@@ -1,0 +1,546 @@
+##########
+##########
+File: data/c_ipv4bgp2011.txt
+Total number of unique final AS: 36630
+Most common ASNs:
+ASN: 6389	Count: 3682
+ASN: 4323	Count: 2572
+ASN: 4766	Count: 1863
+ASN: 19262	Count: 1832
+ASN: 1785	Count: 1793
+ASN: 7545	Count: 1581
+ASN: 6478	Count: 1531
+ASN: 20115	Count: 1525
+ASN: 18566	Count: 1514
+ASN: 4755	Count: 1419
+Longest AS paths:
+Subnet: 110.44.24.0/23      	Path length: 10	Final AS: 45844
+Subnet: 110.44.26.0/23      	Path length: 10	Final AS: 45844
+Subnet: 110.44.28.0/23      	Path length: 10	Final AS: 45844
+Subnet: 110.44.30.0/23      	Path length: 10	Final AS: 45844
+Subnet: 182.23.192.0/22     	Path length: 10	Final AS: 45844
+Subnet: 182.23.196.0/22     	Path length: 10	Final AS: 45844
+Subnet: 65.48.242.0/24      	Path length: 9	Final AS: 10292
+Subnet: 65.48.243.0/24      	Path length: 9	Final AS: 10292
+Subnet: 65.48.244.0/24      	Path length: 9	Final AS: 10292
+Subnet: 65.48.245.0/24      	Path length: 9	Final AS: 10292
+##########
+##########
+File: data/c_ipv4bgp2012.txt
+Total number of unique final AS: 40000
+Most common ASNs:
+ASN: 7029	Count: 3452
+ASN: 6389	Count: 3432
+ASN: 18566	Count: 2080
+ASN: 4766	Count: 1923
+ASN: 1785	Count: 1876
+ASN: 10620	Count: 1749
+ASN: 8402	Count: 1748
+ASN: 28573	Count: 1688
+ASN: 17974	Count: 1649
+ASN: 7545	Count: 1640
+Longest AS paths:
+Subnet: 180.189.192.0/19    	Path length: 14	Final AS: 18407
+Subnet: 180.189.194.0/23    	Path length: 14	Final AS: 18407
+Subnet: 46.226.208.0/21     	Path length: 11	Final AS: 52214
+Subnet: 81.20.16.0/20       	Path length: 11	Final AS: 39214
+Subnet: 31.29.0.0/19        	Path length: 10	Final AS: 12997
+Subnet: 77.235.0.0/21       	Path length: 10	Final AS: 41750
+Subnet: 81.88.192.0/20      	Path length: 10	Final AS: 25035
+Subnet: 92.245.96.0/19      	Path length: 10	Final AS: 41750
+Subnet: 109.201.160.0/19    	Path length: 10	Final AS: 41750
+Subnet: 115.178.16.0/22     	Path length: 10	Final AS: 55359
+##########
+##########
+File: data/c_ipv4bgp2013.txt
+Total number of unique final AS: 43362
+Most common ASNs:
+ASN: 6389	Count: 3051
+ASN: 17974	Count: 2481
+ASN: 28573	Count: 2417
+ASN: 10620	Count: 2328
+ASN: 7029	Count: 2138
+ASN: 4766	Count: 2120
+ASN: 18566	Count: 2081
+ASN: 22773	Count: 1986
+ASN: 1785	Count: 1958
+ASN: 8402	Count: 1912
+Longest AS paths:
+Subnet: 61.60.96.0/24       	Path length: 9	Final AS: 4782
+Subnet: 61.60.97.0/24       	Path length: 9	Final AS: 4782
+Subnet: 61.61.248.0/21      	Path length: 9	Final AS: 18422
+Subnet: 61.67.9.0/24        	Path length: 9	Final AS: 18413
+Subnet: 86.63.184.0/22      	Path length: 9	Final AS: 28711
+Subnet: 87.246.36.0/22      	Path length: 9	Final AS: 29622
+Subnet: 91.224.0.0/23       	Path length: 9	Final AS: 28711
+Subnet: 91.224.116.0/24     	Path length: 9	Final AS: 56373
+Subnet: 91.224.117.0/24     	Path length: 9	Final AS: 56373
+Subnet: 94.140.127.0/24     	Path length: 9	Final AS: 57178
+##########
+##########
+File: data/c_ipv4bgp2014.txt
+Total number of unique final AS: 46128
+Most common ASNs:
+ASN: 28573	Count: 3503
+ASN: 6389	Count: 3021
+ASN: 17974	Count: 2757
+ASN: 10620	Count: 2753
+ASN: 22773	Count: 2318
+ASN: 4766	Count: 2208
+ASN: 1785	Count: 2165
+ASN: 7545	Count: 2126
+ASN: 18566	Count: 2045
+ASN: 18881	Count: 1907
+Longest AS paths:
+Subnet: 23.29.0.0/20        	Path length: 12	Final AS: 26421
+Subnet: 31.177.84.0/24      	Path length: 11	Final AS: 48287
+Subnet: 61.60.96.0/24       	Path length: 11	Final AS: 4782
+Subnet: 61.60.97.0/24       	Path length: 11	Final AS: 4782
+Subnet: 91.217.20.0/24      	Path length: 11	Final AS: 48287
+Subnet: 103.21.205.0/24     	Path length: 11	Final AS: 131746
+Subnet: 103.21.206.0/24     	Path length: 11	Final AS: 131746
+Subnet: 103.21.207.0/24     	Path length: 11	Final AS: 131746
+Subnet: 120.96.144.0/20     	Path length: 11	Final AS: 1659
+Subnet: 120.96.160.0/19     	Path length: 11	Final AS: 1659
+##########
+##########
+File: data/c_ipv4bgp2015.txt
+Total number of unique final AS: 49438
+Most common ASNs:
+ASN: 10620	Count: 3126
+ASN: 22773	Count: 2982
+ASN: 6389	Count: 2890
+ASN: 17974	Count: 2808
+ASN: 39891	Count: 2472
+ASN: 7545	Count: 2330
+ASN: 28573	Count: 2317
+ASN: 4766	Count: 2186
+ASN: 18566	Count: 2039
+ASN: 4755	Count: 1974
+Longest AS paths:
+Subnet: 23.29.0.0/20        	Path length: 12	Final AS: 26421
+Subnet: 103.23.232.0/23     	Path length: 12	Final AS: 58475
+Subnet: 103.26.12.0/22      	Path length: 12	Final AS: 132660
+Subnet: 103.252.188.0/24    	Path length: 12	Final AS: 59138
+Subnet: 202.0.88.0/23       	Path length: 12	Final AS: 55697
+Subnet: 114.108.196.0/23    	Path length: 11	Final AS: 23944
+Subnet: 114.108.197.0/24    	Path length: 11	Final AS: 23944
+Subnet: 114.108.206.0/24    	Path length: 11	Final AS: 23944
+Subnet: 120.96.144.0/20     	Path length: 11	Final AS: 1659
+Subnet: 120.96.160.0/19     	Path length: 11	Final AS: 1659
+##########
+##########
+File: data/c_ipv4bgp2016.txt
+Total number of unique final AS: 53088
+Most common ASNs:
+ASN: 10620	Count: 3448
+ASN: 22773	Count: 3346
+ASN: 7545	Count: 3061
+ASN: 17974	Count: 2909
+ASN: 39891	Count: 2514
+ASN: 4766	Count: 2421
+ASN: 9829	Count: 2405
+ASN: 20940	Count: 2398
+ASN: 6389	Count: 2393
+ASN: 8151	Count: 2221
+Longest AS paths:
+Subnet: 129.7.66.0/24       	Path length: 13	Final AS: 7908
+Subnet: 130.123.224.0/19    	Path length: 12	Final AS: 56554
+Subnet: 192.33.108.0/23     	Path length: 12	Final AS: 12118
+Subnet: 195.128.120.0/22    	Path length: 12	Final AS: 56636
+Subnet: 1.8.106.0/24        	Path length: 11	Final AS: 38345
+Subnet: 91.222.202.0/24     	Path length: 11	Final AS: 47805
+Subnet: 147.174.75.0/24     	Path length: 11	Final AS: 25968
+Subnet: 147.174.82.0/24     	Path length: 11	Final AS: 25968
+Subnet: 147.174.192.0/19    	Path length: 11	Final AS: 25968
+Subnet: 198.147.64.0/18     	Path length: 11	Final AS: 3832
+##########
+##########
+File: data/c_ipv4bgp2017.txt
+Total number of unique final AS: 56708
+Most common ASNs:
+ASN: 4538	Count: 5555
+ASN: 7545	Count: 3799
+ASN: 22773	Count: 3681
+ASN: 10620	Count: 3540
+ASN: 6327	Count: 3363
+ASN: 39891	Count: 3333
+ASN: 20940	Count: 3067
+ASN: 17974	Count: 2997
+ASN: 4766	Count: 2762
+ASN: 9829	Count: 2724
+Longest AS paths:
+Subnet: 103.195.168.0/24    	Path length: 12	Final AS: 46047
+Subnet: 103.195.169.0/24    	Path length: 12	Final AS: 46047
+Subnet: 148.204.126.0/24    	Path length: 11	Final AS: 3484
+Subnet: 189.51.136.0/23     	Path length: 11	Final AS: 262420
+Subnet: 91.239.214.0/24     	Path length: 10	Final AS: 58216
+Subnet: 93.171.228.0/23     	Path length: 10	Final AS: 47864
+Subnet: 124.109.107.0/24    	Path length: 10	Final AS: 55344
+Subnet: 128.26.53.0/24      	Path length: 10	Final AS: 4021
+Subnet: 148.204.129.0/24    	Path length: 10	Final AS: 3484
+Subnet: 177.39.225.0/24     	Path length: 10	Final AS: 52979
+##########
+##########
+File: data/c_ipv4bgp2018.txt
+Total number of unique final AS: 59953
+Most common ASNs:
+ASN: 4538	Count: 5435
+ASN: 7545	Count: 4243
+ASN: 8151	Count: 4158
+ASN: 10620	Count: 3592
+ASN: 39891	Count: 3520
+ASN: 6327	Count: 3400
+ASN: 22773	Count: 3273
+ASN: 4766	Count: 2864
+ASN: 20940	Count: 2843
+ASN: 9829	Count: 2802
+Longest AS paths:
+Subnet: 81.18.48.0/24       	Path length: 11	Final AS: 203879
+Subnet: 136.210.249.0/24    	Path length: 11	Final AS: 1501
+Subnet: 143.73.65.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.67.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.69.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.70.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.71.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.77.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.78.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.79.0/24      	Path length: 11	Final AS: 1501
+##########
+##########
+File: data/c_ipv4bgp2019.txt
+Total number of unique final AS: 63397
+Most common ASNs:
+ASN: 8151	Count: 5580
+ASN: 47331	Count: 5556
+ASN: 12479	Count: 5339
+ASN: 7545	Count: 4653
+ASN: 4538	Count: 4649
+ASN: 39891	Count: 3649
+ASN: 6327	Count: 3584
+ASN: 11492	Count: 3517
+ASN: 22773	Count: 3303
+ASN: 8551	Count: 3248
+Longest AS paths:
+Subnet: 158.13.148.0/24     	Path length: 13	Final AS: 1501
+Subnet: 43.240.126.0/24     	Path length: 12	Final AS: 4812
+Subnet: 136.210.249.0/24    	Path length: 11	Final AS: 1501
+Subnet: 143.73.49.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.73.90.0/24      	Path length: 11	Final AS: 1501
+Subnet: 143.76.128.0/24     	Path length: 11	Final AS: 1501
+Subnet: 143.76.130.0/24     	Path length: 11	Final AS: 1501
+Subnet: 143.76.131.0/24     	Path length: 11	Final AS: 1501
+Subnet: 143.76.133.0/24     	Path length: 11	Final AS: 1501
+Subnet: 143.76.135.0/24     	Path length: 11	Final AS: 1501
+##########
+##########
+File: data/c_ipv4bgp2020.txt
+Total number of unique final AS: 67174
+Most common ASNs:
+ASN: 8151	Count: 6271
+ASN: 47331	Count: 5946
+ASN: 12479	Count: 5910
+ASN: 7545	Count: 5329
+ASN: 4538	Count: 4630
+ASN: 31334	Count: 4054
+ASN: 7155	Count: 4034
+ASN: 11492	Count: 3998
+ASN: 16509	Count: 3859
+ASN: 39891	Count: 3776
+Longest AS paths:
+Subnet: 5.252.216.0/22      	Path length: 11	Final AS: 61362
+Subnet: 55.22.82.0/24       	Path length: 11	Final AS: 13979
+Subnet: 55.22.84.0/24       	Path length: 11	Final AS: 13979
+Subnet: 55.22.86.0/24       	Path length: 11	Final AS: 13979
+Subnet: 55.22.130.0/24      	Path length: 11	Final AS: 13979
+Subnet: 55.22.144.0/24      	Path length: 11	Final AS: 13979
+Subnet: 55.22.158.0/24      	Path length: 11	Final AS: 13979
+Subnet: 55.22.170.0/24      	Path length: 11	Final AS: 13979
+Subnet: 55.22.174.0/24      	Path length: 11	Final AS: 13979
+Subnet: 55.22.176.0/24      	Path length: 11	Final AS: 13979
+##########
+##########
+File: data/c_ipv4bgp2021.txt
+Total number of unique final AS: 70644
+Most common ASNs:
+ASN: 8151	Count: 8396
+ASN: 47331	Count: 7751
+ASN: 12479	Count: 6368
+ASN: 7545	Count: 5709
+ASN: 16509	Count: 4872
+ASN: 4538	Count: 4838
+ASN: 11492	Count: 4752
+ASN: 7155	Count: 4030
+ASN: 22773	Count: 3903
+ASN: 9808	Count: 3757
+Longest AS paths:
+Subnet: 31.25.92.0/24       	Path length: 12	Final AS: 51411
+Subnet: 91.226.224.0/23     	Path length: 12	Final AS: 56703
+Subnet: 94.199.136.0/23     	Path length: 12	Final AS: 57563
+Subnet: 94.199.138.0/23     	Path length: 12	Final AS: 57563
+Subnet: 136.210.249.0/24    	Path length: 12	Final AS: 1501
+Subnet: 143.73.48.0/24      	Path length: 12	Final AS: 1501
+Subnet: 143.73.49.0/24      	Path length: 12	Final AS: 1501
+Subnet: 143.73.74.0/24      	Path length: 12	Final AS: 1501
+Subnet: 143.73.76.0/24      	Path length: 12	Final AS: 1501
+Subnet: 143.73.88.0/24      	Path length: 12	Final AS: 1501
+##########
+##########
+File: data/c_ipv6bgp2011.txt
+Total number of unique final AS: 3257
+Most common ASNs:
+ASN: 23947	Count: 67
+ASN: 24521	Count: 54
+ASN: 12041	Count: 33
+ASN: 1237	Count: 32
+ASN: 23698	Count: 30
+ASN: 703	Count: 26
+ASN: 42	Count: 23
+ASN: 33517	Count: 23
+ASN: 22394	Count: 23
+ASN: 31334	Count: 21
+Longest AS paths:
+Subnet: 2001:7fb:ff04::/48  	Path length: 10	Final AS: 12654
+Subnet: 2001:e30::/32       	Path length: 10	Final AS: 2697
+Subnet: 2001:df0:17::/48    	Path length: 9	Final AS: 38229
+Subnet: 2400:fc00:4000::/35 	Path length: 9	Final AS: 45773
+Subnet: 2400:fc00:8000::/35 	Path length: 9	Final AS: 45773
+Subnet: 2001:254:8000::/33  	Path length: 8	Final AS: 24490
+Subnet: 2001:dc5:a::/48     	Path length: 8	Final AS: 23600
+Subnet: 2001:dc7::/32       	Path length: 8	Final AS: 24136
+Subnet: 2001:dc7:1000::/48  	Path length: 8	Final AS: 24136
+Subnet: 2001:48d0:a000::/35 	Path length: 8	Final AS: 75
+##########
+##########
+File: data/c_ipv6bgp2012.txt
+Total number of unique final AS: 3951
+Most common ASNs:
+ASN: 20940	Count: 87
+ASN: 22394	Count: 40
+ASN: 12041	Count: 38
+ASN: 17451	Count: 37
+ASN: 1237	Count: 33
+ASN: 17832	Count: 32
+ASN: 35994	Count: 32
+ASN: 33517	Count: 27
+ASN: 12008	Count: 26
+ASN: 6830	Count: 24
+Longest AS paths:
+Subnet: 2404:2400:200::/48  	Path length: 9	Final AS: 38280
+Subnet: 2001:dc7::/32       	Path length: 8	Final AS: 24136
+Subnet: 2001:dc7:1000::/48  	Path length: 8	Final AS: 24136
+Subnet: 2001:dd8:5::/48     	Path length: 8	Final AS: 55439
+Subnet: 2001:df0:21a::/48   	Path length: 8	Final AS: 23855
+Subnet: 2400:fc00:4000::/35 	Path length: 8	Final AS: 45773
+Subnet: 2400:fc00:8000::/35 	Path length: 8	Final AS: 45773
+Subnet: 2401:aa00::/32      	Path length: 8	Final AS: 55466
+Subnet: 2401:ba00::/32      	Path length: 8	Final AS: 55466
+Subnet: 2401:be00::/32      	Path length: 8	Final AS: 55466
+##########
+##########
+File: data/c_ipv6bgp2013.txt
+Total number of unique final AS: 6581
+Most common ASNs:
+ASN: 22394	Count: 269
+ASN: 20940	Count: 117
+ASN: 15133	Count: 89
+ASN: 17832	Count: 62
+ASN: 12041	Count: 50
+ASN: 12008	Count: 48
+ASN: 35994	Count: 48
+ASN: 12222	Count: 45
+ASN: 17451	Count: 38
+ASN: 9031	Count: 38
+Longest AS paths:
+Subnet: 2001:998::/32       	Path length: 8	Final AS: 38064
+Subnet: 2400:9800::/32      	Path length: 8	Final AS: 45209
+Subnet: 2806:1000::/24      	Path length: 8	Final AS: 49070
+Subnet: 2001:678:78::/48    	Path length: 7	Final AS: 51090
+Subnet: 2001:678:78::/48    	Path length: 7	Final AS: 43681
+Subnet: 2001:678:78::/48    	Path length: 7	Final AS: 47749
+Subnet: 2001:678:78::/48    	Path length: 7	Final AS: 57381
+Subnet: 2001:798::/32       	Path length: 7	Final AS: 12654
+Subnet: 2001:998::/32       	Path length: 7	Final AS: 2499
+Subnet: 2400:9800::/32      	Path length: 7	Final AS: 23862
+##########
+##########
+File: data/c_ipv6bgp2014.txt
+Total number of unique final AS: 7775
+Most common ASNs:
+ASN: 22394	Count: 350
+ASN: 174	Count: 270
+ASN: 680	Count: 238
+ASN: 12041	Count: 176
+ASN: 17621	Count: 166
+ASN: 20940	Count: 165
+ASN: 6461	Count: 125
+ASN: 42	Count: 108
+ASN: 55430	Count: 108
+ASN: 15133	Count: 107
+Longest AS paths:
+Subnet: 2400:9800:5::/48    	Path length: 10	Final AS: 45209
+Subnet: 2001:660:3203::/48  	Path length: 9	Final AS: 2094
+Subnet: 2001:998::/30       	Path length: 9	Final AS: 9931
+Subnet: 2001:998::/30       	Path length: 9	Final AS: 9931
+Subnet: 2001:998::/30       	Path length: 9	Final AS: 4718
+Subnet: 2400:9800:5::/48    	Path length: 9	Final AS: 132796
+Subnet: 2407:9800::/32      	Path length: 9	Final AS: 132497
+Subnet: 2806:1080:101::/48  	Path length: 9	Final AS: 20940
+Subnet: 2001:200::/32       	Path length: 8	Final AS: 2500
+Subnet: 2001:590:1006::/48  	Path length: 8	Final AS: 20940
+##########
+##########
+File: data/c_ipv6bgp2015.txt
+Total number of unique final AS: 9086
+Most common ASNs:
+ASN: 22394	Count: 557
+ASN: 3651	Count: 416
+ASN: 174	Count: 335
+ASN: 680	Count: 280
+ASN: 15133	Count: 275
+ASN: 40440	Count: 262
+ASN: 55430	Count: 228
+ASN: 12041	Count: 225
+ASN: 20940	Count: 216
+ASN: 22773	Count: 146
+Longest AS paths:
+Subnet: 2001:998::/30       	Path length: 10	Final AS: 38064
+Subnet: 2001:998::/30       	Path length: 10	Final AS: 38064
+Subnet: 2806:1080:101::/48  	Path length: 10	Final AS: 60564
+Subnet: 2001:998::/30       	Path length: 9	Final AS: 4718
+Subnet: 2400:9880::/32      	Path length: 9	Final AS: 132796
+Subnet: 2604:9980:2::/48    	Path length: 9	Final AS: 30350
+Subnet: 2806:1080:101::/48  	Path length: 9	Final AS: 37674
+Subnet: 2001:200::/32       	Path length: 8	Final AS: 2500
+Subnet: 2001:298::/32       	Path length: 8	Final AS: 9700
+Subnet: 2001:678:94::/48    	Path length: 8	Final AS: 56740
+##########
+##########
+File: data/c_ipv6bgp2017.txt
+Total number of unique final AS: 12930
+Most common ASNs:
+ASN: 22773	Count: 1331
+ASN: 133612	Count: 743
+ASN: 28573	Count: 549
+ASN: 16509	Count: 452
+ASN: 22394	Count: 437
+ASN: 32098	Count: 392
+ASN: 3651	Count: 372
+ASN: 20940	Count: 371
+ASN: 174	Count: 350
+ASN: 15133	Count: 346
+Longest AS paths:
+Subnet: 2001:dce:9500::/48  	Path length: 10	Final AS: 38064
+Subnet: 2001:dce:8000::/48  	Path length: 9	Final AS: 45285
+Subnet: 2600:1419:6000::/48 	Path length: 9	Final AS: 20940
+Subnet: 2804:223c:8000::/33 	Path length: 9	Final AS: 264599
+Subnet: 2a00:86c0:1052::/48 	Path length: 9	Final AS: 2906
+Subnet: 2001:678:9c::/48    	Path length: 8	Final AS: 57801
+Subnet: 2001:df7:5400::/48  	Path length: 8	Final AS: 134632
+Subnet: 2001:13c7:600a::/48 	Path length: 8	Final AS: 52376
+Subnet: 2606:2800:7015::/48 	Path length: 8	Final AS: 14153
+Subnet: 2800:100::/32       	Path length: 8	Final AS: 11694
+##########
+##########
+File: data/c_ipv6bgp2018.txt
+Total number of unique final AS: 14599
+Most common ASNs:
+ASN: 22773	Count: 1246
+ASN: 28573	Count: 855
+ASN: 16509	Count: 645
+ASN: 54113	Count: 597
+ASN: 32098	Count: 516
+ASN: 20940	Count: 450
+ASN: 22394	Count: 443
+ASN: 133612	Count: 382
+ASN: 174	Count: 375
+ASN: 19551	Count: 302
+Longest AS paths:
+Subnet: 2800:100::/32       	Path length: 10	Final AS: 11694
+Subnet: 2800:130::/32       	Path length: 10	Final AS: 27820
+Subnet: 2800:a020::/32      	Path length: 10	Final AS: 27891
+Subnet: 2001:13c7:7007::/48 	Path length: 9	Final AS: 27859
+Subnet: 2400:7400:0:105::/64	Path length: 9	Final AS: 65500
+Subnet: 2800:a000::/32      	Path length: 9	Final AS: 27686
+Subnet: 2800:a008::/32      	Path length: 9	Final AS: 23007
+Subnet: 2800:a010::/32      	Path length: 9	Final AS: 19192
+Subnet: 2800:a018::/32      	Path length: 9	Final AS: 27890
+Subnet: 2800:a028::/32      	Path length: 9	Final AS: 27892
+##########
+##########
+File: data/c_ipv6bgp2019.txt
+Total number of unique final AS: 16467
+Most common ASNs:
+ASN: 12479	Count: 1427
+ASN: 22773	Count: 982
+ASN: 28573	Count: 966
+ASN: 16509	Count: 777
+ASN: 30036	Count: 721
+ASN: 7552	Count: 664
+ASN: 45609	Count: 650
+ASN: 33363	Count: 642
+ASN: 32098	Count: 629
+ASN: 54113	Count: 590
+Longest AS paths:
+Subnet: 2402:4000:bb00::/48 	Path length: 9	Final AS: 18001
+Subnet: 2400:7400:0:105::/64	Path length: 8	Final AS: 4200000401
+Subnet: 2400:7400:0:106::/64	Path length: 8	Final AS: 4200000400
+Subnet: 2400:7400:e021::/48 	Path length: 8	Final AS: 4200000121
+Subnet: 2400:ec80::/32      	Path length: 8	Final AS: 133535
+Subnet: 2803:fbc0:4::/48    	Path length: 8	Final AS: 265762
+Subnet: 2803:fbc0:5::/48    	Path length: 8	Final AS: 265762
+Subnet: 2804:259c:1::/48    	Path length: 8	Final AS: 52772
+Subnet: 2804:4348::/32      	Path length: 8	Final AS: 267560
+Subnet: 2a04:1500::/29      	Path length: 8	Final AS: 61026
+##########
+##########
+File: data/c_ipv6bgp2020.txt
+Total number of unique final AS: 18732
+Most common ASNs:
+ASN: 11172	Count: 1920
+ASN: 12479	Count: 1427
+ASN: 45609	Count: 1371
+ASN: 16509	Count: 1230
+ASN: 28573	Count: 1188
+ASN: 45271	Count: 1053
+ASN: 22773	Count: 1002
+ASN: 54113	Count: 767
+ASN: 13335	Count: 751
+ASN: 7552	Count: 736
+Longest AS paths:
+Subnet: 2001:468:1af1::/48  	Path length: 9	Final AS: 4557
+Subnet: 2804:60f0::/32      	Path length: 9	Final AS: 269201
+Subnet: 2a01:9800:8000::/36 	Path length: 9	Final AS: 52155
+Subnet: 2803:2ac0:195f::/48 	Path length: 8	Final AS: 52300
+Subnet: 2803:2ac0:1d40::/48 	Path length: 8	Final AS: 52300
+Subnet: 2804:4510::/32      	Path length: 8	Final AS: 267670
+Subnet: 2804:4e64::/32      	Path length: 8	Final AS: 268258
+Subnet: 2804:5a78::/32      	Path length: 8	Final AS: 268775
+Subnet: 2a00:1570::/32      	Path length: 8	Final AS: 39308
+Subnet: 2a00:1ce0::/32      	Path length: 8	Final AS: 50530
+##########
+##########
+File: data/c_ipv6bgp2021.txt
+Total number of unique final AS: 21693
+Most common ASNs:
+ASN: 11172	Count: 2889
+ASN: 17622	Count: 2112
+ASN: 45609	Count: 2081
+ASN: 16509	Count: 1543
+ASN: 12479	Count: 1492
+ASN: 9808	Count: 1430
+ASN: 45271	Count: 1369
+ASN: 28573	Count: 1232
+ASN: 22773	Count: 1225
+ASN: 7552	Count: 1159
+Longest AS paths:
+Subnet: 2a07:e440::/29      	Path length: 9	Final AS: 59441
+Subnet: 2a0b:b400::/29      	Path length: 9	Final AS: 207141
+Subnet: 2406:5880::/32      	Path length: 8	Final AS: 58844
+Subnet: 2406:8080::/32      	Path length: 8	Final AS: 58844
+Subnet: 2406:8b80::/32      	Path length: 8	Final AS: 58844
+Subnet: 2600:c800::/32      	Path length: 8	Final AS: 6079
+Subnet: 2600:c806::/32      	Path length: 8	Final AS: 6079
+Subnet: 2605:6f40::/32      	Path length: 8	Final AS: 6079
+Subnet: 2606:bc0::/32       	Path length: 8	Final AS: 6079
+Subnet: 2801:15:7000::/48   	Path length: 8	Final AS: 269867
