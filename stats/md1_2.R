@@ -21,7 +21,7 @@ dist_sigma <- function(dist) {
 # Since the problem definition demands EXCLUSIVE interval probabilities,
 # two different ways of evaluating to avoid redundant lookups
 interval_prob <- function(dist, a, b) {
-  sum(dist[, dist[1,] > a & dist[1,] < b])
+  sum(dist[2, dist[1,] > a & dist[1,] < b])
 }
 single_prob <- function(dist, x) {
   dist[2, dist[1,] == x]

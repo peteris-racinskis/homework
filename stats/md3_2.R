@@ -1,10 +1,10 @@
 # use data "InsectSprays"
-s_data <- InsectSprays
-summary(s_data)
-attach(s_data)
+InsectSprays <- InsectSprays
+summary(InsectSprays)
+attach(InsectSprays)
+library(psych)
 # a) boxplot - number of bugs by spray type
 boxplot(count~spray)
-library(psych)
 describe(count)
 describe(count[spray=="A"])
 describe(count[spray=="B"])
@@ -26,12 +26,6 @@ draw_near <- function(data) {
   lines(density(data))
   xax <- seq(min(h$breaks),max(h$breaks),0.01)
   lines(xax,dnorm(xax,mean(data),sd(data)),col="red",lwd=2)
-  qqnorm(data)
-  qqline(data)
-  plot.ecdf(data) # empirical cumulative dist func
-  lines(xax,pnorm(xax,mean(data),sd(data)),col="red")
-  qqnorm(ecdf(data))
-  h
 }
 # histogram with equivalent normal distrib
 draw_near(count[spray=="A"])
@@ -63,52 +57,26 @@ hist(count[spray=="C"])
 hist(count[spray=="D"])
 hist(count[spray=="E"])
 
-install.packages("qqplotr")
-require(qqplotr)
-require(ggplot2)
-# QQ grafiks divām izlasēm
-x <- subset(s_data,spray=="A")$count
-y <- subset(s_data,spray=="B")$count
-sx <- sort(x); sy <- sort(y)
-lenx <- length(sx)
-leny <- length(sy)
-if (leny < lenx) sx <- approx(1L:lenx, sx, n = leny)$y
-if (leny > lenx) sy <- approx(1L:leny, sy, n = lenx)$y
-require(ggplot2)
-g = ggplot() + geom_point(aes(x=sx, y=sy))+
-  geom_abline(intercept =0, slope = 1)+
-  labs(x="A",y="B")
-g
-
-## PP grafiks divām izlasēm
-x <- subset(Salaries,sex=="Female")$salary
-y <- subset(Salaries,sex=="Male")$salary
-fn1<-ecdf(x)
-fn2<-ecdf(y)
-xx<-seq(min(Salaries$salary),max(Salaries$salary),by=10)
-
-dd<-data.frame(y=fn1(xx),x=fn2(xx))
-ggplot(dd, aes(x=x,y=y))+geom_point()+
-  geom_abline(intercept =0, slope = 1)+
-  labs(x="sieviešu alga",y="vīriešu alga")
-
-require(gridExtra)
-
 # Normal P-P plot of Normal data
-g1 <- ggplot(data = subset(s_data,spray=="A"), mapping = aes(sample = count)) +
+g1 <- ggplot(data = subset(InsectSprays,spray=="A"), mapping = aes(sample = count)) +
   stat_pp_band(colour="blue") +
   stat_pp_line() +
   stat_pp_point()+
   labs(title="PP grafiks (A)", x = "Teorētiskās kvantiles", y = "Izlases kvantiles")
 
 # Normal P-P plot of Normal data
-g2 <- ggplot(data = subset(s_data,spray=="B"), mapping = aes(sample = count)) +
+g2 <- ggplot(data = subset(InsectSprays,spray=="B"), mapping = aes(sample = count)) +
   stat_pp_band() +
   stat_pp_line() +
   stat_pp_point()+
   labs(title = "PP grafiks (B)", x = "Teorētiskās kvantiles", y = "Izlases kvantiles")
 
 grid.arrange(g1,g2,ncol=2)
+
+
+require(ggplot2)
+require(qqplotr)
+require(gridExtra)
 
 plot_PP_norm <- function(data) {
   g <- ggplot(data = data, mapping = aes(sample = count)) +
@@ -161,20 +129,20 @@ compare_two <- function(d1,d2,min_c,max_c) {
   print(compare_PP(d1,d2,min_c,max_c))
   print(compare_QQ(d1,d2))
 }
-a <- subset(s_data,spray=="A")
-b <- subset(s_data,spray=="B")
-c <- subset(s_data,spray=="C")
-d <- subset(s_data,spray=="D")
-e <- subset(s_data,spray=="E")
-f <- subset(s_data,spray=="F")
+a <- subset(InsectSprays,spray=="A")
+b <- subset(InsectSprays,spray=="B")
+c <- subset(InsectSprays,spray=="C")
+d <- subset(InsectSprays,spray=="D")
+e <- subset(InsectSprays,spray=="E")
+f <- subset(InsectSprays,spray=="F")
 plots(a)
 plots(b)
 plots(c)
 plots(d)
 plots(e)
 plots(f)
-MIN <- min(s_data$count)
-MAX <- max(s_data$count)
+MIN <- min(InsectSprays$count)
+MAX <- max(InsectSprays$count)
 compare_two(a,b,MIN,MAX)
 compare_two(a,f,MIN,MAX)
 compare_two(b,f,MIN,MAX)

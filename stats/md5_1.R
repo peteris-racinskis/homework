@@ -50,6 +50,20 @@ abline(v=cutoff,col="green")
 # e) reject null hypothesis? accept H1?
 # at p = 0.05:
 conclusion
-# f) can Wilcoxon test be used? do the p-values differ a lot?
-# Wilcox text is designed for paired samples - seeing if two populations 
-# are the same
+# f) can Wilcox test be used?
+# A: yes
+# do the p-values differ a lot?
+wilcox.test(before,after,alternative="l",paired=T,exact=F)
+# A: not greatly - ~1% for t-test and ~3% for wilcox
+# t-test is better for normally distributed data but not by a huge amount.
+# Can test normality with shapiro test.
+# Wilcox is good for determining symmetry. Not a good test for asymmetric
+#  distros.
+# From lecture: Wilcox converges faster for laplace; so it might work better
+#  for various non-normal distributions.
+
+# !!!!!!!!!!!!!!!!!!! NORMALITY TESTS !!!!!!!!!!!!!!!!!!!!!!!
+# Shapiro
+# library(nortest)
+# lillie.test <- use if need Kolmogorov-Smironov test; unknown params
+#    (mu, sigma)
