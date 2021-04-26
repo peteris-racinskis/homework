@@ -587,7 +587,7 @@ t-testa rezultāts, kritiskā vērtība c, p-vērtība.
 
 ``` {r}
 res$statistic
-alpha <- 0.05
+alpha <- 0.025
 cutoff <- qt(1-alpha,n-1); cutoff
 res$p.value
 ```

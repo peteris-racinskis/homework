@@ -42,7 +42,7 @@ exp_pdf <- function(x,mu) {
 hist(q_data$stations,prob=T,main="MME for exp and lnorm")
 xax <- seq(0,max(q_data$stations),0.1)
 x <- q_data$stations
-lines(xax,norm_pdf(xax,mean(x),sd(x)),col="blue",lw, function))
+lines(xax,norm_pdf(xax,mean(x),sd(x)),col="blue",lw, function)
 lines(xax,lnorm_pdf(xax,mean(x),sd(x)),col="red")
 lines(xax,exp_pdf(xax,mean(x)),col="green")
 # which is good? lornm and exp look good - lnorm looks closer in the lower reg

@@ -56,6 +56,8 @@ conclusion
 wilcox.test(before,after,alternative="l",paired=T,exact=F)
 # A: not greatly - ~1% for t-test and ~3% for wilcox
 # t-test is better for normally distributed data but not by a huge amount.
+#  t-test is still robust under non-normal dist but might not be optimal
+#  t-test is not very robust under asymmetric data
 # Can test normality with shapiro test.
 # Wilcox is good for determining symmetry. Not a good test for asymmetric
 #  distros.
