@@ -1,0 +1,133 @@
+---
+title: "MD2_Racinskis"
+author: "Pēteris Račinskis pr20015"
+date: "5/18/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# 2. mājas darbs Mate6029
+
+## 1. uzdevums - lineāras regresijas, modeļu novērtējumi
+
+Datu kopas ielāde:
+
+``` {r, message=FALSE}
+df <- read.table('CMB.dat',header=TRUE)
+attach(df)
+```
+
+Datu kopa - kosmiskā mikroviļņu fona novērojumi. Svarīgie parametri šajā gadījumā ir 'ell' - multipolu moments (rupji runājot, lenķiskais ekvivalents starojuma frekvencei) un starojuma spektra nobīde 'Cl' (rupji runājot, spektra temperatūras nobīde no vidējā). Pārējās trīs kolonnas ir statistiski novērojumu trokšņa u.c. raksturotāji.
+
+``` {r}
+summary(df)
+```
+
+### 1.1. Regresijas modeļu ģenerēšana
+
+Vispārināma lineārās regresijas funkcija grafiku zīmēšanai, rezultātu izvadei uz konsoles un darbam ar augstākas pakāpes modeļiem:
+
+``` {r}
+general_lreg <- function(vec1,vec2,degree=1,plot=F,print=F) {
+  fit<-lm(vec2~poly(vec1,degree,raw=T)) 
+  if(plot){
+    plot(vec1,vec2)
+    x <- seq(min(vec1),max(vec1),length.out = length(vec1))
+    f <- predict(fit, newdata = data.frame(vec1 = x))
+    lines(x,f,col="red",lwd=2)
+  }
+  if(print){
+    print(summary(fit))
+  }
+  fit
+}
+```
+
+Vienkārša lineārā regresija parametriem 'ell' un 'Cl':
+
+``` {r}
+fit1 <- general_lreg(ell,Cl,plot=T,print=T)
+```
+
+Funkcija labākās atbilstības polinoma meklēšanai (apstājas, kad ANOVA tests liecina, ka jaunas brīvības pakāpes pievienošana būtisku uzlabojumu modeļa atbilstībā datiem vairs nesniedz). Virzība - pa divām pakāpēm, lai ļautu modelim piekārtoties simetriskiem/asimetriskiem sadalījumiem pēc vajadzības:
+
+``` {r}
+bestfit <- function(vec1,vec2,deg=1,last_deg=1,P=0,p=0.05,max=27) {
+  if((P>0.05) || (deg>max)){
+    list(d=last_deg,p=P)
+  } else {
+    f1<-general_lreg(vec1,vec2,deg)
+    next_deg<-deg+2
+    f2<-general_lreg(vec1,vec2,next_deg)
+    P<-anova(f1,f2)$'Pr(>F)'[2]
+    bestfit(vec1,vec2,next_deg,deg,P)
+  }
+}
+```
+
+Labākais polinoms:
+
+``` {r}
+res <- bestfit(ell,Cl)
+paste("stopped at x^", res$d,sep="")
+paste("p value:",res$p)
+fitmax<-general_lreg(ell,Cl,degree=res$d,plot=T,print=T)
+```
+
+### 1.2. Diagnostika
+
+Atlikumu neatkarība - grafiski:
+
+``` {r}
+plot(ell,fit1$residuals)
+plot(ell,fitmax$residuals)
+```
+
+Statistisko testu bibliotēkas:
+
+``` {r, message=FALSE}
+library(car)
+library(nortest)
+```
+
+Durbin-Watson tests autokorelācijai:
+
+``` {r}
+durbinWatsonTest(fit1)
+durbinWatsonTest(fitmax)
+```
+
+Normalitātes testi - grafiski:
+
+``` {r}
+qqnorm(fit1$residuals)
+qqline(fit1$residuals)
+qqnorm(fitmax$residuals)
+qqline(fitmax$residuals)
+```
+
+Normalitātes testi - Kolmogorova-Smirnova tests:
+
+``` {r}
+# degree-1 approximation normality
+(lillie.test(fit1$residuals)$p.value > 0.05)
+# max degree approximation normality
+(lillie.test(fitmax$residuals)$p.value > 0.05)
+```
+
+Dispersijas vienmērīguma testi:
+
+``` {r}
+# degree-1 approximation homoscedacity
+(ncvTest(fit1)$p > 0.05)
+# max degree approximation homoscedacity
+(ncvTest(fitmax)$p > 0.05)
+```
+
+### 1.3. Secinājumi
+
+Dati acīmredzami nav lineāri sakarīgi, un to apliecina arī visas formālās metrikas. Cits jautājums ir par reģionu [0:500], kur tie diezgan cieši seko līknei, ko labi varētu aprakstīt samērā nelielas pakāpes polinoms (sk. sekciju "atlikumu neatkarība - grafiski", kur šajā reģionā atlikumi 9. pakāpes regresijas līknei ir vienmērīgi sadalīti ap 0). Taču ap 'ell' = 500 ļoti strauji pieaug novērojumu dispersija, kas pilnībā izgāž jebkādus mēģinājumus aproksimēt visu datu kopu ar vienu līkni. Šī radikālā izmaiņa dispersijā nomāc arī jebkādus dziļākus ieskatus, ko pār visu datu kopu veiktie testi varētu sniegt par sadalījuma dabu.
