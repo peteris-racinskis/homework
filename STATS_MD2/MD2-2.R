@@ -67,4 +67,15 @@ library(nortest)
 (ncvTest(f_dpi)$p > 0.05)
 (ncvTest(f_ddpi)$p > 0.05)
 
+# multifactor regression
+fit_multi<-lm(sr~., data=df)
+summary(fit_multi)
+vif(fit_multi)
+fit_multi<-step(fit_multi)
+summary(fit_multi)
 
+plot(fit_multi$residuals)
+acf(fit_multi$residuals)
+durbinWatsonTest(fit_multi)
+lillie.test(fit_multi$residuals)
+ncvTest(fit_multi)

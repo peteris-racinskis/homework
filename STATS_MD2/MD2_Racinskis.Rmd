@@ -6,7 +6,7 @@ output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE)
 ```
 
 
@@ -217,14 +217,230 @@ Dispersijas vienmērība (TRUE - dispersija nav atkarīga no argumenta)
 (ncvTest(f_ddpi)$p > 0.05)
 ```
 
+### 2.4. daudzfaktoru regresija
+
+Šo apakšuzdevumu gandrīz palaidu garām, jo uzdevuma nosacījumos prasīts veikt "vienkāršas lineāras regresijas", ko var pārprast kā nosacījumu veikt individuālas viena faktora regresijas. Jebkurā gadījumā, šeit veikta daudzfaktoru regresija un rezulātu analīze kā mtcars piemērā lekcijās:
+
+``` {r}
+fit_multi<-lm(sr~., data=df)
+summary(fit_multi)
+```
+
+VIF analīze:
+
+``` {r}
+vif(fit_multi)
+```
+
+Neviena vērtība netiek izmesta.
+
+Iteratīvā uzlabošana pēc AIC metrikas:
+
+``` {r}
+fit_multi<-step(fit_multi)
+summary(fit_multi)
+```
+
+Testi tāpat kā viena faktora regresijās:
+
+``` {r}
+plot(fit_multi$residuals)
+(durbinWatsonTest(fit_multi)$p < 0.05)
+(lillie.test(fit_multi$residuals)$p.value > 0.05)
+(ncvTest(fit_multi)$p > 0.05)
+```
+
 ### Secinājumi
 
-Visos gadījumos lineārās regresijas modelis ir ne īpaši tuvs datiem, taču nav novērotas nozīmīgas autokorelācijas, atlikumi ir normāli sadalīti un to dispersijas ir vienmērīgas, kas neliecina par viegli atrodamām sistemātiskām nobīdēm.
+Visos gadījumos lineārās regresijas modelis ir ne īpaši tuvs datiem, taču nav novērotas nozīmīgas autokorelācijas, atlikumi ir normāli sadalīti un to dispersijas ir vienmērīgas, kas neliecina par viegli atrodamām sistemātiskām nobīdēm. Daudzfaktoru regresijas modelis sniedz mērenu uzlabojumu (det.koef 20% -> 29%).
 
 \newpage
 
+## 3. uzdevums - ANOVA
+
+Datu ielasīšana
+
+``` {r, message=FALSE}
+df <- chickwts
+attach(df)
+summary(df)
+```
+
+### a) Kastu grafiki, aprakstošās statistikas
+
+Bibliotēka
+
+``` {r, results = FALSE, message = FALSE}
+library(psych)
+```
+
+Kastu grafiki, aprakstošās statistikas:
+
+``` {r}
+boxplot(weight~feed)
+describe(weight[feed=="casein"])
+describe(weight[feed=="horsebean"])
+describe(weight[feed=="linseed"])
+describe(weight[feed=="meatmeal"])
+describe(weight[feed=="soybean"])
+describe(weight[feed=="sunflower"])
+```
+
+### b) ANOVA modelis
+
+``` {r}
+fit<-aov(weight~feed)
+summary(fit)
+```
+
+Rezultāts ir gaidītais - grupas nepieder pie viena sadalījuma.
+
+### c) Post-hoc salīdzinājums pa pāriem
+
+``` {r}
+r<-TukeyHSD(fit)
+op <- par(mar= c(4,5,3,3) + 0.1, cex.axis=0.5)
+plot(TukeyHSD(fit),las=1)
+par(op)
+```
+
+Grupas, kas varētu pārklāties:
+
+* meatmeal-casein;
+* sunflower-casein;
+* linseed-horsebean;
+* meatmeal-linseed;
+* soybean-linseed;
+* soybean-meatmeal;
+* sunflower-meatmeal.
+
+### d) ANOVA pieņēmumu pārbaude
+
+Normalitāte:
+
+``` {r, message=FALSE}
+library(dplyr)
+library(rstatix)
+df %>% group_by(feed) %>% shapiro_test(weight)
+```
+
+Nevienai grupai nevar noraidīt.
+
+Dispersijas vienmērība:
+
+``` {r, message=FALSE}
+leveneTest(weight,feed)
+bartlett.test(weight,feed)
+```
+
+Arī to nevar noraidīt.
+
+### e) neparametriskā ANOVA procedūra
+
+Tā kā šajā gadījumā grupu sadalījumu normalitāti un dispersiju vienmērību noraidīt nevar, stingri runājot neparametriskas metodes nav nepieciešamas. Taču Kruskal-test procedūru var veikt jebkurā gadījumā:
+
+``` {r}
+kruskal.test(weight~feed)
+```
+
+Kā iepriekš, visu sadalījumu vienādības hipotēze tiek pārliecinoši noraidīta.
+
+Pāru salīdzināšanai var lietot pāru Vilkoksa testu:
+
+``` {r}
+pairwise.wilcox.test(weight,feed,p.adjust.method="BH")
+```
+
+Grupas, kas varētu pārklāties:
+
+* meatmeal-casein;
+* sunflower-casein;
+* meatmeal-linseed;
+* soybean-linseed;
+* soybean-meatmeal;
+* sunflower-meatmeal.
+
+Salīdzinot ar iepriekšējo, parametrisko metodi atkrīt:
+
+* linseed-horsebean.
+
+### f) neparametriskais post-hoc tests
+
+Izmantojot Dunn testu:
+
+``` {r}
+dunn_test(df, weight~feed)
+```
+
+Grupas, kuru pārklāšanos nevar izslēgt:
+
+* meatmeal-casein;
+* soybean-casein;
+* sunflower-casein;
+* linseed-horsebean;
+* soybean-horsebean;
+* meatmeal-linseed;
+* soybean-linseed;
+* soybean-meatmeal;
+* sunflower-meatmeal;
+* sunflower-soybean.
+
+Salīdzinot ar parametrisko metodi, klāt nākušas:
+
+* soybean-casein;
+* soybean-horsebean;
+* sunflower-soybean.
+
+### g) secinājumi un komentāri
+
+* Kaut gan ANOVA normalitātes un dispersijas vienmērīguma nosacījumi it kā reti izpildās, šajā datu kopā nekādas problēmas tie nesagādā;
+* Dažas grupas ļoti robusti iztur vienādības pārbaudes visās testu kategorijās, bet citas ir uz robežas - dažādi testi sniedz dažādas atbildes - kaut gan tās ir ~5% p-vērtības visos variantos.
+
+\newpage
+## 4. uzdevums - 2-faktoru ANOVA
+
+Ceru, ka esmu pareizi sapratis uzdevuma nosacījumus, jo šķiet, ka šajā punktā jādara daudz mazāk nekā citos.
+
+Datu ielasīšana:
+
+``` {r}
+df <- ToothGrowth
+attach(df)
+summary(df)
+```
+
+Datu kolonnas:
+
+* len - zobu garums;
+* supp - uztura bagātinātājs (2 kategorijas);
+* dose - doza (3 līmeņi - {0.5, 1, 2}).
+
+2-faktoru ANOVA novērtējums:
+
+``` {r}
+summary(aov(len ~ supp*dose))
+```
+
+ANOVA tests liecina, ka katra kategorija ir statistiski nozīmīga (p -> 0). Abu kategoriju mijiedarbība izdalīta kā neatkarīgs faktors nav ne tuvu tik nozīmīga kā katrs atsevišķi, taču p-vērtība tik un tā ir zem 5%, kas ļauj šo mijiedarbību arī atzīt par statistiski nozīmīgu. 
+
+Izmantojot HSD.test, var redzēt, kā kategorijas grupējas:
+
+```{r}
+library(agricolae)
+tx<-with(df, interaction(supp,dose))
+amod <- aov(len ~ tx)
+HSD.test(amod, "tx", group=TRUE,console=TRUE)
+```
+
+Grupās, kas izdalāmas arī ar grafisko metodi, kas apskatīta lekcijā, taču konfliktē ar Markdown kompilatoru, redzams, ka pieaugot dozai, mazinās atšķirības starp uztura bagātinātājiem.
+
+\newpage
+
+## 5. uzdevums
 
 ``` {r}
 
 ```
+
+
 
