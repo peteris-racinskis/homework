@@ -3,16 +3,17 @@
 df <- read.table('CMB.dat',header=TRUE)
 attach(df)
 # generic linear regression function
-general_lreg <- function(vec1,vec2,degree=1,plot=F,print=F) {
+
+general_lreg <- function(vec1,vec2,degree=1,plot=F,print=F,names=c("","")) {
   fit<-lm(vec2~poly(vec1,degree,raw=T)) 
   if(plot){
-    plot(vec1,vec2)
+    plot(vec1,vec2,xlab=names[1],ylab=names[2])
     x <- seq(min(vec1),max(vec1),length.out = length(vec1))
     f <- predict(fit, newdata = data.frame(vec1 = x))
     lines(x,f,col="red",lwd=2)
   }
   if(print){
-    print(summary(fit))
+    print(paste("R-squared:",summary(fit)$r.squared))
   }
   fit
 }
@@ -66,3 +67,28 @@ library(nortest)
 #       -ncvTest() <- reject hypothesis of constant variance
 (ncvTest(fit1)$p > 0.05)
 (ncvTest(fitmax)$p > 0.05)
+
+
+
+
+
+# OLD GENERAL_LREG FUNCTION
+general_lreg <- function(vec1,vec2,degree=1,plot=F,print=F) {
+  fit<-lm(vec2~poly(vec1,degree,raw=T)) 
+  if(plot){
+    plot(vec1,vec2)
+    x <- seq(min(vec1),max(vec1),length.out = length(vec1))
+    f <- predict(fit, newdata = data.frame(vec1 = x))
+    lines(x,f,col="red",lwd=2)
+  }
+  if(print){
+    print(summary(fit))
+  }
+  fit
+}
+
+
+
+
+
+
