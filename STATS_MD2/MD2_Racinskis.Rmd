@@ -436,11 +436,205 @@ Grupās, kas izdalāmas arī ar grafisko metodi, kas apskatīta lekcijā, taču 
 
 \newpage
 
-## 5. uzdevums
+## 5. uzdevums - joslas platuma meklēšana
+
+Datu ielāde (dots speciāls 5-modāls sadalījums, kas lekcijās izmantots, lai ilustrētu pdf novērtējuma metožu trūkumus):
+
+``` {r}
+df <- as.numeric(read.delim("dati2_5.txt",header=F,sep=" "))
+```
+
+### 5.1. uzdevums - joslas platuma atrašana
+
+Izmantojot R iebūvēto krosvalidācijas optimizatoru:
+
+``` {r}
+cross_validated<-bw.ucv(df)
+cross_validated
+```
+
+### 5.2. ilustrēt KDE aproksimāciju pret histogrammu
+
+Lai uzskatāmāk parādītu arī "nepiegludinātus" un "pārgludinātus" PDF tuvinājumus, zīmētas līknes ar h = 1 un h = 0.01:
+
+``` {r, results=F}
+library(histogram)
+hh<-histogram(df,type="regular",penalty="cv")
+lines(density(df,bw=1),col="blue",lwd=2)
+lines(density(df,bw=0.01),col="green",lwd=2)
+lines(density(df,bw="ucv"),col="red",lwd=3)
+```
+
+### 5.3. salīdzināt ar citām joslas platuma novērtējuma metodēm
+
+Grāmatā "Nonparametric and Semiparametric Models" dota formula t.s. "Silverman rule of thumb" heiristikai, kas pieņem normālā sadalījuma otro atvasinājumu un līdz ar to ļauj iegūt joslas platumu no datu kopas standartnovirzes novērtējuma. Šo un nedaudz paplašinātu heiristiku arī piedāvā R iebūvētais joslas platuma noteikšanas rīks: 
+
+``` {r}
+bw.nrd0(df)
+bw.nrd(df)
+```
+
+Kā redzams, iegūtie rezultāti ir ļoti līdzīgi. Salīdzinot tuvāko (mazāko) ar krosvalidācijas optimizatora iegūto:
+
+``` {r, results=F}
+hh<-histogram(df,type="regular",penalty="cv")
+lines(density(df,bw="ucv"),col="red",lwd=3)
+lines(density(df,bw="nrd0"),col="black",lwd=3)
+```
+
+Kā redzams, ar krosvalidācijas metodi iegūtā KDE līkne labāk seko īstajam sadalījumam.
+
+\newpage
+## 6. uzdevums - neparametriskā regresija
+
+Datu ielāde:
+
+``` {r, results=F, message=F}
+df <- read.table('CMB.dat',header=TRUE)
+attach(df)
+```
+
+### 6.1. regresiju ģenerēšana
+
+Polinomiālā regresija ar jau iepriekš noskaidroto "labāko" vērtību:
+
+``` {r}
+p <- lm(Cl~poly(ell,9,raw=T))
+```
+
+Neparametriskā regresija ar NW metodi bez papildus korekcijām (pirmā funkcija nosaka joslas platumu, otrā ģenerē pašu regresijas līkni):
+
+``` {r, message=F, results=F}
+library(np)
+bw <- npregbw(Cl~ell,bwmethod="cv.ls",regtype="lc")
+n <- npreg(bw,residuals=T)
+```
+
+Grafisks attēlojums:
+
+``` {r}
+plot(ell,Cl,col="grey",ylim=c(-500,6000))
+lines(n$mean,col="red",lwd=2)
+lines(p$fitted.values,col="blue",lwd=2,lty="dashed")
+```
+
+\newpage
+### 6.2. nosacījumu pārbaude, salīdzinājums
+
+Grafiski attēlojumi:
+
+``` {r, echo=F}
+op<-par(mfrow = c(1,2))
+plot(ell,n$resid,ylim=c(-2000,2000))
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+plot(ell,p$residuals,ylim=c(-2000,2000))
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+plot(ell,n$resid)
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+plot(ell,p$residuals)
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+acf(n$resid)
+acf(p$residuals)
+par(op)
+```
+
+Grafiski redzams, ka definīcijas intervālā polinoms labāk tuvināts datiem, taču asi maina virzienu abos galos, kas to padara nederīgu paredzējumiem ārpus intervāla. Autokorelācijas abos gadījumos ir diezgan līdzīgas, taču neparametriskās regresijas gadījumā grafiski redzams, ka saglabājusies sistemātiska, periodiska nobīde starp modeli un datiem. Polinoma gadījumā atlikumi veido (vismaz vizuāli) nejauši izkliedētu punktu mākoni.
+
+Jau pirmajā uzdevumā noskaidrots, kas neizpildās ne normalitātes, ne dispersijas vienmērīguma nosacījumi atlikumos, kas nepieciešami lineārām un polinomiālām regresijām.
+
+### 6.3. joslas platuma novērtējumi
+
+NW nav vienīgā metode, ar kuru var ģenerēt neparametriskas regresijas. Lai iegūtu joslas platumus, var izmantot t.s. "plug-in" metodes, kas izmanto vienkāršotas heiristikas. Kodola regresijas jēdzienu iespējams vispārināt, padarot izteiksmi par polinomu katrā punktā - iegūstot lokāli lineāru vai polinomiālu modeli. 
+
+``` {r, results=F}
+bwll <- npregbw(Cl~ell,regtype="ll",bwmethod="cv.aic")
+# would be dpill(ell,Cl), but wilcox test crashes the compiler.
+bwrt <- 34.61873 
+bwrt <-npregbw(Cl~ell,bws=bwrt,bandwidth.compute=F)
+```
+``` {r}
+bwll
+bwrt
+```
+
+Salīdzinot regresijas metodes grafiski:
+
+``` {r}
+nll <- npreg(bwll,residuals=T)
+nrt <- npreg(bwrt,residuals=T)
+```
+
+NW pret lokāli polinomiālo regresiju (metode ir ekvivalenta locpoly funkcijai, bet bez patvaļīgās argumentu kopas pārkārtošanas):
+
+``` {r}
+plot(ell,Cl,col="grey",ylim=c(0,5500))
+lines(n$mean,col="black",lwd=6)
+lines(nll$mean,col="red",lwd=3)
+``` 
+
+Krosvalidācija pret "plug-in" kodola aplēšanu:
+
+``` {r}
+plot(ell,Cl,col="grey",ylim=c(0,5500))
+lines(n$mean,col="black",lwd=6)
+lines(nrt$mean,col="red",lwd=3)
+```
+
+Redzams, kas joslas platuma izvēles metodei ir minimāls iespaids uz rezultējošo līkni šajā gadījumā, taču lokāli polinomiālā regresija datu kopas galos uzvedas ievērojami savādāk nekā parastā NW metode.
+
+Salīdzinot atlikumus:
+
+```{r, echo=F}
+op<-par(mfrow = c(1,2))
+plot(ell,n$resid,ylim=c(-2000,2000))
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+plot(ell,nll$resid,ylim=c(-2000,2000))
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+plot(ell,n$resid)
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+plot(ell,nll$resid)
+abline(h=0,col="black",lwd=4)
+abline(h=0,col="white",lty="dashed",lwd=2)
+acf(n$resid)
+acf(nll$resid)
+par(op)
+```
+
+Redzams, ka mazliet mazinājusies pārpalikusī struktūra atlikumos, taču tuvinājums vēl joprojām nav tik labs kā polinoma gadījumā.
+
+\newpage
+### 7. uzdevums - bootstrap
 
 ``` {r}
 
 ```
+
+
+
+``` {r}
+
+```
+
+
+
+``` {r}
+
+```
+
+
+
+``` {r}
+
+```
+
+
 
 
 
