@@ -610,31 +610,195 @@ par(op)
 Redzams, ka mazliet mazinājusies pārpalikusī struktūra atlikumos, taču tuvinājums vēl joprojām nav tik labs kā polinoma gadījumā.
 
 \newpage
-### 7. uzdevums - bootstrap
+## 7. uzdevums - bootstrap, robusti novērtētāji
+
+Datu ielasīšana:
 
 ``` {r}
+df <- InsectSprays
+attach(df)
+```
+
+### 7.1. dažādu statistiku ticamības intervāli
+
+Funkcijas statistiku aprēķinam:
+
+``` {r, message=F}
+library(boot)
+library(e1071)
+cb_mean <- function(x, i){
+  mean(x[i])
+}
+cb_median <- function(x, i){
+  median(x[i])
+}
+cb_skewness <- function(x, i){
+  skewness(x[i])
+}
+```
+
+Statistiku ticamības intervāli:
+
+``` {r}
+N<-10000
+bobj_mean <- boot(count,statistic=cb_mean,R=N)
+bobj_medi <- boot(count,statistic=cb_median,R=N)
+bobj_skew <- boot(count,statistic=cb_skewness,R=N)
+boot.ci(bobj_mean)
+boot.ci(bobj_medi)
+boot.ci(bobj_skew)
+```
+
+Salīdzinājums ar parametrisku un neparametrisku testu:
+
+``` {r}
+t.test(count,mu=mean(count))
+wilcox.test(count,conf.int = T)
+```
+
+### 7.2. robustie lokācijas novērtējumi
+
+Vidējā vērtība pēc tradicionālā aprēķina:
+
+``` {r}
+mean(count)
+```
+
+\newpage
+Robustas metodes:
+
+```{r, message=F}
+library(robustbase)
+```
+``` {r}
+median(count)
+mean(count,trim=0.2)
+huberM(count)$mu
+```
+
+Secinājumi: Hubera M-novērtējums un "nogrieztā" sadalījuma vidējā vērtība ir samērā tuvi vidējai, taču mediāna ir ievērojami atšķirīga. 
+
+\newpage
+## 8. uzdevums - robustā regresija
+
+Datu ielāde:
+
+``` {r}
+library(robustbase)
+df<-coleman
+attach(df)
+summary(df)
+```
+
+Datu apraksts - valodas testu rezultāti skolās:
+
+- Y - rezultāti valodas testā;
+- salaryP - darbinieku algas uz vienu skolēnu;
+- fatherWc - to tēvu frakcija, kas strādā "white collar" darbus;
+- sstatus - socio-ekonomiskā statusa novērtējums;
+- teacherSc - skolotāju testu rezultāti;
+- motherLev - mātes izglītības līmenis;
+
+### 8.1 aprakstošās statistikas:
+
+``` {r, fig.height=3}
+library(psych)
+describe(df$Y)
+boxplot(df$Y)
+hist(df$Y)
+describe(df$salaryP)
+boxplot(df$salaryP)
+hist(df$salaryP)
+describe(df$fatherWc)
+boxplot(df$fatherWc)
+hist(df$fatherWc)
+describe(df$sstatus)
+boxplot(df$sstatus)
+hist(df$sstatus)
+describe(df$teacherSc)
+boxplot(df$teacherSc)
+hist(df$teacherSc)
+describe(df$motherLev)
+boxplot(df$motherLev)
+hist(df$motherLev)
+```
+
+### 8.2. korelācijas
+
+Korelācijas starp Y un argumentiem:
+
+``` {r}
+correlations<-cor(df)
+correlations[6,]
+```
+
+Redzams, ka socio-ekonomiskais statuss, tēva darbavietas veids un mātes izglītības līmenis ir savstarpēji ļoti cieši korelēti:
+
+``` {r}
+correlations[3,]
+```
+
+### 8.3. daudzfaktoru lineārā regresija
+
+Regresija:
+
+``` {r, message=F}
+library(car)
+```
+``` {r}
+fit_multi<-lm(Y~., data=df)
+summary(fit_multi)
+vif(fit_multi)
+fit_multi<-step(fit_multi)
+summary(fit_multi)
+```
+
+Pārbaudes - grafiski (īsi secinājumi komentāru formā):
+
+``` {r, fig.height=3}
+plot(fit_multi)
+# Residuals vs fitted: Minor visually apparent correlation
+# Normal QQ: Two significant oultiers, mostly normally distributed residuals
+# Scale-Location: not much apparent heteroscedacity
+# Leverage: No outliers with leverage
+acf(fit_multi$residuals)
+# some apparent autocorrelation
+```
+
+Pārbaudes - statistiku testi:
+
+```{r, message=F}
+library(nortest)
+```
+``` {r}
+p<-0.05
+# Are the residuals autocorrelated?
+(durbinWatsonTest(fit_multi)$p < p)
+# Are the residuals normally distributed?
+(lillie.test(fit_multi$residuals)$p.value > p)
+# Are the residuals homoscedastic?
+(ncvTest(fit_multi)$p > p)
+```
+
+### 8.4. daudzfaktoru robustā regresija
+
+Regresija:
+
+```{r}
+fit<-lmrob(Y~.,data=df)
+summary(fit)
+```
+
+Novērtējums (tikai grafiski, jo nav atbalsta lmrob objektam; secinājumi komentāros):
+
+```{r, fig.height=3}
+plot(fit)
+# Residuals vs leverage: One outlier with leverage (point 18)
+# Normal QQ vs residuals: All error terms besides outliers normally distributed
+# Response vs fitted: Two significant outliers, otherwise close fit
+# Residuals vs fitted: No clear pattern, can assume residuals are IID
+# Sqrt of residuals: can see some heteroscedacity (increasing with Y)
 
 ```
 
-
-
-``` {r}
-
-```
-
-
-
-``` {r}
-
-```
-
-
-
-``` {r}
-
-```
-
-
-
-
-
+Salīdzinājums: robustajai regresijai augstāks determinācijas koeficients (97% vs 88%), pat neizmetot savstarpēji korelētos parametrus.
