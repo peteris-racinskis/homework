@@ -1,5 +1,19 @@
 \begin{thebibliography}{10}
 
+\bibitem{TrailClose}
+Slēgta vēl virkne dabas taku un skatu torņi.
+\newblock {\em Latvijas Sabiedriskie Mediji}, 12.
+
+\bibitem{TrailDestruct}
+K.~Balcare.
+\newblock Covid-19 blaknes: dabas izbradātāji, sejas maskas mežā un slēgti
+  objekti.
+\newblock {\em Delfi.lv}, 12.
+
+\bibitem{EcoCounter}
+EcoCounter.
+\newblock Parks and recreation.
+
 \bibitem{HM2007}
 HMC.
 \newblock {\em HM2007 Speech Recognition}.
@@ -19,6 +33,14 @@ K.~Mekki, E.~Bajic, F.~Chaxel, and F.~Meyer.
 \newblock A comparative study of lpwan technologies for large-scale iot
   deployment.
 \newblock {\em ICT express}, 5(1):1--7, 2019.
+
+\bibitem{Muhar:Methods}
+A.~Muhar, A.~Arnberger, and C.~Brandenburg.
+\newblock Methods for visitor monitoring in recreational and protected areas:
+  An overview.
+\newblock {\em Monitoring and Management of Visitor Flows in Recreational and
+  Protected Areas. Institut for Landscape Architecture \& Landscape Management
+  Bodenkultur University Vienna}, 2001:1--6, 2002.
 
 \bibitem{LORAWAN-hills}
 B.~Myagmardulam, R.~Miura, F.~Ono, T.~Kagawa, L.~Shan, T.~Nakayama, F.~Kojima,
