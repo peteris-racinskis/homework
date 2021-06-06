@@ -8,7 +8,7 @@
 % ewsn-proc is based on sigplan-proc-varsize 
 % The default of sigplan-proc-varsize is 9pt, indented paragraphs (ACM style)
 % For EWSN or other 10pt conference, use the 10pt option
-\documentclass[10pt,emptycopyrightspace]{ewsn-proc}
+\documentclass[10pt,nocopyrightspace]{ewsn-proc}
 
 % TODO do we really need this?
 % % hack to avoid the ugly ACM paragraph definition
@@ -19,7 +19,7 @@
 \usepackage{graphicx}
 \usepackage{balance}
 \usepackage{comment}
-
+\usepackage{xurl}
 
 %
 % NOTE
@@ -59,6 +59,45 @@
 
 \begin{abstract}
 TODO
+
+TODO 
+
+TODO
+
+TODO
+
+TODO
+
+TODO
+
+TODO 
+
+TODO
+
+TODO
+
+TODO
+
+TODO
+
+TODO 
+
+TODO
+
+TODO
+
+TODO
+
+TODO
+
+TODO 
+
+TODO
+
+TODO
+
+TODO
+
 \end{abstract}
 
 %
@@ -77,10 +116,19 @@ TODO
 % \keywords{ACM proceedings, \LaTeX, text tagging}
 
 \section{Introduction}
-  \label{sec:intro}
 Latvia is a nation proud of its extensive forest cover, and various sights located in forested surroundings account for a significant fraction of stopping places frequented by any tourist deigning to venture outside the major cities. As in any other visitor-oriented industry, having a clear understanding of attendance patterns is very important for the management, maintenance and adequate monetization of destinations for the management of nature tourism destinations. The very qualities that make these locations desirable in the eyes of potential visitors - remoteness, limited marks of human presence, untouched natural scenery - naturally create a series of challenges when it comes to creating data collection infrastructure. While under normal circumstances this might be enough to thoroughly dissuade any further efforts, events such as the recent (and as of the writing of this paper, still ongoing) COVID-19 pandemic show that traditional methods of visitor count estimation might not be adequate in keeping up with changes in travel patterns. With the shutdown of international travel and various social distancing measures in place, domestic nature tourism sites have experienced damage\cite{TrailDestruct} and full-on closures\cite{TrailClose}. Traditional methods of estimating how many sightseers have walked a trail and used its amenities include surveys and short-term targeted data collection, but these are not adequate for tracking both the long-term evolution and short term fluctuations in load. The negative effects of this lack of information can range from inadequate or out-of-service trail facilities, over- or under-investment in certain objects, unnoticed obstructions, wildlife destruction off-path and lost business opportunities.
 
 Thankfully, over the past decade significant progress has been made in the development of low-power, long-range communications technology that enables relatively inexpensive data collection even over large areas in difficult terrain. Coupled with inexpensive sensor and computing hardware these advances make possible persistent data collection of the kind and scope required for visitor count estimation. The goal of this paper is to propose a specific architecture for a wireless sensor node that might be used to this end, using LoRa and PIR technology.
+
+
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[height=2in]{./Images/map1-Viesata}
+\caption{Map of the Viesata River Bends trail, one of the more challenging locations for WSN application. Much of the trail follows the prominent ravine carved by the flow of the river, the banks of which are sheer inclines up to around 10 meters in height and covered in dense vegetation.}
+\end{figure}
+
+
 
 
 \section{Related Work}
@@ -95,7 +143,6 @@ Finally, it needs to be acknowledged that for any application exploitable by rea
 
 
 \section{Problem Description}
-TODO
 
 \section{Approach}
 The visitor counting problem can be broken down into two main components: visitor detection and sensor network design. In the case of most proposed network architectures and visitor detection schemes, the problems can be tackled independently, as the practical upshot of their employment is the same regardless.
@@ -119,7 +166,7 @@ Active IR relies on a radiation source and detector, either in two separate devi
 
 Alternatively, reflectorless designs are possible where the opposite is the case - a low baseline return is assumed and the sensor goes active in response to the light reflected from a nearby body. This does away with any alignment requirements but results in significantly reduced detection ranges. This type of setup is also more difficult to calibrate, as one has to contend with the broad range of possible surface reflectivities, surrounding stationary objects and continually changing ambient lighting conditions, all of which complicate setting decision thresholds.
 
-The radiation may in either case be continuous or pulsed, the latter case allowing for fast, transient interruptions to be filtered through the use of impulse counting. As it has to constantly emit radiation in addition to powering the light detection circuitry, an active IR solution can generally be assumed to have higher constant current draw (by a figure on the order of at least 10mA).
+The radiation may in either case be continuous or pulsed, the latter case allowing for fast, transient interruptions to be filtered through the use of impulse counting. As it has to constantly emit radiation in addition to powering the light detection circuitry, an active IR solution can generally be assumed to have higher constant current draw (by a figure on the order of at least 10mA \cite{ActiveIR}).
 
 A related family of technologies employs the same principle but with different types of radiation - such as radio-frequency or laser light. Both of the above improve system range at the expense of system cost and power consumption. The use of RF barrier-type detectors is described in the Slitere case study paper\cite{Slitere}.
 

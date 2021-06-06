@@ -3,51 +3,49 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: wsn-paper-Racinskis.aux
 The style file: abbrv.bst
 Database file #1: sigproc.bib
-Warning--entry type for "EcoCounter" isn't style-file defined
---line 19 of file sigproc.bib
 Warning--to sort, need author or key in TrailClose
 Warning--empty author in TrailClose
-Warning--there's a month but no year in TrailClose
-Warning--there's a month but no year in TrailDestruct
-You've used 14 entries,
+Warning--empty year in TrailClose
+Warning--empty year in TrailDestruct
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            583 strings with 6201 characters,
-and the built_in function-call counts, 3666 in all, are:
-= -- 355
-> -- 169
+            589 strings with 6472 characters,
+and the built_in function-call counts, 3895 in all, are:
+= -- 379
+> -- 176
 < -- 1
-+ -- 71
-- -- 56
-* -- 246
-:= -- 616
-add.period$ -- 37
-call.type$ -- 14
-change.case$ -- 70
++ -- 74
+- -- 58
+* -- 253
+:= -- 655
+add.period$ -- 43
+call.type$ -- 15
+change.case$ -- 74
 chr.to.int$ -- 0
-cite$ -- 18
-duplicate$ -- 144
-empty$ -- 296
-format.name$ -- 56
-if$ -- 758
+cite$ -- 19
+duplicate$ -- 151
+empty$ -- 318
+format.name$ -- 58
+if$ -- 808
 int.to.chr$ -- 0
-int.to.str$ -- 14
+int.to.str$ -- 15
 missing$ -- 9
-newline$ -- 67
-num.names$ -- 18
-pop$ -- 77
+newline$ -- 75
+num.names$ -- 20
+pop$ -- 91
 preamble$ -- 1
-purify$ -- 60
+purify$ -- 63
 quote$ -- 0
 skip$ -- 95
 stack$ -- 0
-substring$ -- 159
-swap$ -- 21
+substring$ -- 164
+swap$ -- 22
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 54
+type$ -- 58
 warning$ -- 4
-while$ -- 28
-width$ -- 16
-write$ -- 135
-(There were 5 warnings)
+while$ -- 30
+width$ -- 17
+write$ -- 148
+(There were 4 warnings)

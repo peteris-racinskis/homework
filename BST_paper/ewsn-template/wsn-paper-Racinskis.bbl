@@ -2,17 +2,19 @@
 
 \bibitem{TrailClose}
 Slēgta vēl virkne dabas taku un skatu torņi.
-\newblock {\em Latvijas Sabiedriskie Mediji}, 12.
+\newblock {\em Latvijas Sabiedriskie Mediji}.
 
 \bibitem{TrailDestruct}
 K.~Balcare.
 \newblock Covid-19 blaknes: dabas izbradātāji, sejas maskas mežā un slēgti
   objekti.
-\newblock {\em Delfi.lv}, 12.
+\newblock {\em Delfi.lv}.
 
 \bibitem{EcoCounter}
 EcoCounter.
 \newblock Parks and recreation.
+\newblock \url{https://www.eco-counter.com/application/parks-recreation/}.
+\newblock Accessed: 06/06/2021.
 
 \bibitem{HM2007}
 HMC.
@@ -48,6 +50,13 @@ B.~Myagmardulam, R.~Miura, F.~Ono, T.~Kagawa, L.~Shan, T.~Nakayama, F.~Kojima,
 \newblock Performance evaluation of lora 920 mhz frequency band in a hilly
   forested area.
 \newblock {\em Electronics}, 10(4):502, 2021.
+
+\bibitem{ActiveIR}
+P.~R. Narendra.
+\newblock Energy efficient active ir sensor’s transmitter design.
+\newblock
+  \url{https://medium.com/appiko/energy-efficient-active-ir-sensors-transmitter-design-a2442bce4e1d}.
+\newblock Accessed: 06/06/2021.
 
 \bibitem{LORAWAN-optimal}
 J.~Petajajarvi, K.~Mikhaylov, A.~Roivainen, T.~Hanninen, and M.~Pettissalo.
