@@ -50,7 +50,7 @@
 }
 
 
-\title{Forest trail visitor load estimation using WSNs}
+\title{Sensor Node Design for Forest Trail Visitor Load Estimation}
 
 
 \begin{document}
@@ -134,10 +134,17 @@ Finally, it needs to be acknowledged that for any application exploitable by rea
 \begin{figure}[t!]
 \centering
 \includegraphics[height=2.2in]{./Images/map1-Viesata}
-\caption{Topological map of the Viesata River Bends trail, one of the more challenging locations for WSN application. Much of the trail follows the prominent ravine carved by the flow of the river, the banks of which are sheer inclines up to around 10 meters in height and covered in dense vegetation. Straight-line distance between park entry and the furthest point on the track is around 2.1km, and it follows the straight-line/loop pattern.}
+	\caption{Topographical map of the Viesata River Bends trail, one of the more challenging locations for WSN application. Much of the trail follows the prominent ravine carved by the flow of the river, the banks of which are sheer inclines up to around 10 meters in height and covered in dense vegetation. Straight-line distance between park entry and the furthest point on the track is around 2.1km, and it follows the straight-line/loop pattern. \textit{Map generated using the LVM Geo tool courtesy of AS "Latvijas Valsts Meži"}}
 \end{figure}
 
-\section{Problem Description}
+\begin{figure}[t!]
+\centering
+\includegraphics[height=2.2in]{./Images/viesata_image}
+	\caption{Photo of the Viesata Ravine, taken looking from around the mid-point of the River Bends trail towards the entry point and parking lot area. While for much of its length the trail follows the edge of the embankment, at several points it descends into the gully below, where line of sight is obstructed by terrain in addition to vegetation - and it is precisely there that many points of interest are located. \textit{Photo by author}}
+\end{figure}
+
+
+\section{Motivating Application}
 
 \section{Approach}
 The visitor counting problem can be broken down into two main components: visitor detection and sensor network design. In the case of most proposed network architectures and visitor detection schemes, the problems can be tackled independently, as the practical upshot of their employment is the same regardless.
@@ -187,7 +194,7 @@ However, most of this work seems to have gone into short-ranged consumer goods d
 
 The other method proposed is footstep detection. Being the only species of animal to walk upright, wearing hard-soled footwear to boot, humans produce a unique auditory signature when in motion. Furthermore, this is our preferred method of locomotion, which means that one can reliably count on detecting its signature whenever moving humans are around. The fundamental idea of isolating both the low-to-ultrasonic frequency spectra of single footsteps as well as their predictably repeating pattern has been studied for military applications\cite{NATOfootsteps}, and found to be a viable direction of inquiry. As per the cited source, signatures significantly above the noise floor can be extracted in the 100-300Hz as well as 25-26kHz ranges. Additional work still needs to be done in learning to robustly isolate these from other possible sources of noise in these ranges, but one can expect the periodic step pattern to make this task drastically easier than it would appear at first glance. 
 
-Notable advantages a sound signature based detection system could offer over the previously examined ones is the lack of positional/directional coupling with the path of travel - the sensor can be more easily concealed away from the trail, in more favorable environmental and RF communication conditions - such as high in trees or off-trail.
+A notable advantage a sound signature based detection system could offer over the previously examined ones is the lack of positional/directional coupling with the path of travel - the sensor can be more easily concealed away from the trail, in more favorable environmental and RF communication conditions - such as high in trees or off-trail.
 
 \subsubsection{RF Signature Detection}
 The original idea that inspired this paper, yet turned out to be impossible to test in practice due to a delayed SDR module which was to be used to test the RF emissions of typical cellular devices under various practical conditions. A trail in the forest is far removed from most sources of EMI that can be found in densely populated or industrialized areas, which makes the phone carried by nearly all of us everywhere we go a strong indicator of human presence. Furthermore, the sources of interference that are present away from human-settled areas can be expected to be of highly chaotic nature and cover broad frequency bands, which should prove easily distinguishable from structured narrowband communications transmissions.
