@@ -1,0 +1,59 @@
+\begin{thebibliography}{10}
+
+\bibitem{HM2007}
+HMC.
+\newblock {\em HM2007 Speech Recognition}.
+
+\bibitem{Kajala:Baltic}
+L.~Kajala.
+\newblock {\em Visitor monitoring in nature areas: A manual based on
+  experiences from the Nordic and Baltic countries}.
+\newblock Nordic Council of Ministers, 2007.
+
+\bibitem{Slitere}
+Latvian Country Tourism Association.
+\newblock {\em Visitor Monitoring Guidelines in Protected Nature Areas}, 2012.
+
+\bibitem{LPWAN-compare}
+K.~Mekki, E.~Bajic, F.~Chaxel, and F.~Meyer.
+\newblock A comparative study of lpwan technologies for large-scale iot
+  deployment.
+\newblock {\em ICT express}, 5(1):1--7, 2019.
+
+\bibitem{LORAWAN-hills}
+B.~Myagmardulam, R.~Miura, F.~Ono, T.~Kagawa, L.~Shan, T.~Nakayama, F.~Kojima,
+  and B.~Choijil.
+\newblock Performance evaluation of lora 920 mhz frequency band in a hilly
+  forested area.
+\newblock {\em Electronics}, 10(4):502, 2021.
+
+\bibitem{LORAWAN-optimal}
+J.~Petajajarvi, K.~Mikhaylov, A.~Roivainen, T.~Hanninen, and M.~Pettissalo.
+\newblock On the coverage of lpwans: range evaluation and channel attenuation
+  model for lora technology.
+\newblock In {\em 2015 14th International Conference on ITS Telecommunications
+  (ITST)}, pages 55--59. IEEE, 2015.
+
+\bibitem{Pettebone:Yosemite}
+D.~Pettebone, P.~Newman, and S.~R. Lawson.
+\newblock Estimating visitor use at attraction sites and trailheads in yosemite
+  national park using automated visitor counters.
+\newblock {\em Landscape and Urban Planning}, 97(4):229--238, 2010.
+
+\bibitem{NATOfootsteps}
+J.~M. Sabatier and A.~E. Ekimov.
+\newblock Ultrasonic methods for human motion detection.
+\newblock Technical report, MISSISSIPPI UNIV UNIVERSITY NATIONAL CENTER FOR
+  PHYSICAL ACOUSTICS, 2006.
+
+\bibitem{TI:PIR}
+Texas Instruments.
+\newblock {\em Design of Ultra-Low Power Discrete Signal Conditioning Circuit
+  for Battery-Powered Wireless PIR MotionDetectors}, 1 2017.
+
+\bibitem{TI:APP}
+Texas Instruments.
+\newblock {\em Ultra-Low-Power Wireless PIR Motion Detector for Cost-Optimized
+  Systems Reference Design}, 1 2017.
+
+\end{thebibliography}
