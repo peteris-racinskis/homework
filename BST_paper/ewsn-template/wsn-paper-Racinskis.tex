@@ -121,16 +121,6 @@ Latvia is a nation proud of its extensive forest cover, and various sights locat
 Thankfully, over the past decade significant progress has been made in the development of low-power, long-range communications technology that enables relatively inexpensive data collection even over large areas in difficult terrain. Coupled with inexpensive sensor and computing hardware these advances make possible persistent data collection of the kind and scope required for visitor count estimation. The goal of this paper is to propose a specific architecture for a wireless sensor node that might be used to this end, using LoRa and PIR technology.
 
 
-
-\begin{figure}[hbt!]
-\centering
-\includegraphics[height=2in]{./Images/map1-Viesata}
-\caption{Map of the Viesata River Bends trail, one of the more challenging locations for WSN application. Much of the trail follows the prominent ravine carved by the flow of the river, the banks of which are sheer inclines up to around 10 meters in height and covered in dense vegetation.}
-\end{figure}
-
-
-
-
 \section{Related Work}
 
 Naturally, this being a rather mundane problem, efforts have been directed towards solving it before. One of the more prominent papers on the subject, \textit{“Estimating visitor use at attraction sites and trailheads in Yosemite National Park using automated visitor counters”} by Pettebone et al.\cite{Pettebone:Yosemite}, takes the relatively straightforward approach of utilizing commercial off-the-shelf (hereafter COTS) wildlife monitoring equipment without any networked communication capability to count visitors in select locations across the park. Most of the paper is devoted to cross-referencing the data collected in this fashion with observations through other methods and verifying its reliability. The devices used in the paper are rather bulky and expensive, using active infrared technology to detect interruption events between a beam source and sink. \textit{“Methods for Visitor Monitoring in Recreational and Protected Areas:
@@ -141,6 +131,11 @@ For more geographically proximate takes on the subject one can turn to \textit{�
 Finally, it needs to be acknowledged that for any application exploitable by reasonably mature technologies, commercial solutions are bound to exist. EcoCounter is a company that offers integrated sensor-node and data collection service solutions \cite{EcoCounter}. These utilize PIR detection technology and cellular networking, the latter of which combined with the turn-key service-based approach make competition on price and application freedom viable.
  
 
+\begin{figure}[t!]
+\centering
+\includegraphics[height=2.2in]{./Images/map1-Viesata}
+\caption{Topological map of the Viesata River Bends trail, one of the more challenging locations for WSN application. Much of the trail follows the prominent ravine carved by the flow of the river, the banks of which are sheer inclines up to around 10 meters in height and covered in dense vegetation. Straight-line distance between park entry and the furthest point on the track is around 2.1km, and it follows the straight-line/loop pattern.}
+\end{figure}
 
 \section{Problem Description}
 
@@ -166,7 +161,8 @@ Active IR relies on a radiation source and detector, either in two separate devi
 
 Alternatively, reflectorless designs are possible where the opposite is the case - a low baseline return is assumed and the sensor goes active in response to the light reflected from a nearby body. This does away with any alignment requirements but results in significantly reduced detection ranges. This type of setup is also more difficult to calibrate, as one has to contend with the broad range of possible surface reflectivities, surrounding stationary objects and continually changing ambient lighting conditions, all of which complicate setting decision thresholds.
 
-The radiation may in either case be continuous or pulsed, the latter case allowing for fast, transient interruptions to be filtered through the use of impulse counting. As it has to constantly emit radiation in addition to powering the light detection circuitry, an active IR solution can generally be assumed to have higher constant current draw (by a figure on the order of at least 10mA \cite{ActiveIR}).
+The radiation may in either case be continuous or pulsed, the latter case allowing for fast, transient interruptions to be filtered through the use of impulse counting. As it has to constantly emit radiation in addition to powering the light detection circuitry, an active IR solution can generally be assumed to have higher constant current draw (by a figure on the order of at least 10mA, as elaborated upon in efforts to design active IR detector hardware \cite{ActiveIR}).
+
 
 A related family of technologies employs the same principle but with different types of radiation - such as radio-frequency or laser light. Both of the above improve system range at the expense of system cost and power consumption. The use of RF barrier-type detectors is described in the Slitere case study paper\cite{Slitere}.
 
