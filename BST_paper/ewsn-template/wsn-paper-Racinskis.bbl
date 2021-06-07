@@ -87,6 +87,14 @@ J.~M. Sabatier and A.~E. Ekimov.
 \newblock Technical report, MISSISSIPPI UNIV UNIVERSITY NATIONAL CENTER FOR
   PHYSICAL ACOUSTICS, 2006.
 
+\bibitem{antenna-select}
+Texas Instruments.
+\newblock {\em Antenna Selection Guide}, 10 2010.
+
+\bibitem{antenna-datasheet}
+Texas Instruments.
+\newblock {\em Monopole PCB Antenna with Single or Dual Band Option}, 10 2013.
+
 \bibitem{TI:PIR}
 Texas Instruments.
 \newblock {\em Design of Ultra-Low Power Discrete Signal Conditioning Circuit

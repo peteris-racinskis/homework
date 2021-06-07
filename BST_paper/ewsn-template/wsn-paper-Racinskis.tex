@@ -58,46 +58,7 @@
 \maketitle
 
 \begin{abstract}
-TODO
-
-TODO 
-
-TODO
-
-TODO
-
-TODO
-
-TODO
-
-TODO 
-
-TODO
-
-TODO
-
-TODO
-
-TODO
-
-TODO 
-
-TODO
-
-TODO
-
-TODO
-
-TODO
-
-TODO 
-
-TODO
-
-TODO
-
-TODO
-
+\textit{Visitor count estimation in remote tourist destinations is a fertile ground for Wireless Sensor Network (WSN) application, especially in light of the significant shifts in demand resulting from the COVID-19 pandemic. As part of this design study, multiple potential sites are surveyed and a motivating use case is derived. Against this a range of visitor presence detection methods and wireless network technologies are examined and the most promising selected. These selections then go on to form the basis for a wireless sensor node design proposal.}  
 \end{abstract}
 
 %
@@ -249,12 +210,25 @@ When it comes to selecting a WSN architecture, it usually comes down to a choice
 
 \textbf{LoWPANs}, typically operating on physical layers such as the IEEE 802.15.4 protocol specification, are generally optimized for short ( $<$ 200m ) transmission distances and scale by forming mesh networks - where every node serves as a router and packet forwarder. This approach is favorable when the nodes can be expected to be relatively densely packed and uniformly distributed, with no distant outliers - a condition which cannot be guaranteed under the problem specification given above. A more congested network where nodes also function as routers results in an energy overhead for communication that isn’t strictly necessary unless throughput requirements mandate it.
 
+
 \textbf{LPWANs} emphasize very low power requirements almost to the exclusion of all other criteria. As of 2021, there are 3 major contenders in this market niche, all proprietary technologies, whose advantages and disadvantages, discussed in Mekki et al. \cite{LPWAN-compare}, as they pertain to the visitor counting problem can be summed up as follows:
 \begin{itemize}
 \item \textbf{Sigfox.} A very long range (up to 40km), extremely low throughput (100bps, limited to 140 messages-day) ultra-narrow bandwidth (100Hz at 868/915/433MHz) ISM band technology. Not an international standard - developed by a single company. Limited support for bi-directional communications. Meets the range and power requirements by sacrificing heavily in data rates, which matter little for this specific use case. 
+
+
+\begin{figure}[t!]
+\centering
+\includegraphics[height=2.2in]{./Images/detector}
+\caption{A board layer and 3-dimensional CAD view of the detector module circuit board. Futher floor-plan optimization is clearly possible in terms of space savings, but has been put off until the correct operation of the circuit and external enclosure form factor can be verified.}
+\end{figure}
+
+
+
 \item \textbf{LoRaWAN.} Long range (up to 20km under ideal conditions), variable throughput (up to 50kpbs, much lower under most configurations) ISM band technology. The physical layer of the standard relies on a proprietary chirp spread spectrum modulation technique that has been reliably reverse engineered in Knight et al. \cite{Lora-decode}, which enables reception below the “noise floor” - negative signal-to-noise ratios \cite{Lora-docs}. Relatively high data rates can be maintained at long ranges while maintaining relatively low transmitter power. Standardized by the LoRa-Alliance, implementations available from many vendors internationally with a growing support base in software and hardware. Meets the range requirements assuming it is possible to correct for local variation in reception\footnote{While under ideal conditions\cite{LORAWAN-optimal} ranges of 15-30km can be attained, when faced with vegetation and hilly terrain communication can be disrupted even at short ranges\cite{LORAWAN-hills}}, this is the middle-of-the-road option in most aspects, and the most well-documented one.
 \item \textbf{NB-IoT.} Medium-to-long range (up to 10km) relatively high throughput (200kbps) system based on LTE and operating in licensed frequency bands. As the shortest range, highest power and costliest this is also the least desirable option.
 \end{itemize}
+
+
 
 \textbf{Selection.} After taking the above factors into consideration, LoRaWAN has been selected as the network technology for this project. Cellular networking is attractive due to ready availability of pre-existing infrastructure, but a major drawback is high power consumption - cellular transmitters operating at maximum ranges may have to consume thousands of milliwatts of power as opposed to the 20mW transmit power limit of LoRa transceivers. \cite{Lora-docs} Moreover, COTS systems utilizing it already exist - therefore limiting the possibility of innovation in this direction and opening up opportunities for competition on cost by using a more lightweight, less power-hungry technology for the individual sensor nodes. 
 
@@ -269,6 +243,15 @@ A complete sensor network solution requires the sensing elements, transmitters, 
 
 \subsection{Hardware}
 
+\begin{figure}[t!]
+\centering
+\includegraphics[height=2.2in]{./Images/transmitter}
+\caption{Views of the transmitter module. The significant area taken up by the integrated antenna is visible. Some inefficiency in board area utilization is introduced by the desire to keep all external connections on the bottom of the board.}
+\end{figure}
+
+
+
+
 
 \subsubsection{Overall}
 In the process of sensor node hardware development it was quickly realized that the control-transmission and motion event detection subsystems are largely independent and only linked through a narrow interface of common power supply potentials and 1-2 discrete-valued data lines. Furthermore, these modules are subject to some diametrically opposed design incentives:
@@ -280,19 +263,68 @@ In the process of sensor node hardware development it was quickly realized that 
 
 Therefore the decision was made early on to split the device into two separate circuit boards, linked by a 4-wire connection. Given the extremely low operating currents (which mean transmission line voltage drops measured in mili- or micro- volts) and near-DC signal frequencies (inductors resemble short-circuits and capacitors resemble insulators), a wire connection is effectively invisible in terms of impedance. This decouples the transmitter and detector spatially, allowing their positioning to be optimized independently. Furthermore, the reduced size of the sensing board itself makes it less remarkable to passers-by with potentially destructive intent.
 
+\subsubsection{Detector}
+Most COTS PIR detectors consist of a two-segment pyroelectric device, the elements of which are wired in opposite directions so that only a differential signal produces a net voltage difference across the terminals of the sensor. This is then fed into the gate of a field effect transistor which switches a current across a resistor. Typically the recommended resistor values are in the tens-of-kOhm range, which would result in operating currents measurable in tens of microamps. It is possible to use a higher resistance value in combination with an amplifier circuit to reduce power draw, and that is exactly what has been done in the circuit described by \textit{Texas Instruments} \cite{TI:PIR, TI:APP}. 4 operational amplifiers are used - two as bandpass filter and gain stages and two as window detectors that produce clean activation waveforms when human motion is detected. The design has been extensively tested and verified in operation, and thus utilized with only minor changes in this application - namely using a slightly different version and package of the op-amp, and a power supply routed in from a different board.. 
+
+\subsubsection{Transmitter}
+The transmitter module requires two primary components - a LoRa transceiver and a microcontroller. Once these have been selected, peripherals can be added.
+
+\textbf{Transceiver.} A multitude of LoRa transceiver modules are available on the market, but a shortlist of criteria can be used to narrow down the choice substantially:
+\begin{itemize}
+\item \textbf{Driver support.} The device needs to be supported on as many operating systems and other kinds of development platforms as possible, minimizing development time and coupling with other elements of the system in the early design phases.
+\item \textbf{Documentation.}  Extensive, readily available and clear documentation is crucial for developing software to interface with the device.
+\item \textbf{Availability.}  Having the ability to source the device from many vendors in both the prototyping and serial production phases is a major advantage.
+\item \textbf{RF module packaging.} A common way to speed up RF-capable circuit board design is utilization of pre-made, shielded surface-mount radio modules that already contain the necessary power supply and frequency generation circuitry. This allows end-application designers to avoid many of the time-intensive steps involved in designing PCBs for high-frequency applications.
+\end{itemize}
+
+With these considerations in mind, a clear winner is the ubiquitous module based on a \textit{Semtech Sx1276} dual-purpose LoRa/FSK modem IC. Available from any component vendor at a negligible markup over the single IC cost, these modules are the \textit{de facto} standard in LoRa-enabled device design. Another strong point in their favor is the fact that the author happened to be in possession of several of these modules before even starting work on this project.
+
+\textbf{Microcontroller.} Initially the direct application of one of the \textit{Atmega} series microcontrollers already available for direct testing was considered, but under closer inspection the poor energy efficiency of these devices ruled out this approach. After a protracted research phase, with the initial filtering done with respect to the Operating System selected below, the final choice was made from the following device families:
+\begin{itemize}
+\item \textbf{Microchip SAMD21 series.} Generally good power consumption and performance indicators, limited flash memory in the lower price ranges. Difficulties in setting up the development toolchain. Limited availability for less popular models at favored vendors.
+\item \textbf{Texas Instruments MSP430 series.} Mature product line commonly found in sensor motes, notably the venerable TelosB mote; relatively high price for the same performance as the others. Limited availability for less popular models at favored vendors.
+\item \textbf{ST STM32l0 series.} High performance while also retaining low prices. Easy to set up toolchains. Most of the product range is consistently available across multiple suppliers.
+\end{itemize}
+Thus the \textit{STM32l053R8} was selected as the MCU for this system. Middle-of-the-road in terms of performance (particularly flash memory size), pin-compatible with devices both higher and lower in the capability stack in the 64-pin package. Available in the form of a development kit which can aid rapid application development without the requirement to manufacture prototype boards.
+
+\textbf{Antenna.} One of the most important aspects of RF device design is devising a proper antenna for the application. Fortunately, small form factor devices transmitting or receiving signals in the ISM frequency range are a common enough application that standardized designs and selection guides exist for this problem. In order to limit cost, size and the risk of water or particle ingress, a PCB antenna design was preferred. Following the \textit{Texas Instruments} antenna selection guide \cite{antenna-select} the highest efficiency design was selected \cite{antenna-datasheet}. The dimensions for this design are available for use free of charge. The antenna is a dual-band design, which can operate in both the 868MHz and 2.4GHz range without an external impedance matching network. However, this was added as there is no intention to use the secondary band capability of the design.
+
+\textbf{Power supply.} The system is capable of standby currents under 200uA, assuming the transceiver is switched off. Depending on certain settings and conditions this figure may indeed be significantly lower, but empirical testing and design verification is necessary before any assumptions can be made to this end. With the microcontroller running, transient current draws up to around 6mA can be expected. During the transmit phase, assuming maximum, boosted 20dBm transmitter output, the board can draw over 120mA. Assuming the lowest data rate, this transmission can last up to 11 seconds. In practical applications this duration is likely to be significantly lower, but without \textit{in situ} testing it is inadvisable to discount this worst-case scenario up front. 
+
+The first decision is voltage regulator selection. Switch-mode power supplies are generally more efficient than linear regulators, but also more expensive, and fewer COTS solutions exist at the very low end of the current draw spectrum. Therefore linear regulators are assumed. Given the orders of magnitude in difference between the highest and lowest power consumption modes, a two stage strategy is adopted - a low power voltage source to power the system while in standby or pure MCU running mode, and a secondary, higher current device with a shutdown mode for powering the transceiver.
+
+Using linear regulators means that current draw is roughly a conserved quantity across voltage stages, and therefore provisional estimates can be made of total energy consumption in terms of mAh. Over the course of a year the low-power elements in the system can be expected to draw around 1800mAh, while the transmitter, performing a single worst-case transmit operation per year, would consume around 3300mAh. These figures are disappointingly high, but can quite likely be significantly reduced in practice. Nevertheless, commitment to any specific battery design is not possible at this stage, so pin headers are provided for connecting an external Li-Ion battery and optional 5V solar cell. An integrated battery charging circuit is provided and configured to charge the battery at 100mA when external voltage above the battery voltage is available on the solar pin header.
 
 \subsection{Software}
+Since the hardware platform has not been finalized and the target equipment is not available for testing, everything in this section is to be treated as provisional. Depending on power consumption in practice, some tasks like the timing of transmissions and waking up the chip movement events might have to be delegated to additional low-power hardware. Nevertheless, even a provisional implementation gives some insights into approaching the problem at hand and estimating compiled binary size (which is dominated by operating system and included package size).
 
+\textbf{Operating System.}
+Selecting the operating system is an iterative process tightly intertwined with microcontroller selection. Some of the factors affecting the choice were as follows:
+\begin{itemize}
+\item \textbf{Driver availability.} One of the main benefits of using a platform rather than writing bare metal code is the presence of device drivers that provide a convenient layer of abstraction and save on development time.
+\item \textbf{Platform independence.} Particularly early on in the planning and design stage, having an OS that can be ported to different end architectures is a major advantage as it allows pivots and initial testing on different hardware.
+\end{itemize}
+Due to the idiosyncratic mix of available testing hardware, driver requirements and support for microcontroller platforms then being considered for selection, the OS that was chose was RIOT OS, an open source IoT-focused platform that provides a relatively small kernel, support for very low power applications and integration with a wide range of network technologies, LoRa included. This helped narrow down the microcontroller selection, and when the STM32 option ended up being chosen, another alternative presented itself: ARM mbedOS, which provides \textit{Sx1276} drivers but is only available on ARM Cortex-M microcontrollers. However, it proved that while support for the \textit{STM32l053} had at one point been available on this platform and even served as the example application for LoRa integration, this had been deprecated in later versions, leaving RIOT OS as the only serious contender.
+
+\textbf{Transmit timing strategy.}
+In RIOT, like in many other embedded operating systems, a thread that sets the controller to the lowest possible power setting runs when all other threads are blocked. Consequently a low-power wait mode can be implemented simply through the use of a blocking timer, if no other tasks need to be performed in the primary thread of execution. In the provisional application, this is done by simply creating a loop in the main() function where the transmit sequence is called, followed by a day-long sleep cycle. No reception of acknowledgement or configuration packets from the base stations is envisioned, though it is possible to implement both without too much additional effort.
+
+\textbf{Motion event detection.}
+In the absence of dedicated wakeup hardware, signals from the PIR sensor are connected directly to GPIO pins configured as interrupts. In the provisional application the interrupt utilizes the IPC functionality provided by the operating system to notify a blocked event logger thread that a motion event has been registered. The event logger thread wakes up in response to events in the message queue, creates an event record and stores it in a buffer. This approach is used rather than the IPC message passing interface due to the message format constraints - a single message is limited to a 4-byte integer in content. A static buffer accessed by the event logger and main execution thread through the use of mutexes thus allows one to use records of arbitrary structure, even though at this stage only a truncated and divided timestamp of the same 4-byte integer size is used. 
+
+\section{Estimated Cost}
+Since the device was designed using the integrated \textit{EasyEDA} (design tool) - \textit{LCSC} (component supplier) - \textit{JLCPCB} (PCB manufacturer) online design pipeline, the PCB and schematic files can be converted straight into BOMs and PCB manufacturing work orders. Thus the following BOM and manufacture prices were derived:
+
+\begin{itemize}
+\item Detector - \$6.52 Bill of Materials (BOM) cost, PCB manufacture \$0.07/unit (at 1000 units). The SMT service was sadly not available at the time of writing, but unit cost can be assumed to be negligible compared to the BOM component.
+\item Transmitter - \$12.20 BOM, \$0.18 PCB
+\end{itemize}
+
+Even though the SMT assembly, enclosure, wire, battery and fastener prices have not been accounted for, this is already a promising indicator, as the price range for all but the lowest capability 4g modules typically only starts at \$10-20/unit, and that is before accounting for costs saved in operation. 
 
 \section{Conclusions}
-This paragraph will end the body of this sample document.
-Remember that you might still have Acknowledgments, a brief sample
-follows.  There is still the References (Bibliography) to deal with; and
-we will make a disclaimer about that here: with the exception
-of the reference to the \LaTeX\ book, the citations in
-this paper are to articles which have nothing to
-do with the present subject and are used as
-examples only.
+Over the course of this project a potential application for wireless sensor networks and the emerging LoRa technology in particular was explored, and a design proposal was created. Due to the frustrating pandemic-related circumstances, however, the scope of this work turned out to be much more limited than the author had initially hoped. The very much belated arrival of an SDR, initially intended for attempting to extract RF signature data from mobile devices carried by passers-by, prevented the exploration of this visitor detection method. Furthermore, it also precluded the testing of the available transceiver module hardware. Moreover, it proved impossible to obtain a microcontroller development for testing the software platform, thus limiting the practical side of this project to electrical design, writing generic provisional code and attempts to test it on vastly different, but available, hardware.
+
 
 \newpage
 
@@ -308,9 +340,6 @@ examples only.
 %his help in codifying this \textit{Author's Guide}
 %and the \textbf{.cls} and \textbf{.tex} files that it describes. 
 %Both files are also hacked by John Heidemann and Rasit Eskicioglu.
-
-Note that we used \texttt{balance} style to make the columns on this (the last) page evenly distributed. Also note that the references are typeset in \texttt{{\char'134}small} size. Please do not change this or any other settings.
-
 
 %
 % NOTE

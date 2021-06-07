@@ -9,45 +9,45 @@ Warning--empty author in TrailClose
 Warning--empty year in TrailClose
 Warning--empty year in TrailDestruct
 Warning--can't use both volume and number fields in Lora-decode
-You've used 17 entries,
+You've used 19 entries,
             2118 wiz_defined-function locations,
-            599 strings with 6699 characters,
-and the built_in function-call counts, 4351 in all, are:
-= -- 420
-> -- 190
+            606 strings with 6819 characters,
+and the built_in function-call counts, 4651 in all, are:
+= -- 452
+> -- 192
 < -- 2
-+ -- 80
++ -- 82
 - -- 62
-* -- 277
-:= -- 720
-add.period$ -- 49
-call.type$ -- 17
-change.case$ -- 82
+* -- 295
+:= -- 762
+add.period$ -- 53
+call.type$ -- 19
+change.case$ -- 88
 chr.to.int$ -- 0
-cite$ -- 23
-duplicate$ -- 172
-empty$ -- 369
+cite$ -- 25
+duplicate$ -- 188
+empty$ -- 403
 format.name$ -- 62
-if$ -- 911
+if$ -- 979
 int.to.chr$ -- 0
-int.to.str$ -- 17
+int.to.str$ -- 19
 missing$ -- 10
-newline$ -- 85
+newline$ -- 93
 num.names$ -- 22
-pop$ -- 108
+pop$ -- 114
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 75
 quote$ -- 0
-skip$ -- 109
+skip$ -- 119
 stack$ -- 0
-substring$ -- 174
-swap$ -- 27
+substring$ -- 186
+swap$ -- 29
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 66
+type$ -- 74
 warning$ -- 6
 while$ -- 32
-width$ -- 19
-write$ -- 168
+width$ -- 21
+write$ -- 184
 (There were 6 warnings)
