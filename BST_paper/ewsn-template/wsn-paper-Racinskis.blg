@@ -4,48 +4,50 @@ The top-level auxiliary file: wsn-paper-Racinskis.aux
 The style file: abbrv.bst
 Database file #1: sigproc.bib
 Warning--to sort, need author or key in TrailClose
+Warning--to sort, need author or key in Lora-docs
 Warning--empty author in TrailClose
 Warning--empty year in TrailClose
 Warning--empty year in TrailDestruct
-You've used 15 entries,
+Warning--can't use both volume and number fields in Lora-decode
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            589 strings with 6472 characters,
-and the built_in function-call counts, 3895 in all, are:
-= -- 379
-> -- 176
-< -- 1
-+ -- 74
-- -- 58
-* -- 253
-:= -- 655
-add.period$ -- 43
-call.type$ -- 15
-change.case$ -- 74
+            599 strings with 6699 characters,
+and the built_in function-call counts, 4351 in all, are:
+= -- 420
+> -- 190
+< -- 2
++ -- 80
+- -- 62
+* -- 277
+:= -- 720
+add.period$ -- 49
+call.type$ -- 17
+change.case$ -- 82
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 151
-empty$ -- 318
-format.name$ -- 58
-if$ -- 808
+cite$ -- 23
+duplicate$ -- 172
+empty$ -- 369
+format.name$ -- 62
+if$ -- 911
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 9
-newline$ -- 75
-num.names$ -- 20
-pop$ -- 91
+int.to.str$ -- 17
+missing$ -- 10
+newline$ -- 85
+num.names$ -- 22
+pop$ -- 108
 preamble$ -- 1
-purify$ -- 63
+purify$ -- 69
 quote$ -- 0
-skip$ -- 95
+skip$ -- 109
 stack$ -- 0
-substring$ -- 164
-swap$ -- 22
-text.length$ -- 1
+substring$ -- 174
+swap$ -- 27
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 58
-warning$ -- 4
-while$ -- 30
-width$ -- 17
-write$ -- 148
-(There were 4 warnings)
+type$ -- 66
+warning$ -- 6
+while$ -- 32
+width$ -- 19
+write$ -- 168
+(There were 6 warnings)

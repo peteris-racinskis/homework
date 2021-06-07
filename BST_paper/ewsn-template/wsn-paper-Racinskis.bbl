@@ -1,5 +1,10 @@
 \begin{thebibliography}{10}
 
+\bibitem{Lora-docs}
+Lora documentation.
+\newblock \url{https://lora.readthedocs.io/en/latest/}.
+\newblock Accessed: 06/06/2021.
+
 \bibitem{TrailClose}
 Slēgta vēl virkne dabas taku un skatu torņi.
 \newblock {\em Latvijas Sabiedriskie Mediji}.
@@ -25,6 +30,11 @@ L.~Kajala.
 \newblock {\em Visitor monitoring in nature areas: A manual based on
   experiences from the Nordic and Baltic countries}.
 \newblock Nordic Council of Ministers, 2007.
+
+\bibitem{Lora-decode}
+M.~Knight and B.~Seeber.
+\newblock Decoding lora: Realizing a modern lpwan with sdr.
+\newblock In {\em Proceedings of the GNU Radio Conference}, volume~1, 2016.
 
 \bibitem{Slitere}
 Latvian Country Tourism Association.
