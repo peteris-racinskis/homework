@@ -73,3 +73,8 @@ webtalk_pn.xml
 *.Rhistory
 *.RData
 .Rproj.user
+
+#python stuff
+.venv
+.mypy*
+
