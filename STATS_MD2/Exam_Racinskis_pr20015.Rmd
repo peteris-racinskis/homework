@@ -1,0 +1,288 @@
+---
+title: "Exam_Racinskis_pr20015"
+author: "Pēteris Račinskis pr20015"
+date: "6/9/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+## 1. uzdevums
+
+\textit{Piezīme: eksāmenā laika nav daudz, tāpēc visa tā pati copy \& paste diagnostika normalitātei, dispersijas vienmērīgumam un autokorelācijai nav atkārtota pēc katra regresijas modeļa. }
+
+Bibliotēku un datu ielāde:
+
+```{r, message=F, results=F}
+df <- read.delim("poverty.txt")
+summary(df)
+attach(df)
+library(psych)
+library(robustbase)
+library(histogram)
+library(nortest)
+library(boot)
+library(e1071)
+```
+
+Palīgfunkciju definīcija:
+
+```{r}
+general_lreg <- function(vec1,vec2,degree=1,plot=F,print=F,names=c("","")) {
+  fit<-lm(vec2~poly(vec1,degree,raw=T)) 
+  if(plot){
+    plot(vec1,vec2,xlab=names[1],ylab=names[2])
+    x <- seq(min(vec1),max(vec1),length.out = length(vec1))
+    f <- predict(fit, newdata = data.frame(vec1 = x))
+    lines(x,f,col="red",lwd=2)
+  }
+  if(print){
+    print(paste("R-squared:",summary(fit)$r.squared))
+  }
+  fit
+}
+cb_skewness <- function(x, i){
+  skewness(x[i])
+}
+```
+
+Dati: viena kolonna ar štatu nosaukumiem, 5 skaitlisku datu kolonnas. 
+
+### 1.1 Aprakstošās statistikas:
+
+```{r}
+describe(PovPct)
+boxplot(PovPct)
+describe(Brth15to17)
+boxplot(Brth15to17)
+describe(Brth18to19)
+boxplot(Brth18to19)
+describe(ViolCrime)
+boxplot(ViolCrime)
+describe(TeenBrth)
+boxplot(TeenBrth)
+```
+
+### 1.2 Robusti novērtētāji pret vidējo vērtību:
+
+```{r}
+mean(PovPct)
+huberM(PovPct)$mu
+median(PovPct)
+mean(Brth15to17)
+huberM(Brth15to17)$mu
+median(Brth15to17)
+mean(Brth18to19)
+huberM(Brth18to19)$mu
+median(Brth18to19)
+mean(ViolCrime)
+huberM(ViolCrime)$mu
+median(ViolCrime)
+mean(TeenBrth)
+huberM(TeenBrth)$mu
+median(TeenBrth)
+```
+
+Secinājums: Hubera M-statistika visur tuvu seko vidējai vērtībai, bet mediāna vietām ir diezgan nobīdīta. Tas skaidrojams ar izlēcēju klātbūtni vai sadalījumu asimetriskumu.
+
+### 1.3 Histogrammas. 
+
+Binu platums iegūts ar krosvalidācijas metodi un netiek mainīts, pat ja rezultējošā histogramma ir pilnīgi bezjēdzīga:
+
+```{r, results=F, message=F}
+hh<-histogram(PovPct,type="regular",penalty="cv")
+lines(density(PovPct,bw="ucv"),col="red",lwd=2)
+hh<-histogram(Brth15to17,type="regular",penalty="cv")
+lines(density(Brth15to17,bw="ucv"),col="red",lwd=2)
+hh<-histogram(Brth18to19,type="regular",penalty="cv")
+lines(density(Brth18to19,bw="ucv"),col="red",lwd=2)
+hh<-histogram(ViolCrime,type="regular",penalty="cv")
+lines(density(ViolCrime,bw="ucv"),col="red",lwd=2)
+hh<-histogram(TeenBrth,type="regular",penalty="cv")
+lines(density(TeenBrth,bw="ucv"),col="red",lwd=2)
+```
+
+### 1.4 Vai skaitlisko datu kolonnas ir normāli sadalītas?
+
+```{r}
+(lillie.test(PovPct)$p > 0.05)
+(lillie.test(Brth15to17)$p > 0.05)
+(lillie.test(Brth18to19)$p > 0.05)
+(lillie.test(ViolCrime)$p > 0.05)
+(lillie.test(TeenBrth)$p > 0.05)
+```
+
+### 1.5 Asimetrijas koeficienta novērtējums ar butstrapa metodi
+
+```{r}
+N<-10000
+bobj_skew <- boot(PovPct,statistic=cb_skewness,R=N)
+boot.ci(bobj_skew)
+bobj_skew <- boot(Brth15to17,statistic=cb_skewness,R=N)
+boot.ci(bobj_skew)
+bobj_skew <- boot(Brth18to19,statistic=cb_skewness,R=N)
+boot.ci(bobj_skew)
+bobj_skew <- boot(ViolCrime,statistic=cb_skewness,R=N)
+boot.ci(bobj_skew)
+bobj_skew <- boot(TeenBrth,statistic=cb_skewness,R=N)
+boot.ci(bobj_skew)
+```
+
+### 1.6 Korelācijas koeficienti:
+
+```{r}
+df1 <- df[c("PovPct","Brth15to17","Brth18to19","ViolCrime","TeenBrth")]
+cor(df1)[1,]
+cor(df1, method="spearman")[1,]
+# is cor significant?
+x<-cor.test(PovPct,Brth15to17)
+(x$p.value < 0.05)
+x$conf.int[1:2]
+x<-cor.test(PovPct,Brth18to19)
+(x$p.value < 0.05)
+x$conf.int[1:2]
+x<-cor.test(PovPct,ViolCrime)
+(x$p.value < 0.05)
+x$conf.int[1:2]
+x<-cor.test(PovPct,TeenBrth)
+(x$p.value < 0.05)
+x$conf.int[1:2]
+```
+
+### 1.7 Lineārās regresijas:
+
+```{r}
+fit<-general_lreg(Brth15to17,PovPct,plot=T,names=c("brth 15-17","pov%"))
+summary(fit)
+fit<-general_lreg(Brth18to19,PovPct,plot=T,names=c("brth 18-19","pov%"))
+summary(fit)
+```
+
+### 1.8 Daudzfaktoru lineārās regresijas:
+
+```{r}
+fit_multi<-lm(PovPct~Brth15to17+Brth18to19, data=df1)
+summary(fit_multi)
+fit_multi<-lm(PovPct~., data=df1)
+summary(fit_multi)
+```
+
+### 1.9 Robustās regresijas dzimstības rādītājiem atsevišķi:
+
+```{r}
+fit<-lmrob(PovPct~Brth15to17,data=df1)
+summary(fit)
+plot(fit)
+fit<-lmrob(PovPct~Brth18to19,data=df1)
+summary(fit)
+plot(fit)
+```
+
+\textbf{Secinājums:} robustās regresijas šajā gadījumā sniedz sliktākus determinācijas koeficientus un atrod 2-3 izlēcējus katrā gadījumā.
+
+\newpage
+## 2. uzdevums
+
+Dati un bibliotēkas:
+
+```{r, message=F, results=F}
+library(rstatix)
+df <- read.csv("gapC.csv")
+attach(df)
+```
+
+### 2.1 Kastu grafiki pa kontinentiem:
+
+```{r}
+boxplot(breastcancer~continent)
+```
+
+### 2.2 ANOVA pa kontinentiem - noraida vidējo vērtību vienādību:
+
+```{r}
+fit<-aov(breastcancer~continent)
+summary(fit) 
+```
+
+### 2.3 Post-Hoc tests - atrod grupas, kuru vidējās vērtības varētu būt vienādas:
+
+```{r}
+f<-TukeyHSD(fit)
+op <- par(mar= c(4,5,3,3) + 0.1, cex.axis=0.5)
+plot(f,las=1)
+par(op)
+f
+```
+
+### 2.4 Neparametriskie ekvivalenti:
+
+```{r}
+library(rstatix)
+kruskal.test(breastcancer~continent)
+dunn_test(df, breastcancer~continent)
+```
+
+### 2.5 Wilkoksona zīmju-rangu tests - alternatīva metode:
+
+```{r}
+pairwise.wilcox.test(breastcancer,continent,p.adjust.method="BH")
+```
+
+\newpage
+## 3. uzdevums
+
+Datu ielāde, bibliotēkas:
+
+```{r, message=F, results=F}
+library(astsa)
+library(smooth)
+library(np)
+df <- as.data.frame(econ5)
+attach(df)
+```
+
+### 3.1 Gludināšana ar slīdošo vidējo, prognozes:
+
+```{r}
+md<-sma(unemp,h=10,order=5)
+plot(forecast(md))
+md<-sma(unemp,h=10,order=10)
+plot(forecast(md))
+md<-sma(unemp,h=10,order=30)
+plot(forecast(md))
+```
+
+Kā redzams, lietojot mazākus logus, modelis tuvāk seko datiem intervālā, taču zaudē spēju paredzēt sakarības ilgākos laika periodos.
+
+### 3.2 Gludināšana ar neparametriskajām regresijām
+
+Nadaraya-Watson (local constant) vs local linear:
+
+```{r, results=F, message=F}
+xax<-seq(1:length(unemp))
+bwnw <- npregbw(unemp~xax,regtype="lc",bwmethod="cv.aic")
+bwll <- npregbw(unemp~xax,regtype="ll",bwmethod="cv.aic")
+nnw <- npreg(bwnw,residuals=T)
+nll <- npreg(bwll,residuals=T)
+plot(xax,unemp,col="grey")
+lines(nnw$mean,col="red",lwd=2)
+plot(xax,unemp,col="grey")
+lines(nll$mean,col="blue",lwd=2)
+```
+
+Regresijas modeļi definīcijas intervālā izskatās gandrīz identiski, ar nelielām atšķirībām abos galos. Šo atšķirību nozīme kļūst acīmredzama, veicot ekstrapolāciju:
+
+```{r, results=F, message=F}
+flen<-10
+forecast <- seq(length(unemp)+1,length(unemp)+flen)
+predll<-predict(nll, newdata=data.frame(xax=forecast))
+prednw<-predict(nnw, newdata=data.frame(xax=forecast))
+plot(c(unemp,prednw),col="white")
+points(unemp,col="grey")
+lines(c(unemp,prednw),col="red",lwd=4)
+lines(c(unemp,predll),col="blue",lwd=2)
+```
+
+Kā redzams, lokāli lineārais modelis lielāku svaru liek uz lejupejošās tendences saglabāšanu netālu no datu kopas beigām, savukārt NW modelis nenovirzās tālu no datu vidējās vērtības.
