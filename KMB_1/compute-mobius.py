@@ -2,6 +2,7 @@
 import sys
 #INPUT_FILE="ieeja-ex1.txt" # change this to change input filename
 #INPUT_FILE="ieeja-ex2.txt" # change this to change input filename
+#INPUT_FILE="ieeja-ex3.txt" # change this to change input filename
 INPUT_FILE="ieeja.txt" # change this to change input filename
 
 # a smarter implementation might exist but this is at least polynomial
