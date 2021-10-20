@@ -3,7 +3,7 @@ import sys
 INPUT_FILE="ieeja-ex2.txt"
 
 # a smarter implementation might exist but this is at least polynomial
-def compute_mobius_naive_cubic(ordering, n, output):
+def compute_mobius_cubic(ordering, n, output):
     for i in range(n):
         output[i][i] = 1
     for i in range(n): # every row
@@ -32,7 +32,7 @@ def process_input(array):
     output = [[0] * n for _ in range(n)]
     array = ascending_order(array, n)
     transposed = transpose_and_clean(array, n)
-    compute_mobius_naive_cubic(transposed, n, output)
+    compute_mobius_cubic(transposed, n, output)
     return output
 
 
