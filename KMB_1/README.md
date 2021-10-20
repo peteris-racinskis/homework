@@ -30,7 +30,7 @@ To print the Mobius function in matrix form mu(i,j), uncomment the line
 #[print_array_line(line) for line in output] 
 ```
 
-Output example:
+Output example (i -> row, j -> column):
 
 ```
 $ ./compute-mobius.py 1 2
