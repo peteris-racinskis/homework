@@ -1,0 +1,9 @@
+# Lines starting with # are ignored
+# example set P from task 2
+6
+111111
+011001
+001001
+000101
+000011
+111111
