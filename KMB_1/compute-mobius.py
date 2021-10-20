@@ -6,7 +6,10 @@ import sys
 INPUT_FILE="ieeja.txt" # change this to change input filename
 
 # a smarter implementation might exist but this is at least polynomial
-def compute_mobius_cubic(ordering, n, output):
+# how this works: walks down the table computing from the "smallest" elements 
+# first, then summing the already existing values for elements that are comparable
+# ignores incomparable elements (subtracts 0)
+def compute_mobius_cubic(incidence, n, output):
     for i in range(n):
         output[i][i] = 1
     for i in range(n): # every row
@@ -15,7 +18,7 @@ def compute_mobius_cubic(ordering, n, output):
                 # ij - current row, column
                 # kj - other row (above), current column
                 # ik - current row (as row), other row (as column) in incidence matrix
-                output[i][j] = output[i][j] - (output[k][j] if ordering[i][k] == 1 else 0)
+                output[i][j] = output[i][j] - (output[k][j] if incidence[i][k] == 1 else 0)
 
 def ascending_order(array: list, n):
     return sorted(array[1:], key=lambda x: x.index(1))
