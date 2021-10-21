@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 import sys
 #INPUT_FILE="ieeja-ex1.txt" # change this to change input filename
-INPUT_FILE="ieeja-ex2.txt" # change this to change input filename
+#INPUT_FILE="ieeja-ex2.txt" # change this to change input filename
 #INPUT_FILE="ieeja-ex3.txt" # change this to change input filename
-#INPUT_FILE="ieeja.txt" # change this to change input filename
-PRINT_MATRICES=True
-#PRINT_MATRICES=False
+INPUT_FILE="ieeja.txt" # change this to change input filename
+#PRINT_MATRICES=True
+PRINT_MATRICES=False
 
 # a smarter implementation might exist but this is at least polynomial
 # how this works: walks down the table computing from the "smallest" elements 
