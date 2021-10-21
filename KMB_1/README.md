@@ -24,21 +24,43 @@ Changing input file path: comment/uncomment lines for the included examples or a
 INPUT_FILE="ieeja.txt" 
 ```
 
-To print the Mobius function in matrix form mu(i,j), uncomment the line
+To print the Mobius function in matrix form mu(i,j), change the lines
 
 ```
-#[print_array_line(line) for line in output] 
+#PRINT_MATRICES=True
+PRINT_MATRICES=False
 ```
-
-Output example (i -> row, j -> column):
+to
 
 ```
-$ ./compute-mobius.py 1 2
-> [1	0	0	0	0	0]
-> [-1	1	0	0	0	0]
-> [0	-1	1	0	0	0]
-> [-1	0	0	1	0	0]
-> [-1	0	0	0	1	0]
-> [2	0	-1	-1	-1	1]
-> [1,2] -1
+PRINT_MATRICES=True
+#PRINT_MATRICES=False
+```
+Output example:
+
+```
+$ ./compute-mobius.py 1 2 
+zeta(i,j)
+[1      1       1       1       1       1]
+[0      1       1       0       0       1]
+[0      0       1       0       0       1]
+[0      0       0       1       0       1]
+[0      0       0       0       1       1]
+[0      0       0       0       0       1]
+mu(i,j)
+[1      -1      0       -1      -1      2]
+[0      1       -1      0       0       0]
+[0      0       1       0       0       -1]
+[0      0       0       1       0       -1]
+[0      0       0       0       1       -1]
+[0      0       0       0       0       1]
+(zeta*mu)(i,j)
+[1      0       0       0       0       0]
+[0      1       0       0       0       0]
+[0      0       1       0       0       0]
+[0      0       0       1       0       0]
+[0      0       0       0       1       0]
+[0      0       0       0       0       1]
+
+[1,2] -1
 ```

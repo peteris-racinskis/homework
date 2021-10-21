@@ -4,12 +4,16 @@ import sys
 #INPUT_FILE="ieeja-ex2.txt" # change this to change input filename
 #INPUT_FILE="ieeja-ex3.txt" # change this to change input filename
 INPUT_FILE="ieeja.txt" # change this to change input filename
+PRINT_MATRICES=True
+#PRINT_MATRICES=False
 
 # a smarter implementation might exist but this is at least polynomial
 # how this works: walks down the table computing from the "smallest" elements 
 # first, then summing the already existing values for elements that are comparable
 # ignores incomparable elements (subtracts 0)
-def compute_mobius_cubic(incidence, n, output):
+def compute_mobius_cubic(zeta, n):
+    incidence = transpose(zeta, n)
+    output = [[0] * n for _ in range(n)]
     for i in range(n):
         output[i][i] = 1
     for i in range(n): # every row
@@ -19,12 +23,20 @@ def compute_mobius_cubic(incidence, n, output):
                 # kj - other row (above), current column
                 # ik - current row (as row), other row (as column) in incidence matrix
                 output[i][j] = output[i][j] - (output[k][j] if incidence[i][k] == 1 else 0)
+    return transpose(output, n)
 
 def ascending_order(array: list, n):
     return sorted(array[1:], key=lambda x: x.index(1))
 
 def transpose(array, n):
     return [[array[j][i] for j in range(n)] for i in range(n)]
+
+def matmul(left, m, right, k, n):
+    result = [[0] * k for _ in range(m)]
+    for x in range(m):
+        for y in range(k):
+            result[x][y] = sum([left[x][z]*right[z][y] for z in range(n)])
+    return result
 
 def print_array_line(line: list):
     output = ""
@@ -33,13 +45,24 @@ def print_array_line(line: list):
     output = "[{}]".format(output[:-1])
     print(output)
 
+def print_results(zeta, mu, convolution):
+    print("zeta(i,j)")
+    [print_array_line(line) for line in zeta]
+    print("mu(i,j)")
+    [print_array_line(line) for line in mu]
+    print("(zeta*mu)(i,j)")
+    [print_array_line(line) for line in convolution]
+
 def process_input(array):
     n = array[0][0]
-    output = [[0] * n for _ in range(n)]
-    array = ascending_order(array, n)
-    transposed = transpose(array, n)
-    compute_mobius_cubic(transposed, n, output)
-    return output
+    mu = [[0] * n for _ in range(n)]
+    zeta = ascending_order(array, n)
+    mu = compute_mobius_cubic(zeta, n)
+    conv = matmul(zeta, n, mu, n, n)
+    if PRINT_MATRICES:
+        print_results(zeta, mu, conv)
+    print()
+    return mu
 
 
 if __name__ == "__main__":
@@ -50,5 +73,4 @@ if __name__ == "__main__":
             [int(y) for y in filter(lambda z: z.isdigit(), list(x))])
             for x in filter(lambda x: x[0] != "#", f.readlines())]
     output = process_input(array)
-    #[print_array_line(line) for line in output] # for printing the array (not in homework requirement)
-    print("[{},{}] {}".format(i+1, j+1, output[j][i]))
+    print("[{},{}] {}".format(i+1, j+1, output[i][j]))
