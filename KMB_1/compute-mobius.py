@@ -61,7 +61,6 @@ def process_input(array):
     conv = matmul(zeta, n, mu, n, n)
     if PRINT_MATRICES:
         print_results(zeta, mu, conv)
-    print()
     return mu
 
 
