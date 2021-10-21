@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 import sys
 #INPUT_FILE="ieeja-ex1.txt" # change this to change input filename
-#INPUT_FILE="ieeja-ex2.txt" # change this to change input filename
+INPUT_FILE="ieeja-ex2.txt" # change this to change input filename
 #INPUT_FILE="ieeja-ex3.txt" # change this to change input filename
-INPUT_FILE="ieeja.txt" # change this to change input filename
+#INPUT_FILE="ieeja.txt" # change this to change input filename
 PRINT_MATRICES=True
 #PRINT_MATRICES=False
 
@@ -66,7 +66,7 @@ def process_input(array):
 
 
 if __name__ == "__main__":
-    i, j = (int(x)-1 for x in sys.argv[1:]) # minus 1 because mathematicians start indexing from 1
+    i, j = (int(x)-1 for x in sys.argv[1:])
     array = []
     with open(INPUT_FILE, mode="r") as f:
         [array.append(
