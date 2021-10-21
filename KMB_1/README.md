@@ -8,7 +8,7 @@ $ ./compute-mobius.py 1 2
 > [1,2] -1
 ```
 
-Option 2: provide a Python executable:
+Option 2: provide a Python executable (3.8+):
 
 ```
 $ python3 compute-mobius.py 1 2
