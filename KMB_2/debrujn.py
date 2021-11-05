@@ -10,7 +10,6 @@ INFILE = "ieeja.txt"
 OUTFILE = "izeja.txt"
 PRINT = True
 
-
 def create_graph(m, n):
     vertices = [str(x) for x in range(m)]
     while len(vertices[0]) < n-1:
@@ -57,8 +56,11 @@ def debrujn_sequence(cycle: list):
         result = last_concat(result, edge)
     return result
 
-def debrujn_test(sequence: str, n: int):
+def debrujn_test(sequence: str, n: int, m: int):
     print(sequence)
+    if m < 2:
+        print("Trivial sequence")
+        return
     original = len(sequence)
     sequence = sequence + sequence[:n-1]
     not_allowed = []
@@ -86,4 +88,4 @@ if __name__ == "__main__":
     with open(OUTFILE, 'w') as f:
         f.write(result)
     if PRINT:
-        debrujn_test(result, n)
+        debrujn_test(result, n, m)
