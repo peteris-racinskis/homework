@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # find euler cycle in graph of size n-1
 # rather than hamilton cycle in size n
 #
@@ -63,15 +64,15 @@ def debrujn_test(sequence: str, n: int, m: int):
         return
     original = len(sequence)
     sequence = sequence + sequence[:n-1]
-    not_allowed = []
+    already_seen = []
     for i in range(original):
         substr = sequence[i:i+n]
-        if substr in not_allowed:
+        if substr in already_seen:
             print("Invalid: {} appears twice".format(substr))
             return
-        not_allowed.append(substr)
-    print("all ok, {} unique sequential substrings:".format(len(not_allowed)))
-    print(not_allowed)
+        already_seen.append(substr)
+    print("all ok, {} unique sequential substrings:".format(len(already_seen)))
+    print(already_seen)
 
 def find_debrujn(m, n):
     if n < 2:
