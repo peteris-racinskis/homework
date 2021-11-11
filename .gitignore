@@ -77,4 +77,5 @@ webtalk_pn.xml
 #python stuff
 .venv
 .mypy*
+__pycache__/
 
