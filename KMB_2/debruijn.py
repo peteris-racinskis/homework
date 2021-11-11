@@ -16,16 +16,16 @@ def create_graph(m, n):
         vertices = vertex_build_layer(m, vertices)
     return {vertex:adjacent_list(vertex, m) for vertex in vertices}
 
-def vertex_build_layer(m: int, previous):
+def vertex_build_layer(m, previous):
     result = []
     for line in previous:
         result = result + [line + str(x) for x in range(m)]
     return result
 
-def adjacent_list(vertex: str, m: int):
+def adjacent_list(vertex, m):
     return [vertex[1:] + str(x) for x in range(m)]
 
-def find_euler(graph: dict):
+def find_euler(graph):
     partial_cycles = {vertex:[] for vertex in graph.keys()}
     # find cycles from each vertex
     for vertex, adj in graph.items():
@@ -49,7 +49,7 @@ def find_euler(graph: dict):
                 longest = longest[:i] + partial_cycles[vertex].pop() + longest[i+1:]
     return longest
 
-def get_cycle_vert(graph: dict, vertex: str):
+def get_cycle_vert(graph, vertex):
     cycle = [vertex]
     next_vertex = ""
     while next_vertex != vertex:
@@ -57,16 +57,16 @@ def get_cycle_vert(graph: dict, vertex: str):
         cycle.append(next_vertex)
     return cycle
 
-def last_concat(s1: str, s2: str):
+def last_concat(s1, s2):
     return s1 + s2[-1]
 
-def debruijn_sequence(cycle: list):
+def debruijn_sequence(cycle):
     result = ""
     for vertex in cycle[:-1]:
         result = last_concat(result, vertex)
     return result
 
-def debrujn_test(sequence: str, n: int, m: int, print_seq = False):
+def debrujn_test(sequence, n, m, print_seq = False):
     print("m = {}, n = {}".format(m,n))
     if m < 2:
         print("Trivial sequence")
