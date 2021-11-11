@@ -6,9 +6,11 @@
 # because python doesn't do tail call
 # optimization.
 #
+import time
 INFILE = "ieeja.txt"
 OUTFILE = "izeja.txt"
-PRINT = True
+TEST = True
+PRINT = False
 
 def create_graph(m, n):
     vertices = [str(x) for x in range(m)]
@@ -67,38 +69,45 @@ def debruijn_sequence(cycle):
     return result
 
 def debruijn_test(sequence, n, m, print_seq = False):
-    print("m = {}, n = {}".format(m,n))
     if m < 2:
         print("Trivial sequence")
         return
     original = len(sequence)
+    if print_seq:
+        print("sequence: {}".format(sequence))
     sequence = sequence + sequence[:n-1]
     if print_seq:
-        print(sequence)
-    already_seen = []
+        print("extended: {}".format(sequence))
+    already_seen = set()
     for i in range(original):
         substr = sequence[i:i+n]
         if substr in already_seen:
             print("Invalid: {} appears twice".format(substr))
             return
-        already_seen.append(substr)
+        already_seen.add(substr)
     print("all ok, {} unique sequential substrings:".format(len(already_seen)))
     if print_seq:
         print(already_seen)
 
 def find_debruijn(m, n):
-    if n < 2:
+    if n == 1:
         return "".join([str(x) for x in range(m)])
-    if m < 2:
+    if m == 1:
         return "".join([str(0)] * n)
+    if m == 0 or n == 0:
+        return ""
     return debruijn_sequence(find_euler(create_graph(m,n)))
 
 if __name__ == "__main__":
     with open(INFILE, 'r') as f:
         cont = f.readlines()
         m, n  = int(cont[0]), int(cont[1])
+    t0 = time.time()
     result = find_debruijn(m, n)
+    t1 = time.time()
     with open(OUTFILE, 'w') as f:
         f.write(result)
-    if PRINT:
-        debruijn_test(result, n, m, True)
+    print("m = {}, n = {}".format(m,n))
+    print("time to find result: {}".format(t1-t0))
+    if TEST:
+        debruijn_test(result, n, m, PRINT)
