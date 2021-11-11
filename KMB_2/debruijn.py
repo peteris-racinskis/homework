@@ -30,7 +30,7 @@ def find_euler(graph):
     # find cycles from each vertex
     for vertex, adj in graph.items():
         while len(adj) > 0:
-            partial_cycles[vertex].append(get_cycle_vert(graph, vertex))
+            partial_cycles[vertex].append(get_cycle(graph, vertex))
     # combine cycles from each vertex
     for vertex in partial_cycles.keys():
         if len(partial_cycles[vertex]) > 0:
@@ -49,7 +49,7 @@ def find_euler(graph):
                 longest = longest[:i] + partial_cycles[vertex].pop() + longest[i+1:]
     return longest
 
-def get_cycle_vert(graph, vertex):
+def get_cycle(graph, vertex):
     cycle = [vertex]
     next_vertex = ""
     while next_vertex != vertex:
@@ -66,7 +66,7 @@ def debruijn_sequence(cycle):
         result = last_concat(result, vertex)
     return result
 
-def debrujn_test(sequence, n, m, print_seq = False):
+def debruijn_test(sequence, n, m, print_seq = False):
     print("m = {}, n = {}".format(m,n))
     if m < 2:
         print("Trivial sequence")
@@ -101,4 +101,4 @@ if __name__ == "__main__":
     with open(OUTFILE, 'w') as f:
         f.write(result)
     if PRINT:
-        debrujn_test(result, n, m, True)
+        debruijn_test(result, n, m, True)
