@@ -1,0 +1,52 @@
+---
+title: "Mājas darbs 2-1: MDS, ISOMAP"
+output: 
+  pdf_document:
+    includes:
+      in_header: "preamble.tex"
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Uzdevums: MDS, pilsētu savstarpējie attālumi
+
+Vispirms jāielādē dati. Šajā gadījumā izvēlēta datu kopa WG22 ("West Germany"), kur apkopoti attālumi starp 22 Rietumvācijas pilsētām (datu kopa acīmredzot nav tā jaunākā), pieejama [Floridas Štata universitātes mājas lapā kopā ar citām pilsētu attālumu datu kopām.](https://people.sc.fsu.edu/~jburkardt/datasets/cities/cities.html)
+
+```{r}
+dist.de <- read.table("wg22_dist.txt")
+names <- read.table("wg22_name.txt")
+```
+
+Pēc tam veic dimensiju redukciju:
+
+```{r}
+fit <- cmdscale(dist.de, eig = TRUE, k = 2)
+```
+
+Iznesot iegūtos punktus 2-dimensiju koordinātu sistēmā un grafiski attēlojot, redzams, ka to izkārtojums ir līdzīgs Vācijas kartei, taču iespējams, nepieciešams pagriezt (samainīt x-y asis) un/vai kādu no asīm apgriezt otrādi (reizināt ar -1).
+
+![Vācijas karte no [Google Maps](https://maps.google.com)](german-cities.jpg){width=60%}
+
+```{r, fig.width=8, fig.height=6}
+x <- fit$points[, 1]
+y <- fit$points[, 2]
+plot(x,y,xlim=c(-150,150),ylim=c(-120,120))
+text(x,y,labels=names$V1)
+```
+
+Veicot korekcijas:
+
+```{r, fig.width=6, fig.height=8}
+x <- -x
+y <- -y
+plot(y,x,xlim=c(-120,120),ylim=c(-150,150))
+text(y,x,labels=names$V1)
+```
+
+
+\newpage
+
+# 2. Uzdevums: ISOMAP

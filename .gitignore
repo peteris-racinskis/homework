@@ -1,6 +1,7 @@
 *isim*
 *tar.gz
 *tar
+*.log
 *pcb*
 # intermediate build files
 *.bgn
