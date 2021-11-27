@@ -170,7 +170,7 @@ plot(x,y,col=color_row)
 
 \newpage
 
-K = 5, redzams, ka projekcija sāk telpiski "izplūst", lielāka nozīme lokāli ir Eiklīda, nevis telpiskām distancēm, veidojas nepārtraukta virsma:
+K = 5, redzams, ka projekcija sāk telpiski "izplūst", lielāka nozīme lokāli ir telpiskām, nevis grafu distancēm, veidojas nepārtraukta virsma:
 
 ```{r, echo=FALSE, fig.height=3}
 fit <- Isomap(distances, 5, 2)
