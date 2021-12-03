@@ -1,0 +1,140 @@
+---
+title: "Mājas darbs 2-2: dimensiju redukcija"
+output: 
+  pdf_document:
+    includes:
+      in_header: "preamble.tex"
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 1. Uzdevums - dimensiju redukcija ar algoritmu pēc izvēles (t-SNE)
+
+## Datu apstrāde
+
+Algoritms t-SNE izvēlēts kā pirmais no dotajiem un tāpēc, ka pieejama realizācija R platformā.
+
+Vispirms ielasa datus:
+
+``` {r}
+library(foreign)
+data <- read.arff("ionosphere.arff")
+```
+
+Veic priekšapstrādi, lai nogrieztu klases un pēc tam varētu tās grafiski attēlot kā punktu krāsas:
+
+```{r}
+trim <- function(df){
+  df[,1:length(df[1,])-1]
+}
+
+colors <- function(df) {
+  sapply(df, function(x) {
+    if (x == "b") {
+      "blue"
+    } else {
+      "red"
+    }})
+}
+
+trimmed <- trim(data)
+col_row <- colors(data[,length(data[1,])])
+```
+
+Kods t-SNE aprēķinam un grafiskai attēlošanai:
+
+```{r}
+library(tsne)
+plot.tsne <- function(df, perp=30, iter=400, class=NULL, plt=T, k=2, ret=F) {
+  transformed <- tsne(df, k = k, perplexity = perp,
+                      initial_dims = length(df[1,]), max_iter = iter)
+  x <- transformed[,1]
+  y <- transformed[,2]
+  if (plt) {
+    plot(x,y,col=class,xlab="comp1",
+         ylab="comp2",
+         main=sprintf("t-SNE perplexity = %d iter = %d", perp, iter))
+  }
+  if (ret) {
+    transformed
+  }
+}
+```
+
+\newpage
+Kods PCA aprēķinam un attēlošanai (salīdzināšanas mērķiem):
+
+```{r}
+plot.pca <- function(df, class){
+  pca <- prcomp(df)
+  plot(pca$x[,1:2],col=class,main="PCA (2 largest)")
+  s <- summary(pca)
+  s$importance[2,1:2]
+}
+```
+
+PCA ar divām galvenajām komponentēm, 2 galveno komponenšu dispersijas proporcija:
+
+```{r}
+v<-plot.pca(trimmed, col_row)
+v
+sum(v)
+```
+
+Šai t-SNE realizācijai pieejami divi galvenie hiperparametri - \textit{perplexity} (ļoti aptuveni ekvivalents tuvāko kaimiņu skaitam) un \textit{max\_iter} - gradientu optimizācijas algoritma iterāciju skaits. Funkcija automātiski drukā \textit{loss} vērtību pēc katrām 100 optimizācijas algoritma iterācijām un uzreiz redzams, ka visām izvēlētām \textit{perplexity} vērtībām \textit{loss} vērtība ir faktiski minimizēta jau pēc 200 iterācijām. Pēc noklusējma iterāciju skaits ir 1000, šeit atstāts 400 un sīkāk nav pētīts, jo lielas izmaiņas nav novērotas. Ir pieejams arī \textit{min\_cost} parametrs, kas ļauj pārtraukt darbu pie izvēlētas \textit{loss} vērtības, taču atkarībā no \textit{perplexity} izskatās, ka tām ir dažādas asimptotes - tāpēc mainot \textit{perplexity} šis parametrs nav īpaši noderīgs.
+
+\newpage
+Zīmējot grafikus ar \textit{perplexity} vērtībām {3,10,20,30,50,100}:
+
+```{r, message=F, fig.height=4}
+plot.tsne(trimmed,3,class=col_row)
+```
+
+
+```{r, message=F, fig.height=4}
+plot.tsne(trimmed,10,class=col_row)
+```
+
+\newpage
+```{r, message=F, fig.height=4}
+plot.tsne(trimmed,20,class=col_row)
+```
+
+
+```{r, message=F, fig.height=4}
+plot.tsne(trimmed,30,class=col_row)
+```
+
+\newpage
+```{r, message=F, fig.height=4}
+plot.tsne(trimmed,50,class=col_row)
+```
+
+
+```{r, message=F, fig.height=4}
+plot.tsne(trimmed,100,class=col_row)
+```
+
+\newpage
+## Secinājumi
+
+Ar visām \textit{perplexity} vērtībām, izņemot 3 un 100, var novērot, ka sarkanā klase veido divus klasterus - vienu izstieptu un ārpus zilo punktu mākoņa, otru bez nekādas izteiktas formas taču ar zilās klases punktiem visapkārt. Pie vērtības 3 pēc dimensiju redukcijas iegūtais punktu mākonis veido tikai nelielus lokālus klasterus, kas škietami nejauši izkaisīti plaknē. Pie vērtības 100, abi sarkanās klases klasteri apvienojušies izliektas "T" formas struktūrā, kam apkārt ir zilās klases punkti. Zīmīgi, ka lokāli klases nav sevišķi sajauktas, taču izdarīt kaut kādu nozīmīgus spriedumus par struktūru bez zināšanām par datu kopu nav iespējams - un bez klašu anotācijas apšaubāmi, vai kāds klasterizācijas algoritms varētu konstatēt divu klašu klātbūtni.
+
+Ar PCA iegūtais attēls ietver tikai 44% kopējās dispersijas, taču arī tajā novērojams kas līdzīgs t-SNE atrastajām struktūrām.
+
+\newpage
+# 2. Uzdevums - dimensiju redukcija ar algoritmu pēc izvēles (PaCMAP)
+
+
+```{r}
+library(reticulate)
+use_python("/usr/bin/python3")
+```
+
+```{python}
+print(["test" for x in range(5)])
+```
+
