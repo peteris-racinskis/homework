@@ -131,10 +131,10 @@ Ar PCA iegūtais attēls ietver tikai 44% kopējās dispersijas, taču arī taj�
 
 ```{r}
 library(reticulate)
-use_python("/usr/bin/python3")
+use_virtualenv(".venv")
 ```
 
 ```{python}
-print(["test" for x in range(5)])
+import pacmap
 ```
 

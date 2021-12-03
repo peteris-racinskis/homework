@@ -1,0 +1,33 @@
+---
+title: "Mājas darbs 2-2: dimensiju redukcija"
+output: 
+  pdf_document:
+    highlight: tango
+    includes:
+      in_header: "preamble.tex"
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(reticulate)
+use_virtualenv("~/repos/homework/DIA_MD/.venv")
+```
+
+
+# 2. Uzdevums - dimensiju redukcija ar algoritmu pēc izvēles (PaCMAP)
+
+## Datu apstrāde
+
+```{r}
+np <- import("numpy")
+```
+
+```{python}
+import pacmap
+print("success")
+
+def this_is_a_function(Arg):
+  return 1
+```
+
