@@ -81,3 +81,11 @@ webtalk_pn.xml
 .mypy*
 __pycache__/
 
+# latex stuff
+*.aux
+*.fdb*
+*.synctex*
+*.fls*
+
+
+
