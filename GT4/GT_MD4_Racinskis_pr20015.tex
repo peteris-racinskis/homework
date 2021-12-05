@@ -12,14 +12,11 @@
 
 \section{Uzdevums}
 
-Dots koka $G$ Prūfera kods $P=(1,1,3,3,1,1,8,5,7)$. Atjaunoto koku $G' = (V',E')$ iegūst, sākot no koda beigām  ar 
+Dots koka $G$ Prūfera kods $P=(1,1,3,3,1,1,8,5,7)$. Atjaunoto koku $G' = (V',E')$ iegūst, paplašinot kodu ar maksimālo elementu
 \begin{equation}
-    V'_0 = \max(V[G])
-    \end{equation}
-    \begin{equation}
-    E'_0 = \lbrace \lbrace \max(V[G] \setminus V'_0), P_{n-2} \rbrace \rbrace
-    \end{equation}
-un katram elementam izpildot soļus
+    V'_0 = \lbrace P_{n-1} \rbrace = \lbrace \max(V[G]) \rbrace
+\end{equation}
+un ar $i=\lbrace 1, ..., n-2 \rbrace$ izpildot soļus
 \begin{equation}
     v_i = 
 \begin{cases}
@@ -37,9 +34,8 @@ Process attēlots grafiski:
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[height=4.8cm,page=1]{pruefer.png}
+    \includegraphics[height=5.5cm,page=1]{pruefer.png}
     \caption{Koka atjaunošana pēc Prūfera koda}
-    \label{fig:att}
 \end{figure}
 
 \newpage
