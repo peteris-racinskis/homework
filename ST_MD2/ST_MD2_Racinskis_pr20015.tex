@@ -306,6 +306,98 @@ The Pareto optima of an outcome set are given by the set of maximal elements in 
     \caption{Partial ordering of the outcome set under Pareto dominance. Maximal elements marked in green.}
 \end{figure}
 
+\newpage
+\section{Symmetric 3-player game}
+
+\subsection{Filled-in matrix, Pareto optima}
+
+Calculating all the numbers by hand would have been fairly error-prone, therefore I used a simple Python script to generate them. Adding a quick comparison to find Pareto-dominated outcomes was trivial. It simply compares every outcome with every other outcome, breaks the loop for each if it is dominated, prints the dominance relation and only selects those which aren't dominated.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[height=14cm]{output.png}
+    \caption{Payoff tensor, pareto optima.}
+\end{figure}
+
+\newpage
+\subsection{Nash equilibrium}
+
+In the general case, working out a Nash equilibrium for a 3x3x3 game could be a fairly involved process, but thankfully several simplifications are possible here.
+
+First, notice that $\pi^1=f(x,y), \pi^2=g(y,z), \pi^3=h(z,x)$, which allows one to represent the entire payoff tensor with 3 matrices - one for each player (with rows being the value selected by this player)
+
+\begin{equation}
+    \boldsymbol{\pi^1}=\begin{bmatrix}
+        -\frac{1}{2} & -\frac{3}{2} & -\frac{11}{2} \\
+        1 & -1 & -9 \\
+        \frac{9}{2} & \frac{3}{2} & -\frac{21}{2} \\ 
+    \end{bmatrix}
+\end{equation}
+\begin{equation}
+    \boldsymbol{\pi^2}=\begin{bmatrix}
+        0 & 1 & -5 \\
+        2 & 0 & -8 \\
+        6 & 3 & -9 \\ 
+    \end{bmatrix}
+\end{equation}
+\begin{equation}
+    \boldsymbol{\pi^3}=\begin{bmatrix}
+        0 & 1 & -5 \\
+        2 & 0 & -8 \\
+        6 & 3 & -9 \\ 
+    \end{bmatrix}
+\end{equation}
+The matrices of p2, p3 are also identical after this rotation.
+
+The next key insight is that the middle row (2) of $\pi^2, \pi^3$ is dominated by mixed strategies with
+\begin{equation}
+    p(1)+(1-p)(3);\frac{1}{4} \leq p \leq \frac{2}{3}
+\end{equation}
+while the middle row (2) of $\pi^1$ is dominated by mixed strategies with
+\begin{equation}
+    p(1)+(1-p)(3);\frac{3}{10} \leq p \leq \frac{7}{10}
+\end{equation}
+allowing the middle row and column of every 3x3 matrix to be eliminated. 
+
+The payoff matrices are thus
+
+\begin{equation}
+    \boldsymbol{\pi^1}=\begin{bmatrix}
+        -\frac{1}{2} & -\frac{11}{2} \\
+        \frac{9}{2} & -\frac{21}{2} \\ 
+    \end{bmatrix},
+    \boldsymbol{\pi^2}=\begin{bmatrix}
+        0 & -5 \\
+        6 & -9 \\ 
+    \end{bmatrix},
+    \boldsymbol{\pi^3}=\begin{bmatrix}
+        0 & -5 \\
+        6 & -9 \\ 
+    \end{bmatrix}
+\end{equation}
+and by solving the resulting indifference equations
+\begin{equation}
+    p_x=p_z;0p_x-5(1-p_x)=6p_x-9(1-p_x)
+\end{equation}
+\begin{equation}
+    -\frac{1}{2}p_y-\frac{11}{2}(1-p_y)=\frac{9}{2}p_y-\frac{21}{2}(1-p_y)
+\end{equation}
+we obtain
+\begin{equation}
+    p_x=p_z=\frac{2}{5};s_1=s_3=\frac{2}{5}(1)+\frac{3}{5}(3);E_2(eq.)=E_3(eq.)=-3
+\end{equation}
+\begin{equation}
+    p_y=\frac{1}{2};s_2=\frac{1}{2}(1)+\frac{1}{2}(3);E_1(eq.)=-3
+\end{equation}
+
+As before, the players are all indifferent to the strategies within their mixed strategy support sets, but the fact that no player benefits by deviating can be verified by calculating the expected payoff of playing the remaining strategy
+
+\begin{equation}
+    E_1(2)=1*\frac{1}{2}-9*\frac{1}{2}=-4<E_1(eq.)
+\end{equation}
+\begin{equation}
+    E_2(2)=E_3(2)=2*\frac{2}{5}-8*\frac{3}{5}=-4<E_2(eq.)=E_3(eq.)
+\end{equation}
 
 
 \end{document}
