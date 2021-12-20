@@ -52,16 +52,12 @@ Pievienojot atpakaļ jebkuru no šķautnēm (10-8 vai 7-9) attēlā, iespējams 
 
 Hamiltona cikla pastāvēšanas nosacījums 3-regulārā grafā: pastāv krāsojums 3 krāsās. k-regulārā grafā ekvivalenta problēma ir 1-faktorizācija (redukcija uz 1-regulāriem apakšgrafiem ar to pašu virsotņu kopu - 1-faktoriem - kuru šķautņu kopas ir nešķeļošas). Tāpat ir jābūt arī pilnajam sapārojamam (1-faktoram), kas nešķeļ Hamiltona ceļu.
 
-Petersena grafā veidojot 1-faktoru (pilno sapārojumu), sākot no jebkuras virsotnes un pievienojot kādu tās šķautni faktoram un atņemot to no sākotnējā grafa tā, lai palikušajā grafā visām virsotnēm $deg=2$ var pierādīt, ka iespējami tikai divi varianti (konstrukcija ir vienāda visām virsotņu secībām). Abos gadījumos pārējās šķautnes veido divus 5-ciklus, nevis vienu Hamiltona ciklu. 
-
-Šādas 5-cikla komponentes arī nav iespējams 1-faktorizēt (nokrāsot divās palikušajās krāsās), jo jebkurā gadījumā vienai virsotnei ciklā paliks $deg=2$ vai $deg=0$ (abas šķautnes būs vienā krāsā).
-
+Petersena grafā veidojot 1-faktoru (pilnā sapārojumu) nešķeļošu apakš-grafu, sākot ar jebkuru šķautni, un pa vienai izmetot palikušās šķautnes tā, lai palikušajā grafā visām virsotnēm $deg=2$, var pierādīt, ka iespējami tikai divi varianti (konstrukcija ir vienāda visām virsotņu secībām). Abos gadījumos pārējās šķautnes veido divus 5-ciklus, nevis vienu Hamiltona ciklu. Šādas 5-cikla komponentes arī nav iespējams 1-faktorizēt (nokrāsot divās palikušajās krāsās), jo jebkurā gadījumā vienai virsotnei ciklā paliks $deg=2$ vai $deg=0$ (abas šķautnes būs vienā krāsā).
 
 \begin{figure}[h!]
     \centering
-    \includegraphics[height=9.5cm,page=1]{task3.jpeg}
-    \caption{Sākot ar jebkuru šķautni un jebkuru virsotni, ir iespējami tikai divi pilnie sapārojumi.}
+    \includegraphics[height=8.9cm,page=1]{task3.jpeg}
 \end{figure}
-
+Sākot ar jebkuru šķautni, ir iespējami tikai divi pilnie sapārojumi kā palikušo grafu nešķeļoši sākotnējā grafa faktori. Izmetot šķautni, katru tās virsotni un visas tai blakus esošās virsotnes palikušajā grafā marķē kādā krāsā. Šķautni nevar izmest no grafa, ja abas tās virsotnes ir marķētas vienā krāsā, jo katrai virsotnei rezultātā jābūt $deg=2$. Mēģinot citādi dalīt grafu otrajā attēla rindā, tiek iegūta situācija, kad vai nu jāatstāj virsotnes ar $deg=3$, vai arī jāizmet šķautnes līdz kādai ir $deg=1$.
 
 \end{document}
