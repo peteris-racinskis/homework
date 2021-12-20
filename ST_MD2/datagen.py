@@ -1,6 +1,5 @@
 def fac(x):
-    fac = {1:1, 2:2, 3:6}
-    return fac[x]
+    return {1:1, 2:2, 3:6}[x]
 
 def pareto_dominated(x, y):
     bigger = False
@@ -14,8 +13,8 @@ def pareto_dominated(x, y):
 
 def pareto_top(x_list, y):
     for x in x_list:
-        if pareto_dominated(y, x):
-            print(f"Cell {y} dominated by {x}")
+        if pareto_dominated(y[0], x[0]):
+            print(f"Outcome {y[0]} dominated by {x[0]}")
             return False
     return True
 
@@ -32,7 +31,7 @@ if __name__ == "__main__":
                 p2 = y * (y - fac(z))
                 p3 = z * (z - fac(x))
                 row.append((p1, p2, p3))
-                cells.append((p1, p2, p3))
+                cells.append([(p1, p2, p3), (x,y,z)])
             s = " ".join([f"{i}\t" for i in row])
             matrix.append(row)
             print(s)
@@ -43,5 +42,5 @@ if __name__ == "__main__":
     for cell in cells:
         if pareto_top(cells, cell):
             top.append(cell)
-    print("remaining:")
-    [print(t) for t in top]
+    print(f"Maximal ({len(top)} outcomes):")
+    [print(f"{t[0]} \tat {t[1]}") for t in top]
