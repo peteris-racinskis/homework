@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 def fac(x):
     return {1:1, 2:2, 3:6}[x]
 
