@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import sys
 IFILE=sys.argv[1]
 
@@ -12,10 +13,10 @@ def curve_max(x_list):
     for i in range(1, len(x_list)-1) :
         x1, x2, x3 = x_list[i-1:i+2]
         c = curve(x1, x2, x3)
-        if i > 1 and not abs(c) > max:
+        if i > 1 and not c > max:
             break
-        amax = (i,x2) if abs(c) > max else amax
-        max = abs(c) if abs(c) > max else max
+        amax = (i,x2) if c > max else amax
+        max = abs(c) if c > max else max
         print(f"x = {x2} curve = {c}")
     print(f"max = {max}")
     print(f"amax = {amax}")
