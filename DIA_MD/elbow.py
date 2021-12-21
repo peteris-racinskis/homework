@@ -16,7 +16,7 @@ def curve_max(x_list):
         if i > 1 and not c > max:
             break
         amax = (i,x2) if c > max else amax
-        max = abs(c) if c > max else max
+        max = c if c > max else max
         print(f"x = {x2} curve = {c}")
     print(f"max = {max}")
     print(f"amax = {amax}")
