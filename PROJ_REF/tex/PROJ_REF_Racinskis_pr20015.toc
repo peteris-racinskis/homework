@@ -6,19 +6,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2}COVID-19 ierobežošanas projekti}{4}{section.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1}COVID-19 pandēmija --- īss pārskats}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.1}Projektu dalījums un izvēle}{4}{subsection.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2}Projektu dalījums}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}COVID-19 pandēmija --- īss pārskats}{5}{subsection.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Vīrusa izplatības tūlītēja samazināšana}{4}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Vīrusa izplatības tūlītēja samazināšana}{5}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Vakcīnu izstrāde, ieviešana}{4}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Vakcīnu izstrāde, ieviešana}{5}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.5}Vakcinācija}{4}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.5}Vakcinācija}{5}{subsection.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Secinājumi}{5}{section.3}%
+\contentsline {section}{\numberline {3}Secinājumi}{6}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Svarīgākās atziņas}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Svarīgākās atziņas}{6}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Atsauces}{6}{figure.1}%
+\contentsline {section}{Atsauces}{7}{figure.1}%
 \contentsfinish 

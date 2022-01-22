@@ -2182,7 +2182,8 @@
     <bcf:datasource type="file" datatype="bibtex">refs.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">enc_stim</bcf:citekey>
+    <bcf:citekey order="1">proj_book_intro</bcf:citekey>
+    <bcf:citekey order="2">enc_stim</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

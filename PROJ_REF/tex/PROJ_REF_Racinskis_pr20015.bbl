@@ -19,6 +19,37 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{proj_book_intro}{online}{}
+      \name{author}{1}{}{%
+        {{hash=59737f8fee391c3d0fbed1b673fc5e4c}{%
+           family={Roberts},
+           familyi={R\bibinitperiod},
+           given={Michael\bibnamedelima Harding},
+           giveni={M\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{59737f8fee391c3d0fbed1b673fc5e4c}
+      \strng{fullhash}{59737f8fee391c3d0fbed1b673fc5e4c}
+      \strng{bibnamehash}{59737f8fee391c3d0fbed1b673fc5e4c}
+      \strng{authorbibnamehash}{59737f8fee391c3d0fbed1b673fc5e4c}
+      \strng{authornamehash}{59737f8fee391c3d0fbed1b673fc5e4c}
+      \strng{authorfullhash}{59737f8fee391c3d0fbed1b673fc5e4c}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chapter 1 - Introduction and Principles}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.hraconsulting-ltd.co.uk/project-management-book-0101.htm
+      \endverb
+      \verb{url}
+      \verb https://www.hraconsulting-ltd.co.uk/project-management-book-0101.htm
+      \endverb
+    \endentry
     \entry{enc_stim}{online}{}
       \name{author}{1}{}{%
         {{hash=eef1e50c27feed6ce7c73ba532c06b64}{%
@@ -33,8 +64,8 @@
       \strng{authorbibnamehash}{eef1e50c27feed6ce7c73ba532c06b64}
       \strng{authornamehash}{eef1e50c27feed6ce7c73ba532c06b64}
       \strng{authorfullhash}{eef1e50c27feed6ce7c73ba532c06b64}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{reinforcement learning}
