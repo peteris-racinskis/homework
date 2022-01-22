@@ -2,9 +2,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1}Ievads}{3}{section.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1}Darba mērķis un struktūra}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.1}COVID-19 pandēmija --- īss pārskats}{3}{subsection.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2}Otrā nodaļa --- ko šeit?}{4}{section.2}%
+\contentsline {subsection}{\numberline {1.2}Referāta mērķis un struktūra}{3}{subsection.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2}COVID-19 ierobežošanas projekti}{4}{section.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1}Projektu dalījums}{4}{subsection.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2}Vīrusa izplatības tūlītēja samazināšana}{4}{subsection.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3}Vakcīnu izstrāde, ieviešana}{4}{subsection.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4}Vakcinācija}{4}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3}Secinājumi}{5}{section.3}%
 \defcounter {refsection}{0}\relax 
