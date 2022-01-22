@@ -1,0 +1,56 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{enc_stim}{online}{}
+      \name{author}{1}{}{%
+        {{hash=eef1e50c27feed6ce7c73ba532c06b64}{%
+           family={protokoli},
+           familyi={p\bibinitperiod},
+           given={LZA\bibnamedelimb TK\bibnamedelima ITTEA},
+           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+      }
+      \strng{namehash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \strng{fullhash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \strng{bibnamehash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \strng{authorbibnamehash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \strng{authornamehash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \strng{authorfullhash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{reinforcement learning}
+      \field{urlday}{20}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://termini.gov.lv/kolekcijas/97/skirklis/454193
+      \endverb
+      \verb{url}
+      \verb https://termini.gov.lv/kolekcijas/97/skirklis/454193
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
