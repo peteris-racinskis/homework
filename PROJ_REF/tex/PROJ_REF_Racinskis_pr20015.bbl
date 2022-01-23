@@ -81,6 +81,290 @@
       \verb https://healthpolicy.fsi.stanford.edu/news/how-taiwan-used-big-data-transparency-central-command-protect-its-people-coronavirus
       \endverb
     \endentry
+    \entry{wang2020response}{article}{}
+      \name{author}{3}{}{%
+        {{hash=217dfa00f523e403d40b0d55566656f2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={C\bibnamedelima Jason},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=8d074ffa07fb6ad6e013e5c043a11d7c}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Chun\bibnamedelima Y},
+           giveni={C\bibinitperiod\bibinitdelim Y\bibinitperiod}}}%
+        {{hash=e9cdf5cc00d720f52ac10eb13ebdfd6a}{%
+           family={Brook},
+           familyi={B\bibinitperiod},
+           given={Robert\bibnamedelima H},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {American Medical Association}%
+      }
+      \strng{namehash}{3e42ce6fa10202b49734139df5236702}
+      \strng{fullhash}{3e42ce6fa10202b49734139df5236702}
+      \strng{bibnamehash}{3e42ce6fa10202b49734139df5236702}
+      \strng{authorbibnamehash}{3e42ce6fa10202b49734139df5236702}
+      \strng{authornamehash}{3e42ce6fa10202b49734139df5236702}
+      \strng{authorfullhash}{3e42ce6fa10202b49734139df5236702}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jama}
+      \field{number}{14}
+      \field{title}{Response to COVID-19 in Taiwan: big data analytics, new technology, and proactive testing}
+      \field{volume}{323}
+      \field{year}{2020}
+      \field{pages}{1341\bibrangedash 1342}
+      \range{pages}{2}
+    \endentry
+    \entry{human_human}{online}{}
+      \name{author}{1}{}{%
+        {{hash=5762cf4cd11977da19bf9d69c4c98007}{%
+           family={Kuo},
+           familyi={K\bibinitperiod},
+           given={Lily},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{5762cf4cd11977da19bf9d69c4c98007}
+      \strng{fullhash}{5762cf4cd11977da19bf9d69c4c98007}
+      \strng{bibnamehash}{5762cf4cd11977da19bf9d69c4c98007}
+      \strng{authorbibnamehash}{5762cf4cd11977da19bf9d69c4c98007}
+      \strng{authornamehash}{5762cf4cd11977da19bf9d69c4c98007}
+      \strng{authorfullhash}{5762cf4cd11977da19bf9d69c4c98007}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{China confirms human-to-human transmission of coronavirus}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.theguardian.com/world/2020/jan/20/coronavirus-spreads-to-beijing-as-china-confirms-new-cases
+      \endverb
+      \verb{url}
+      \verb https://www.theguardian.com/world/2020/jan/20/coronavirus-spreads-to-beijing-as-china-confirms-new-cases
+      \endverb
+    \endentry
+    \entry{export_ban}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fea7f6955b0ef21c63fb83f9a959780b}{%
+           family={Yang},
+           familyi={Y\bibinitperiod},
+           given={Sophia},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{fea7f6955b0ef21c63fb83f9a959780b}
+      \strng{fullhash}{fea7f6955b0ef21c63fb83f9a959780b}
+      \strng{bibnamehash}{fea7f6955b0ef21c63fb83f9a959780b}
+      \strng{authorbibnamehash}{fea7f6955b0ef21c63fb83f9a959780b}
+      \strng{authornamehash}{fea7f6955b0ef21c63fb83f9a959780b}
+      \strng{authorfullhash}{fea7f6955b0ef21c63fb83f9a959780b}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taiwan bans export of surgical, N95 masks amid China coronavirus outbreak}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.taiwannews.com.tw/en/news/3863692
+      \endverb
+      \verb{url}
+      \verb https://www.taiwannews.com.tw/en/news/3863692
+      \endverb
+    \endentry
+    \entry{backfired}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c37796737bfd689dd28da0a8de150f13}{%
+           family={Tufekci},
+           familyi={T\bibinitperiod},
+           given={Zeynep},
+           giveni={Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{fullhash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{bibnamehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{authorbibnamehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{authornamehash}{c37796737bfd689dd28da0a8de150f13}
+      \strng{authorfullhash}{c37796737bfd689dd28da0a8de150f13}
+      \field{sortinit}{7}
+      \field{sortinithash}{f615fb9c6fba11c6f962fb3fd599810e}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Why Telling People They Don’t Need Masks Backfired}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nytimes.com/2020/03/17/opinion/coronavirus-face-masks.html
+      \endverb
+      \verb{url}
+      \verb https://www.nytimes.com/2020/03/17/opinion/coronavirus-face-masks.html
+      \endverb
+    \endentry
+    \entry{taiwan_mask}{online}{}
+      \name{author}{1}{}{%
+        {{hash=40788ef17fd0045d18f04aa01e74c683}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Kelvin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{40788ef17fd0045d18f04aa01e74c683}
+      \strng{fullhash}{40788ef17fd0045d18f04aa01e74c683}
+      \strng{bibnamehash}{40788ef17fd0045d18f04aa01e74c683}
+      \strng{authorbibnamehash}{40788ef17fd0045d18f04aa01e74c683}
+      \strng{authornamehash}{40788ef17fd0045d18f04aa01e74c683}
+      \strng{authorfullhash}{40788ef17fd0045d18f04aa01e74c683}
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taiwan residents face heavy fines for going maskless}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.taiwannews.com.tw/en/news/4203995
+      \endverb
+      \verb{url}
+      \verb https://www.taiwannews.com.tw/en/news/4203995
+      \endverb
+    \endentry
+    \entry{taiwan_stats}{online}{}
+      \name{author}{1}{}{%
+        {{hash=963a563c339e60d42f76f5ec12b3bb8e}{%
+           family={Worldometer},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{fullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{bibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorbibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authornamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorfullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \field{extraname}{1}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taiwan --- coronavirus}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.worldometers.info/coronavirus/country/taiwan/
+      \endverb
+      \verb{url}
+      \verb https://www.worldometers.info/coronavirus/country/taiwan/
+      \endverb
+    \endentry
+    \entry{taiwan_pop}{online}{}
+      \name{author}{1}{}{%
+        {{hash=963a563c339e60d42f76f5ec12b3bb8e}{%
+           family={Worldometer},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{fullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{bibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorbibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authornamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorfullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \field{extraname}{2}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taiwan --- population}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.worldometers.info/world-population/taiwan-population/
+      \endverb
+      \verb{url}
+      \verb https://www.worldometers.info/world-population/taiwan-population/
+      \endverb
+    \endentry
+    \entry{taiwan_zero}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1e080f08c0ba0b50f0e95ebdc33ef82e}{%
+           family={Taiwan},
+           familyi={T\bibinitperiod},
+           given={Focus},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{1e080f08c0ba0b50f0e95ebdc33ef82e}
+      \strng{fullhash}{1e080f08c0ba0b50f0e95ebdc33ef82e}
+      \strng{bibnamehash}{1e080f08c0ba0b50f0e95ebdc33ef82e}
+      \strng{authorbibnamehash}{1e080f08c0ba0b50f0e95ebdc33ef82e}
+      \strng{authornamehash}{1e080f08c0ba0b50f0e95ebdc33ef82e}
+      \strng{authorfullhash}{1e080f08c0ba0b50f0e95ebdc33ef82e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Taiwan eases COVID-19 rules as domestic transmissions stay at zero}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://focustaiwan.tw/society/202006070013
+      \endverb
+      \verb{url}
+      \verb https://focustaiwan.tw/society/202006070013
+      \endverb
+    \endentry
+    \entry{us_stats}{online}{}
+      \name{author}{1}{}{%
+        {{hash=963a563c339e60d42f76f5ec12b3bb8e}{%
+           family={Worldometer},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{fullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{bibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorbibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authornamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorfullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \field{extraname}{3}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{USA --- coronavirus}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.worldometers.info/coronavirus/country/us/
+      \endverb
+      \verb{url}
+      \verb https://www.worldometers.info/coronavirus/country/us/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
