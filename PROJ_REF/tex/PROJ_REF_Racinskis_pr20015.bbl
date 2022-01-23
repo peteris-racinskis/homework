@@ -590,7 +590,7 @@
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Latvia's Health Ministry and Center for Disease Prevention and Control (SPKC) announced March 2 that a first positive test for the COVID-19 coronavirus has been confirmed, reported LSM's Latvian language service.}
+      \field{title}{First case of COVID-19 coronavirus confirmed in Latvia}
       \field{urlday}{23}
       \field{urlmonth}{1}
       \field{urlyear}{2022}
@@ -764,6 +764,96 @@
       \endverb
       \verb{url}
       \verb https://eng.lsm.lv/article/society/health/latvias-state-of-emergency-comes-to-an-end-on-june-10.a363138/
+      \endverb
+    \endentry
+    \entry{lv_omicron_dominate}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{5}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Local spread of Omicron strain becomes apparent in Latvia}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/local-spread-of-omicron-strain-becomes-apparent-in-latvia.a437677/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/local-spread-of-omicron-strain-becomes-apparent-in-latvia.a437677/
+      \endverb
+    \endentry
+    \entry{lv_october_2020_spread}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{6}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kopš septembra vidus inficēšanās ar Covid-19 pieaugusi 11 reizes}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/kops-septembra-vidus-inficesanas-ar-covid-19-pieaugusi-11-reizes.a377678/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/kops-septembra-vidus-inficesanas-ar-covid-19-pieaugusi-11-reizes.a377678/
+      \endverb
+    \endentry
+    \entry{lv_emergency_2020_fall}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{7}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{State of emergency ends in Latvia: what changes?}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/society/state-of-emergency-ends-in-latvia-what-changes.a399539/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/society/state-of-emergency-ends-in-latvia-what-changes.a399539/
       \endverb
     \endentry
   \enddatalist
