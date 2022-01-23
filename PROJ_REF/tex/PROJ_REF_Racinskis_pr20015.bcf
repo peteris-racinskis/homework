@@ -2194,6 +2194,14 @@
     <bcf:citekey order="10">taiwan_pop</bcf:citekey>
     <bcf:citekey order="11">taiwan_zero</bcf:citekey>
     <bcf:citekey order="12">us_stats</bcf:citekey>
+    <bcf:citekey order="13">us_movement</bcf:citekey>
+    <bcf:citekey order="14">congress_2020</bcf:citekey>
+    <bcf:citekey order="15">taiwan_vp</bcf:citekey>
+    <bcf:citekey order="16">parascandola1996mcwa</bcf:citekey>
+    <bcf:citekey order="17">wang2020response</bcf:citekey>
+    <bcf:citekey order="18">spkc_lv</bcf:citekey>
+    <bcf:citekey order="19">us_stats</bcf:citekey>
+    <bcf:citekey order="20">florida_cancel</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

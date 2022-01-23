@@ -365,6 +365,183 @@
       \verb https://www.worldometers.info/coronavirus/country/us/
       \endverb
     \endentry
+    \entry{us_movement}{online}{}
+      \name{author}{1}{}{%
+        {{hash=04d665cb34921d104db7ec5e1e81d54f}{%
+           family={Chertoff},
+           familyi={C\bibinitperiod},
+           given={Meryl},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{04d665cb34921d104db7ec5e1e81d54f}
+      \strng{fullhash}{04d665cb34921d104db7ec5e1e81d54f}
+      \strng{bibnamehash}{04d665cb34921d104db7ec5e1e81d54f}
+      \strng{authorbibnamehash}{04d665cb34921d104db7ec5e1e81d54f}
+      \strng{authornamehash}{04d665cb34921d104db7ec5e1e81d54f}
+      \strng{authorfullhash}{04d665cb34921d104db7ec5e1e81d54f}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Right to Travel and National Quarantines: Coronavirus Tests the Limits}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.law.georgetown.edu/salpal/the-right-to-travel-and-national-quarantines-coronavirus-tests-the-limits/
+      \endverb
+      \verb{url}
+      \verb https://www.law.georgetown.edu/salpal/the-right-to-travel-and-national-quarantines-coronavirus-tests-the-limits/
+      \endverb
+    \endentry
+    \entry{congress_2020}{online}{}
+      \name{author}{1}{}{%
+        {{hash=035c0919b89a9a1d7e8c8a553606118e}{%
+           family={Ballotpedia},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{035c0919b89a9a1d7e8c8a553606118e}
+      \strng{fullhash}{035c0919b89a9a1d7e8c8a553606118e}
+      \strng{bibnamehash}{035c0919b89a9a1d7e8c8a553606118e}
+      \strng{authorbibnamehash}{035c0919b89a9a1d7e8c8a553606118e}
+      \strng{authornamehash}{035c0919b89a9a1d7e8c8a553606118e}
+      \strng{authorfullhash}{035c0919b89a9a1d7e8c8a553606118e}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{116th congress}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://ballotpedia.org/116th_United_States_Congress
+      \endverb
+      \verb{url}
+      \verb https://ballotpedia.org/116th_United_States_Congress
+      \endverb
+    \endentry
+    \entry{taiwan_vp}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ceade1abdc552658376055297406b4b5}{%
+           family={Center},
+           familyi={C\bibinitperiod},
+           given={Genomics\bibnamedelima Research},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{ceade1abdc552658376055297406b4b5}
+      \strng{fullhash}{ceade1abdc552658376055297406b4b5}
+      \strng{bibnamehash}{ceade1abdc552658376055297406b4b5}
+      \strng{authorbibnamehash}{ceade1abdc552658376055297406b4b5}
+      \strng{authornamehash}{ceade1abdc552658376055297406b4b5}
+      \strng{authorfullhash}{ceade1abdc552658376055297406b4b5}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Chen, Chien-Jen}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.genomics.sinica.edu.tw/index.php/en/chen-chien-jen
+      \endverb
+      \verb{url}
+      \verb https://www.genomics.sinica.edu.tw/index.php/en/chen-chien-jen
+      \endverb
+    \endentry
+    \entry{parascandola1996mcwa}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e5e8fbe7f123ec0ab042ede0be776ab6}{%
+           family={Parascandola},
+           familyi={P\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SAGE Publications}%
+      }
+      \strng{namehash}{e5e8fbe7f123ec0ab042ede0be776ab6}
+      \strng{fullhash}{e5e8fbe7f123ec0ab042ede0be776ab6}
+      \strng{bibnamehash}{e5e8fbe7f123ec0ab042ede0be776ab6}
+      \strng{authorbibnamehash}{e5e8fbe7f123ec0ab042ede0be776ab6}
+      \strng{authornamehash}{e5e8fbe7f123ec0ab042ede0be776ab6}
+      \strng{authorfullhash}{e5e8fbe7f123ec0ab042ede0be776ab6}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Public Health Reports}
+      \field{number}{6}
+      \field{title}{From MCWA to CDC--origins of the Centers for Disease Control and Prevention.}
+      \field{volume}{111}
+      \field{year}{1996}
+      \field{pages}{549}
+      \range{pages}{1}
+    \endentry
+    \entry{spkc_lv}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Category --- SPKC}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/topic/center-for-disease-control-and-prevention/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/topic/center-for-disease-control-and-prevention/
+      \endverb
+    \endentry
+    \entry{florida_cancel}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fffd5ac64aaf66f7ec65db315c3a31bf}{%
+           family={Macias},
+           familyi={M\bibinitperiod},
+           given={Amanda},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{fffd5ac64aaf66f7ec65db315c3a31bf}
+      \strng{fullhash}{fffd5ac64aaf66f7ec65db315c3a31bf}
+      \strng{bibnamehash}{fffd5ac64aaf66f7ec65db315c3a31bf}
+      \strng{authorbibnamehash}{fffd5ac64aaf66f7ec65db315c3a31bf}
+      \strng{authornamehash}{fffd5ac64aaf66f7ec65db315c3a31bf}
+      \strng{authorfullhash}{fffd5ac64aaf66f7ec65db315c3a31bf}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Florida Gov. DeSantis suspends all remaining Covid restrictions: ‘We are no longer in a state of emergency’}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.cnbc.com/2021/05/03/florida-governor-desantis-suspends-all-remaining-covid-restrictions.html
+      \endverb
+      \verb{url}
+      \verb https://www.cnbc.com/2021/05/03/florida-governor-desantis-suspends-all-remaining-covid-restrictions.html
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

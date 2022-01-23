@@ -12,15 +12,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.1}Pirmie viļņi --- 2020. gada pavasaris}{5}{subsubsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Vēlāki vilņi, apvienojums ar vakcināciju}{6}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2}Vēlāki vilņi, apvienojums ar vakcināciju}{7}{subsubsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3}Vakcīnu izstrāde, ieviešana}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.3}Vakcīnu izstrāde, ieviešana}{7}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.4}Vakcinācija}{6}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.4}Vakcinācija}{7}{subsection.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3}Secinājumi}{7}{section.3}%
+\contentsline {section}{\numberline {3}Secinājumi}{8}{section.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1}Svarīgākās atziņas}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.1}Svarīgākās atziņas}{8}{subsection.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Atsauces}{8}{figure.1}%
+\contentsline {section}{Atsauces}{9}{figure.1}%
 \contentsfinish 
