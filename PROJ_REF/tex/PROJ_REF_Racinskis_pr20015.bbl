@@ -50,35 +50,35 @@
       \verb https://www.hraconsulting-ltd.co.uk/project-management-book-0101.htm
       \endverb
     \endentry
-    \entry{enc_stim}{online}{}
+    \entry{Taiwan_wave_1}{online}{}
       \name{author}{1}{}{%
-        {{hash=eef1e50c27feed6ce7c73ba532c06b64}{%
-           family={protokoli},
-           familyi={p\bibinitperiod},
-           given={LZA\bibnamedelimb TK\bibnamedelima ITTEA},
-           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim I\bibinitperiod}}}%
+        {{hash=755bb2b8cb4adaf52808d7155e7aba13}{%
+           family={Duff-Brown},
+           familyi={D\bibinithyphendelim B\bibinitperiod},
+           given={Beth},
+           giveni={B\bibinitperiod}}}%
       }
-      \strng{namehash}{eef1e50c27feed6ce7c73ba532c06b64}
-      \strng{fullhash}{eef1e50c27feed6ce7c73ba532c06b64}
-      \strng{bibnamehash}{eef1e50c27feed6ce7c73ba532c06b64}
-      \strng{authorbibnamehash}{eef1e50c27feed6ce7c73ba532c06b64}
-      \strng{authornamehash}{eef1e50c27feed6ce7c73ba532c06b64}
-      \strng{authorfullhash}{eef1e50c27feed6ce7c73ba532c06b64}
+      \strng{namehash}{755bb2b8cb4adaf52808d7155e7aba13}
+      \strng{fullhash}{755bb2b8cb4adaf52808d7155e7aba13}
+      \strng{bibnamehash}{755bb2b8cb4adaf52808d7155e7aba13}
+      \strng{authorbibnamehash}{755bb2b8cb4adaf52808d7155e7aba13}
+      \strng{authornamehash}{755bb2b8cb4adaf52808d7155e7aba13}
+      \strng{authorfullhash}{755bb2b8cb4adaf52808d7155e7aba13}
       \field{sortinit}{2}
       \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{reinforcement learning}
-      \field{urlday}{20}
+      \field{title}{How Taiwan Used Big Data, Transparency and a Central Command to Protect Its People from Coronavirus}
+      \field{urlday}{23}
       \field{urlmonth}{1}
       \field{urlyear}{2022}
-      \field{year}{2017}
+      \field{year}{2020}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://termini.gov.lv/kolekcijas/97/skirklis/454193
+      \verb https://healthpolicy.fsi.stanford.edu/news/how-taiwan-used-big-data-transparency-central-command-protect-its-people-coronavirus
       \endverb
       \verb{url}
-      \verb https://termini.gov.lv/kolekcijas/97/skirklis/454193
+      \verb https://healthpolicy.fsi.stanford.edu/news/how-taiwan-used-big-data-transparency-central-command-protect-its-people-coronavirus
       \endverb
     \endentry
   \enddatalist

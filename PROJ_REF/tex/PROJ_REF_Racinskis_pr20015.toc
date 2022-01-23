@@ -12,9 +12,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {2.2.1}Pirmie viļņi --- 2020. gada pavasaris}{5}{subsubsection.2.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.2}Otrie viļņi --- 2020. gada rudens}{5}{subsubsection.2.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {2.2.3}Vēlāki vilņi, apvienojums ar vakcināciju}{5}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.2}Vēlāki vilņi, apvienojums ar vakcināciju}{5}{subsubsection.2.2.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3}Vakcīnu izstrāde, ieviešana}{5}{subsection.2.3}%
 \defcounter {refsection}{0}\relax 
