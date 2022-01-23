@@ -2202,6 +2202,13 @@
     <bcf:citekey order="18">spkc_lv</bcf:citekey>
     <bcf:citekey order="19">us_stats</bcf:citekey>
     <bcf:citekey order="20">florida_cancel</bcf:citekey>
+    <bcf:citekey order="21">lv_stats</bcf:citekey>
+    <bcf:citekey order="22">lv_first_case</bcf:citekey>
+    <bcf:citekey order="23">lv_measures</bcf:citekey>
+    <bcf:citekey order="24">walsh2021school</bcf:citekey>
+    <bcf:citekey order="25">lv_reopen</bcf:citekey>
+    <bcf:citekey order="26">lv_stats</bcf:citekey>
+    <bcf:citekey order="27">lv_mk_control</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

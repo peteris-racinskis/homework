@@ -495,6 +495,7 @@
       \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
       \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
       \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -540,6 +541,229 @@
       \endverb
       \verb{url}
       \verb https://www.cnbc.com/2021/05/03/florida-governor-desantis-suspends-all-remaining-covid-restrictions.html
+      \endverb
+    \endentry
+    \entry{lv_stats}{online}{}
+      \name{author}{1}{}{%
+        {{hash=963a563c339e60d42f76f5ec12b3bb8e}{%
+           family={Worldometer},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{fullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{bibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorbibnamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authornamehash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \strng{authorfullhash}{963a563c339e60d42f76f5ec12b3bb8e}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latvia --- coronavirus}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.worldometers.info/coronavirus/country/latvia/
+      \endverb
+      \verb{url}
+      \verb https://www.worldometers.info/coronavirus/country/latvia/
+      \endverb
+    \endentry
+    \entry{lv_first_case}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latvia's Health Ministry and Center for Disease Prevention and Control (SPKC) announced March 2 that a first positive test for the COVID-19 coronavirus has been confirmed, reported LSM's Latvian language service.}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/first-case-of-covid-19-coronavirus-confirmed-in-latvia.a350338/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/first-case-of-covid-19-coronavirus-confirmed-in-latvia.a350338/
+      \endverb
+    \endentry
+    \entry{lv_measures}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latvian government announces widespread measures to contain coronavirus}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/latvian-government-announces-widespread-measures-to-contain-coronavirus.a351529/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/latvian-government-announces-widespread-measures-to-contain-coronavirus.a351529/
+      \endverb
+    \endentry
+    \entry{walsh2021school}{article}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{10}{}{%
+        {{hash=542ad7cce02e1c79acfbc5660cb3192c}{%
+           family={Walsh},
+           familyi={W\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=57302348f631c983d4c086add6da841f}{%
+           family={Chowdhury},
+           familyi={C\bibinitperiod},
+           given={A},
+           giveni={A\bibinitperiod}}}%
+        {{hash=d0f44710521cc1cf1546676ac8a01bc9}{%
+           family={Braithwaite},
+           familyi={B\bibinitperiod},
+           given={V},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c451164a0a4a9471276b7e4fb5a8cbd6}{%
+           family={Russell},
+           familyi={R\bibinitperiod},
+           given={S},
+           giveni={S\bibinitperiod}}}%
+        {{hash=442d0f09301e67e994ca313599821f0d}{%
+           family={Birch},
+           familyi={B\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=61dea3fc3e57c20db23f094fbafa5f1a}{%
+           family={Ward},
+           familyi={W\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0912567a50ef7c1d127aec2afbbf5ff9}{%
+           family={Waddington},
+           familyi={W\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{hash=3d07f8ff632a30facee7dbb27c088dde}{%
+           family={Brayne},
+           familyi={B\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{hash=abd0956e77ea9fc0323e51a343537174}{%
+           family={Bonell},
+           familyi={B\bibinitperiod},
+           given={C},
+           giveni={C\bibinitperiod}}}%
+        {{hash=a833748b5a6018b00e35c59ace43ca79}{%
+           family={Viner},
+           familyi={V\bibinitperiod},
+           given={RM},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{17c5fe9b659fded10258fe26f296ff09}
+      \strng{fullhash}{77aca5e1069d698968749a67b989d798}
+      \strng{bibnamehash}{17c5fe9b659fded10258fe26f296ff09}
+      \strng{authorbibnamehash}{17c5fe9b659fded10258fe26f296ff09}
+      \strng{authornamehash}{17c5fe9b659fded10258fe26f296ff09}
+      \strng{authorfullhash}{77aca5e1069d698968749a67b989d798}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{A systematic review of observational studies. BMJ Open}
+      \field{title}{Do school closures and school reopenings affect community transmission of COVID-19}
+      \field{volume}{11}
+      \field{year}{2021}
+      \field{pages}{e053371}
+      \range{pages}{-1}
+    \endentry
+    \entry{lv_reopen}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{4}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latvia's state of emergency comes to an end on June 10}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/latvias-state-of-emergency-comes-to-an-end-on-june-10.a363138/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/latvias-state-of-emergency-comes-to-an-end-on-june-10.a363138/
+      \endverb
+    \endentry
+    \entry{lv_mk_control}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8dae3f8a5bfbc700a04520d3646f008d}{%
+           family={Kontrole},
+           familyi={K\bibinitperiod},
+           given={Valsts},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{8dae3f8a5bfbc700a04520d3646f008d}
+      \strng{fullhash}{8dae3f8a5bfbc700a04520d3646f008d}
+      \strng{bibnamehash}{8dae3f8a5bfbc700a04520d3646f008d}
+      \strng{authorbibnamehash}{8dae3f8a5bfbc700a04520d3646f008d}
+      \strng{authornamehash}{8dae3f8a5bfbc700a04520d3646f008d}
+      \strng{authorfullhash}{8dae3f8a5bfbc700a04520d3646f008d}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{COVID-19 izraisītie ārkārtas apstākļi un kompetento institūciju paziņojumi attiecībā uz COVID-19 uzliesmojuma ierobežošanai nepieciešamajiem iepirkumiem un atkāpēm preču atbilstības novērtēšanā}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2020}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/latvias-state-of-emergency-comes-to-an-end-on-june-10.a363138/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/latvias-state-of-emergency-comes-to-an-end-on-june-10.a363138/
       \endverb
     \endentry
   \enddatalist
