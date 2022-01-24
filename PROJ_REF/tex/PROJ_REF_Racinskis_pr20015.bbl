@@ -1065,7 +1065,7 @@
       \verb https://eng.lsm.lv/article/society/health/health-ministry-presents-covid-19-vaccination-plan.a387761/
       \endverb
     \endentry
-    \entry{vaxx_bureau_proposed}{online}{}
+    \entry{vaxx_center_oppose}{online}{}
       \name{author}{1}{}{%
         {{hash=82c44058974ad330bf7eac0733668a09}{%
            family={LSM},
@@ -1080,6 +1080,36 @@
       \field{extraname}{14}
       \field{sortinit}{3}
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Daļa ģimenes ārstu neredz vajadzību pēc Covid-19 masu vakcinācijas centriem}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/dala-gimenes-arstu-neredz-vajadzibu-pec-covid-19-masu-vakcinacijas-centriem.a400598
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/dala-gimenes-arstu-neredz-vajadzibu-pec-covid-19-masu-vakcinacijas-centriem.a400598
+      \endverb
+    \endentry
+    \entry{vaxx_bureau_proposed}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{15}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Latvia to have a central vaccination bureau}
@@ -1138,7 +1168,7 @@
       \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
       \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
       \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
-      \field{extraname}{15}
+      \field{extraname}{16}
       \field{sortinit}{4}
       \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
