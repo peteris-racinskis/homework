@@ -1305,6 +1305,36 @@
       \verb https://eng.lsm.lv/article/society/health/latvian-government-approves-exemptions-for-vaccinated-people.a406463/
       \endverb
     \endentry
+    \entry{vaxx_unavailable}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{20}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Iedzīvotāji sūdzas par grūtībām tikt pie Covid-19 vakcīnas; NVD meklē risinājumus kapacitātes stiprināšanai (precizēts)}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/iedzivotaji-sudzas-par-grutibam-tikt-pie-covid-19-vakcinas-nvd-mekle-risinajumus-kapacitates-stiprinasanai-precizets.a427784/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/iedzivotaji-sudzas-par-grutibam-tikt-pie-covid-19-vakcinas-nvd-mekle-risinajumus-kapacitates-stiprinasanai-precizets.a427784/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -2231,8 +2231,9 @@
     <bcf:citekey order="47">lv_fire_unvaccinated</bcf:citekey>
     <bcf:citekey order="48">lv_stats</bcf:citekey>
     <bcf:citekey order="49">vaxx_stats</bcf:citekey>
-    <bcf:citekey order="50">lv_stats</bcf:citekey>
-    <bcf:citekey order="51">vaxx_stats</bcf:citekey>
+    <bcf:citekey order="50">vaxx_unavailable</bcf:citekey>
+    <bcf:citekey order="51">lv_stats</bcf:citekey>
+    <bcf:citekey order="52">vaxx_stats</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
