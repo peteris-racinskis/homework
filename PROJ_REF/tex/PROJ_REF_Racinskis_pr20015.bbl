@@ -1186,6 +1186,125 @@
       \verb https://www.lsm.lv/raksts/zinas/latvija/no-ritdienas-vakcinacijas-projekta-birojs-tiek-pievienots-nvd.a401366/?utm_source=lsm&utm_medium=theme&utm_campaign=theme
       \endverb
     \endentry
+    \entry{vaxx_queue}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{17}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Brīvo rindu pēc Covid-19 potēm piektdien slēdz agrāk par plānoto; izlietotas 3 300 devas}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/brivo-rindu-pec-covid-19-potem-piektdien-sledz-agrak-par-planoto-izlietotas-3-300-devas.a400870/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/brivo-rindu-pec-covid-19-potem-piektdien-sledz-agrak-par-planoto-izlietotas-3-300-devas.a400870/
+      \endverb
+    \endentry
+    \entry{vaxx_all}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{18}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Prioritāro grupu iedzīvotājus aicina līdz 3. maijam aktīvāk pieteikties vakci-nācijai pret Covid-19}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/prioritaro-grupu-iedzivotajus-aicina-lidz-3-maijam-aktivak-pieteikties-vakcinacijai-pret-covid-19.a402436/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/prioritaro-grupu-iedzivotajus-aicina-lidz-3-maijam-aktivak-pieteikties-vakcinacijai-pret-covid-19.a402436/
+      \endverb
+    \endentry
+    \entry{vaxx_stats}{online}{}
+      \name{author}{1}{}{%
+        {{hash=65cad414593fbc9c1fcd63a5e4cf509f}{%
+           family={Infogram},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{65cad414593fbc9c1fcd63a5e4cf509f}
+      \strng{fullhash}{65cad414593fbc9c1fcd63a5e4cf509f}
+      \strng{bibnamehash}{65cad414593fbc9c1fcd63a5e4cf509f}
+      \strng{authorbibnamehash}{65cad414593fbc9c1fcd63a5e4cf509f}
+      \strng{authornamehash}{65cad414593fbc9c1fcd63a5e4cf509f}
+      \strng{authorfullhash}{65cad414593fbc9c1fcd63a5e4cf509f}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Vakcinācija pret COVID-19 Latvijā}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://infogram.com/vakcinacija-pret-covid-19-1h0n25yyrqonz6p
+      \endverb
+      \verb{url}
+      \verb https://infogram.com/vakcinacija-pret-covid-19-1h0n25yyrqonz6p
+      \endverb
+    \endentry
+    \entry{vaxx_cert}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{19}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latvian government approves exemptions for vaccinated people}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/latvian-government-approves-exemptions-for-vaccinated-people.a406463/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/latvian-government-approves-exemptions-for-vaccinated-people.a406463/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

@@ -2224,6 +2224,15 @@
     <bcf:citekey order="40">vaxx_bureau_proposed</bcf:citekey>
     <bcf:citekey order="41">vaxx_bureau_leadership</bcf:citekey>
     <bcf:citekey order="42">vaxx_bureau_reorganized</bcf:citekey>
+    <bcf:citekey order="43">vaxx_queue</bcf:citekey>
+    <bcf:citekey order="44">vaxx_all</bcf:citekey>
+    <bcf:citekey order="45">vaxx_stats</bcf:citekey>
+    <bcf:citekey order="46">vaxx_cert</bcf:citekey>
+    <bcf:citekey order="47">lv_fire_unvaccinated</bcf:citekey>
+    <bcf:citekey order="48">lv_stats</bcf:citekey>
+    <bcf:citekey order="49">vaxx_stats</bcf:citekey>
+    <bcf:citekey order="50">lv_stats</bcf:citekey>
+    <bcf:citekey order="51">vaxx_stats</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
