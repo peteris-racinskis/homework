@@ -2212,6 +2212,12 @@
     <bcf:citekey order="28">lv_omicron_dominate</bcf:citekey>
     <bcf:citekey order="29">lv_october_2020_spread</bcf:citekey>
     <bcf:citekey order="30">lv_emergency_2020_fall</bcf:citekey>
+    <bcf:citekey order="31">lv_vaccine_half_2021_october</bcf:citekey>
+    <bcf:citekey order="32">lv_emergency_2021</bcf:citekey>
+    <bcf:citekey order="33">lv_lockdown_2021</bcf:citekey>
+    <bcf:citekey order="34">lv_fire_unvaccinated</bcf:citekey>
+    <bcf:citekey order="35">lv_stats</bcf:citekey>
+    <bcf:citekey order="36">lv_sick_student</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
