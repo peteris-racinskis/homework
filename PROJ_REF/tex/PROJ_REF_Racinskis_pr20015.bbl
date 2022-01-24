@@ -1335,6 +1335,96 @@
       \verb https://www.lsm.lv/raksts/zinas/latvija/iedzivotaji-sudzas-par-grutibam-tikt-pie-covid-19-vakcinas-nvd-mekle-risinajumus-kapacitates-stiprinasanai-precizets.a427784/
       \endverb
     \endentry
+    \entry{revaxx_start}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{21}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Revakcinācija pret Covid-19 – arī visiem no 50 gadiem un pilngadīgajiem ar hroniskām slimībām}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/revakcinacija-pret-covid-19--ari-visiem-no-50-gadiem-un-pilngadigajiem-ar-hroniskam-slimibam.a429416/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/revakcinacija-pret-covid-19--ari-visiem-no-50-gadiem-un-pilngadigajiem-ar-hroniskam-slimibam.a429416/
+      \endverb
+    \endentry
+    \entry{revaxx_open}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{22}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Balstvakcīnu pret Covid-19 var saņemt trīs mēnešus pēc pirmreizējās vakci-nācijas}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/balstvakcinu-pret-covid-19-var-sanemt-tris-menesus-pec-pirmreizejas-vakcinacijas.a435435/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/balstvakcinu-pret-covid-19-var-sanemt-tris-menesus-pec-pirmreizejas-vakcinacijas.a435435/
+      \endverb
+    \endentry
+    \entry{revaxx_cert_term}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{23}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Eiropas Komisija nosaka deviņu mēnešu derīguma termiņu Covid-19 sertifikātiem}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/arzemes/eiropas-komisija-nosaka-devinu-menesu-deriguma-terminu-covid-19-sertifikatiem.a435543/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/arzemes/eiropas-komisija-nosaka-devinu-menesu-deriguma-terminu-covid-19-sertifikatiem.a435543/
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
