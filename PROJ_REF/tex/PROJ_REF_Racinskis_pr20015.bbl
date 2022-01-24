@@ -1005,6 +1005,157 @@
       \verb https://www.lsm.lv/raksts/zinas/latvija/vakar-ap-40-jauno-covid-19-gadijumu-konstateti-bernu-un-jauniesu-vidu.a440036/
       \endverb
     \endentry
+    \entry{lv_minister_fired}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{12}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Premjers izsaka neuzticību veselības ministrei Viņķelei}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/premjers-izsaka-neuzticibu-veselibas-ministrei-vinkelei.a387740/
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/premjers-izsaka-neuzticibu-veselibas-ministrei-vinkelei.a387740/
+      \endverb
+    \endentry
+    \entry{lv_vaxx_plan}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{13}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Health Ministry presents Covid-19 vaccination plan}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/health-ministry-presents-covid-19-vaccination-plan.a387761/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/health-ministry-presents-covid-19-vaccination-plan.a387761/
+      \endverb
+    \endentry
+    \entry{vaxx_bureau_proposed}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{14}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Latvia to have a central vaccination bureau}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://eng.lsm.lv/article/society/health/latvia-to-have-a-central-vaccination-bureau.a388692/
+      \endverb
+      \verb{url}
+      \verb https://eng.lsm.lv/article/society/health/latvia-to-have-a-central-vaccination-bureau.a388692/
+      \endverb
+    \endentry
+    \entry{vaxx_bureau_leadership}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4d89b0b7f32252783f17a7b51e4e1687}{%
+           family={Ministrija},
+           familyi={M\bibinitperiod},
+           given={Veselības},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d89b0b7f32252783f17a7b51e4e1687}
+      \strng{fullhash}{4d89b0b7f32252783f17a7b51e4e1687}
+      \strng{bibnamehash}{4d89b0b7f32252783f17a7b51e4e1687}
+      \strng{authorbibnamehash}{4d89b0b7f32252783f17a7b51e4e1687}
+      \strng{authornamehash}{4d89b0b7f32252783f17a7b51e4e1687}
+      \strng{authorfullhash}{4d89b0b7f32252783f17a7b51e4e1687}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Izveidots Vakcinācijas biroja komandas kodols}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.vm.gov.lv/lv/jaunums/izveidots-vakcinacijas-biroja-komandas-kodols
+      \endverb
+      \verb{url}
+      \verb https://www.vm.gov.lv/lv/jaunums/izveidots-vakcinacijas-biroja-komandas-kodols
+      \endverb
+    \endentry
+    \entry{vaxx_bureau_reorganized}{online}{}
+      \name{author}{1}{}{%
+        {{hash=82c44058974ad330bf7eac0733668a09}{%
+           family={LSM},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{fullhash}{82c44058974ad330bf7eac0733668a09}
+      \strng{bibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorbibnamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authornamehash}{82c44058974ad330bf7eac0733668a09}
+      \strng{authorfullhash}{82c44058974ad330bf7eac0733668a09}
+      \field{extraname}{15}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{No rītdienas Vakcinācijas projekta birojs tiek pievienots NVD}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/no-ritdienas-vakcinacijas-projekta-birojs-tiek-pievienots-nvd.a401366/?utm_source=lsm&utm_medium=theme&utm_campaign=theme
+      \endverb
+      \verb{url}
+      \verb https://www.lsm.lv/raksts/zinas/latvija/no-ritdienas-vakcinacijas-projekta-birojs-tiek-pievienots-nvd.a401366/?utm_source=lsm&utm_medium=theme&utm_campaign=theme
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

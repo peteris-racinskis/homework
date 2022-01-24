@@ -2218,6 +2218,11 @@
     <bcf:citekey order="34">lv_fire_unvaccinated</bcf:citekey>
     <bcf:citekey order="35">lv_stats</bcf:citekey>
     <bcf:citekey order="36">lv_sick_student</bcf:citekey>
+    <bcf:citekey order="37">lv_minister_fired</bcf:citekey>
+    <bcf:citekey order="38">lv_vaxx_plan</bcf:citekey>
+    <bcf:citekey order="39">vaxx_bureau_proposed</bcf:citekey>
+    <bcf:citekey order="40">vaxx_bureau_leadership</bcf:citekey>
+    <bcf:citekey order="41">vaxx_bureau_reorganized</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
