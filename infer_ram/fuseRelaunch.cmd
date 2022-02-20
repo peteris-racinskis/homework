@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/peter/repos/infer_ram/memtest_isim_beh.exe" -prj "/home/peter/repos/infer_ram/memtest_beh.prj" "work.memtest" "work.glbl" 
