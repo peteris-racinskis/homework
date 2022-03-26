@@ -88,6 +88,7 @@ __pycache__/
 *.fls*
 
 DMM_MD2/data/*
+DMM_MD2/checkpoint
 
 
 
