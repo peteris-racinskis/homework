@@ -35,14 +35,12 @@ if __name__ == "__main__":
     test_dataset, test_labels = reformat(test_dataset, test_labels)
 
     stop_condition = tf.keras.callbacks.EarlyStopping(
-        monitor='val_loss', patience=10)
+        monitor='val_loss', patience=20)
 
     model = tf.keras.Sequential([
-        layers.Dense(4096, activation=activations.relu,
-                     kernel_regularizer=regularizers.l2(0.001)),
+        layers.Dense(4096, activation=activations.relu),
         layers.Dropout(0.5),
-        layers.Dense(4096, activation=activations.relu,
-                     kernel_regularizer=regularizers.l2(0.001)),
+        layers.Dense(4096, activation=activations.relu),
         layers.Dropout(0.5),
         layers.Dense(train_labels[0].size, activation=None),
         layers.Softmax()
@@ -60,7 +58,7 @@ if __name__ == "__main__":
     history = model.fit(
         train_dataset,
         train_labels,
-        batch_size=8192,
+        batch_size=12500,
         epochs=1000,
         validation_data=(valid_dataset, valid_labels),
         validation_freq=1,
