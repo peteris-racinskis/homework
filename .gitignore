@@ -87,5 +87,7 @@ __pycache__/
 *.synctex*
 *.fls*
 
+DMM_MD2/data/*
+
 
 
